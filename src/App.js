@@ -1,15 +1,19 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
+import Skills from "./components/Skills";
+
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
-    <div className="container">
+    <Container className="container">
       <Navbar />
       <Profile />
-    </div>
+      <Skills />
+    </Container>
   );
 }
 

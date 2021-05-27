@@ -1,22 +1,14 @@
 import React from 'react'
+import { Container, Navbar } from 'react-bootstrap'
 
-const Navbar = (props) =>{
+const Nav_bar = (props) =>{
     return (
-        <ul className="nav justify-content-center align-items-center" style={{height: 75}}>
-            <li className="nav-item">
-                <a className="nav-link text-dark active fw-bolder" aria-current="page" href="#">tmnyoni</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link text-dark" href="#">skills</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link text-dark" href="#">projects</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link text-dark" href="#">about me</a>
-            </li>
-        </ul>
+        <Container>
+            <Navbar expand variant="light" bg="light" className='w-100 d-flex justify-content-end'> 
+                <Navbar.Brand href="/" className='text-muted fst-italic'>tmnyoni</Navbar.Brand>
+            </Navbar>
+        </Container>
     )
 }
 
-export default Navbar;
+export default Nav_bar;
