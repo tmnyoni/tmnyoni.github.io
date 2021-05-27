@@ -5,7 +5,7 @@ import profImg from '../assets/img/profile.jpg'
 
 const Profile = (props) =>{
     return (
-        <Row className='d-flex align-items-center justify-content-center text-center bg-warning' style={{marginTop: '5rem'}}>
+        <Row className='d-flex align-items-center justify-content-center text-center' style={{marginTop: '5rem'}}>
             <img src={profImg} alt='profile' style={{width: '16rem', height: '16rem'}} className='rounded-circle border'/>
             <Card style={{ width: '30rem' }} className='border-0'>
                 <Card.Body>
