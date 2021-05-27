@@ -2,11 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
   "homepage": "https://tmnyoni.github.io/portfolio",
-=======
-  "homepage": "http://tmnyoni.github.io/portfolio",
->>>>>>> 68590c6 (uploaded my picture on the profile picture and pruned the navbar.)
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
