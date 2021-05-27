@@ -1,12 +1,20 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap';
+import { Card, Container, Row } from 'react-bootstrap';
 
 const Skills = () => {
     return(
-        <Container style={{marginTop: '6rem'}}>
-            <h4>What I can do</h4>
-            
-        </Container>
+        <Row className="d-flex justify-content-betweeen" style={{marginTop: '6rem'}} >
+            <Card sm className=''>
+                <img src='' alt='..' />
+                <h6>Thinker</h6>
+                <p>I think very much, especially about ... </p>
+            </Card>
+            <Card sm className=''>
+                <img src='' alt='..' />
+                <h6>Thinker</h6>
+                <p>I think very much, especially about ... </p>
+            </Card>
+        </Row>
     )
 }
 
