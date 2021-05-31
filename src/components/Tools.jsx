@@ -3,7 +3,7 @@ import { Card, CardGroup } from 'react-bootstrap'
 
 const Tools = () =>{
     return (
-        <>
+        <div style={{marginTop: '10rem'}}>
             <h4>What I do... </h4>
             <CardGroup className='text-center m-2 mt-3 '>
                 <Card className='m-2 border' style={{height: '20rem'}}>
@@ -40,7 +40,7 @@ const Tools = () =>{
                     </Card.Body>
                 </Card>
             </CardGroup>
-        </>
+        </div>
     )
 }
 
