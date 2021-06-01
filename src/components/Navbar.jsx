@@ -5,7 +5,7 @@ const Nav_bar = (props) =>{
     return (
         <Container>
             <Navbar expand variant="light"  className='w-100 d-flex justify-content-end'> 
-                <Navbar.Brand href="/" className='text-muted fst-italic'>tmnyoni</Navbar.Brand>
+                <Navbar.Brand href="/" className='text-muted fst-italic small'>tmnyoni</Navbar.Brand>
             </Navbar>
         </Container>
     )
