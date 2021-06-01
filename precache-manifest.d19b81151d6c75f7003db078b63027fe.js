@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "0bec794e6138c1ff9e3e",
-    "url": "/static/js/main.b8a43187.chunk.js"
+    "revision": "8b1601be1d697aa0d9f6",
+    "url": "/static/js/main.12ba215f.chunk.js"
   },
   {
     "revision": "52285b8d0d10c94187d1",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/static/media/instagram.46ce54c9.jpeg"
   },
   {
-    "revision": "a88f437cb05778ee6c875ac42456e96d",
+    "revision": "2578b586b7cffb847dfbf0feb48944dd",
     "url": "/index.html"
   }
 ];
