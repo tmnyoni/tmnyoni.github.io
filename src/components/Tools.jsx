@@ -6,7 +6,7 @@ const Tools = () =>{
         <div style={{marginTop: '10rem'}}>
             <h4>What I do... </h4>
             <CardGroup className='text-center m-2 mt-3 '>
-                <Card className='m-2 border' style={{height: '20rem'}}>
+                <Card className='m-2 border shadow' style={{height: '20rem'}}>
                     <Card.Body className='d-flex flex-column justify-content-center'>
                         <Card.Title> Desktop App Developer </Card.Title>
                         <Card.Text>
@@ -18,7 +18,7 @@ const Tools = () =>{
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className='m-2 border' style={{height: '20rem'}}>
+                <Card className='m-2 border shadow' style={{height: '20rem'}}>
                     <Card.Body className='d-flex flex-column justify-content-center'>
                         <Card.Title> Web Development </Card.Title>
                         <Card.Text>
@@ -30,7 +30,7 @@ const Tools = () =>{
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className='m-2 m-2 border' style={{height: '20rem'}}>
+                <Card className='m-2 m-2 border shadow' style={{height: '20rem'}}>
                     <Card.Body className='d-flex flex-column justify-content-center'>    
                         <Card.Title> UI/UX Designer </Card.Title>
                         <Card.Text>
