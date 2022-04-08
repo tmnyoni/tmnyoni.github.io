@@ -16,7 +16,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="col-lg-6">
-                    <h1 className="display-5 fw-bold lh-1 mb-3">
+                    <h1 className="display-5 fw-bolder lh-1 mb-3">
                         I am a freelancer, web developer
                     </h1>
                     <p className="lead">
