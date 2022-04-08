@@ -1,32 +1,32 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
-
-import SocialMedia from './SocialMedia'
+import React from "react";
 
 const Footer = () => {
     return (
-        <div style={{marginTop: '10rem'}}>
-            <h4> More about me </h4>
-            <Container>
-                <Row sm className='d-flerx '>
-                    <Col>
-                        <p style={{textAlign: 'justify'}}>  
-                            I spend most of my time doing programming. I work hard everyday to improve my skills.
-                            But I also have other things I do besides being behind the monitor. I play tennis and 
-                            I like spending some of my time teaching and learning from people in my circles.
-                        </p>
-                    </Col>
-                    <Col>
-                        <h6 className='text-center'>Social Media</h6>
-                        <div>
-                            <SocialMedia />
-                        </div>
-                    </Col>
-                </Row>
-                <div className='text-center' style={{marginTop: '5rem'}}>
-                    <p className='small '> Copyright ©2021 Tawanda M. All rights reserved | Powered by Reactjs </p>
+        <div className="section min-vh-100">
+            <div className="container col-xxl-8 px-4 py-5">
+                <div className="d-flex justify-content-center flex-column">
+                    <h6> Need a high-quality website </h6>
+                    <div className="fs-1"> Let's build it now</div>
+                    <div>
+                        <a
+                            href="#"
+                            className="btn btn-outline-secondary"
+                        >
+                            Make a call
+                        </a>
+                        <a
+                            href="#"
+                            className="btn btn-dark"
+                        >
+                            Or send me an email
+                        </a>
+                    </div>
                 </div>
-            </Container>
+
+                <div>
+
+                </div>
+            </div >
         </div>
     )
 }

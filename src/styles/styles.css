@@ -1,0 +1,13 @@
+.masthead {
+  min-height: 80vh;
+}
+
+.masthead .heading {
+  width: 300px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
