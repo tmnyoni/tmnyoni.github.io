@@ -2,13 +2,26 @@ import React from "react";
 
 export default function ServiceSection() {
     return (
-        <div className="container col-xxl-8 px-4 py-5">
-            <h2 className="text-center mb-5">
+        <div
+            className="container col-xxl-8 px-4 py-5"
+            id="services"
+        >
+            <h1 className="display-5 fw-bolder lh-1 mb-5 text-center">
                 You don't simply need a website;
                 <div>you need a high-quality website.</div>
-            </h2>
+            </h1>
 
-            <div className="row justify-content-betweeen p-3" >
+            <div className="row justify-content-betweeen p-3 py-5 my-5">
+                <div className="col-12 col-sm-12 col-lg-6">
+                    <img
+                        src="assets/profile.jpg"
+                        className="d-block mx-lg-auto my-5 my-md-auto img-fluid"
+                        alt="Bootstrap Themes"
+                        width="700"
+                        height="500"
+                        loading="lazy"
+                    />
+                </div>
                 <div className="col-12 col-lg-6 d-flex align-items-center">
                     <div>
                         <img
@@ -27,14 +40,18 @@ export default function ServiceSection() {
                         </p>
                     </div>
                 </div>
-
-
-                <div className="col">
-                </div>
             </div>
 
-            <div className="row justify-content-betweeen p-3" >
-                <div className="col">
+            <div className="row justify-content-betweeen flex-row-reverse p-3 py-5 my-5">
+                <div className="col-12 col-sm-12 col-lg-6">
+                    <img
+                        src="assets/profile.jpg"
+                        className="d-block mx-lg-auto my-5 my-md-auto img-fluid"
+                        alt="Bootstrap Themes"
+                        width="700"
+                        height="500"
+                        loading="lazy"
+                    />
                 </div>
                 <div className="col-12 col-lg-6 d-flex align-items-center">
                     <div>
@@ -55,7 +72,17 @@ export default function ServiceSection() {
                 </div>
             </div>
 
-            <div className="row justify-content-betweeen p-3" >
+            <div className="row justify-content-betweeen p-3 py-5 my-5">
+                <div className="col-12 col-sm-12 col-lg-6">
+                    <img
+                        src="assets/profile.jpg"
+                        className="d-block mx-lg-auto my-5 my-md-auto img-fluid"
+                        alt="Bootstrap Themes"
+                        width="700"
+                        height="500"
+                        loading="lazy"
+                    />
+                </div>
                 <div className="col-12 col-lg-6 d-flex align-items-center">
                     <div>
                         <img
@@ -72,10 +99,6 @@ export default function ServiceSection() {
                             so make it easy for your clients to identify you.
                         </p>
                     </div>
-                </div>
-
-
-                <div className="col">
                 </div>
             </div>
         </div>
