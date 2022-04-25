@@ -2,7 +2,7 @@ import React from "react";
 import SocialMedia from "./social";
 
 
-export default function Footer() {
+export default function CallToAction() {
     return (
         <div className="container col-xxl-8 px-4 py-5 section footer min-vh-100">
             <div className="container col-xxl-8 px-4 py-5">

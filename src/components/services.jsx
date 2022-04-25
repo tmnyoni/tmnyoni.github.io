@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ServiceSection() {
+export default function Services() {
     return (
         <div
             className="container col-xxl-8 px-4 py-5"

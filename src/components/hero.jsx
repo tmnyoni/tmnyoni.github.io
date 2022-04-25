@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/styles.module.css"
 
-export default function HeroSection() {
+export default function Hero() {
     return (
         <div className={styles.heroSection}>
             <div className="container col-xxl-8 px-4">
