@@ -14,6 +14,7 @@ export default function SocialMedia() {
                 href="https://www.linkedin.com/in/tmnyoni/"
                 className=""
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 <Linkedin width={"1.5rem"} height="1.5rem" />
             </a>
@@ -22,6 +23,7 @@ export default function SocialMedia() {
                 href="https://github.com/tmnyoni"
                 className=""
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 <Github width={"1.5rem"} height="1.5rem" />
             </a>
@@ -30,6 +32,7 @@ export default function SocialMedia() {
                 href="mailto:tmnyoni@outlook.com"
                 className=""
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 <Whatsapp width={"1.5rem"} height="1.5rem" />
             </a>

@@ -3,13 +3,13 @@ import React from "react";
 
 export default function Navbar() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top w-100 bg-white">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top w-100 bg-white">
+            <div className="container-fluid">
+                <a className="navbar-brand" href="#">
                     Tmnyoni
                 </a>
                 <button
-                    class="navbar-toggler"
+                    className="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarText"
@@ -17,40 +17,40 @@ export default function Navbar() {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span class="navbar-toggler-icon">
+                    <span className="navbar-toggler-icon">
                     </span>
                 </button>
                 <div
-                    class="collapse navbar-collapse"
+                    className="collapse navbar-collapse"
                     id="navbarText"
                 >
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
                             <a
-                                class="nav-link"
+                                className="nav-link"
                                 href="#services"
                             >
                                 Service
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <a
-                                class="nav-link"
+                                className="nav-link"
                                 href="#about"
                             >
                                 About
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <a
-                                class="nav-link"
+                                className="nav-link"
                                 href="#footer"
                             >
                                 Contact
                             </a>
                         </li>
                     </ul>
-                    <a class="btn btn-outline-secondary">
+                    <a className="btn btn-outline-secondary">
                         Get in touch
                     </a>
                 </div>
