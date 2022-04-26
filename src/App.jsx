@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, Page404 } from "./pages";
 import { Layout } from "./components";
 
 import "./styles/styles.css";
@@ -19,6 +19,11 @@ export default function App() {
                 <Route
                     exact path="/"
                     element={<Home />}
+                />
+
+                <Route
+                    path="*"
+                    element={<Page404 />}
                 />
             </Routes>
         </Layout>
