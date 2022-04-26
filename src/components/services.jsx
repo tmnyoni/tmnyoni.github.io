@@ -1,4 +1,5 @@
 import React from "react";
+import { } from "react-bootstrap-icons";
 import styles from "../styles/styles.module.css";
 
 export default function Services() {
@@ -48,7 +49,7 @@ export default function Services() {
                     </div>
                     <div className="col-12 col-lg-6 d-flex align-items-center">
                         <div className="ms-3">
-                            <h3> Is a 27/4 website </h3>
+                            <h3> Is a brand-accurate website </h3>
                             <p>
                                 A well-designed website with few faults  that disrupt
                                 your presence on the internet, hurting your market.
