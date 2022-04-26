@@ -26,6 +26,16 @@ export default function Navbar() {
                     </div>
                 </NavLink>
 
+                {/* TO-DO: Finish of the animated navbar toggler*/}
+                <div
+                    className={`${styles.navbarToggler} ${isOpen && "active"} d-none`}
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
                 <button
                     className="navbar-toggler"
                     type="button"
