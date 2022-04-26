@@ -10,7 +10,7 @@ export default function WorkProcess() {
                         My Processes
                     </h1>
                     <div className={styles.processes}>
-                        <div className="card col-5 bg-secondary py-5">
+                        <div className="card col-12 col-lg-5 bg-secondary py-5 my-2 my-lg-auto">
                             <div className="card-body">
                                 <h2> Discovery Call </h2>
                                 <p className="card-text">
@@ -21,7 +21,7 @@ export default function WorkProcess() {
                             </div>
                         </div>
 
-                        <div className="card col-5 bg-secondary py-5 ms-3">
+                        <div className="card col-12 col-lg-5 bg-secondary py-5 ms-lg-3 my-2 my-lg-auto">
                             <div className="card-body">
                                 <h2> Strategic Meeting </h2>
                                 <p className="card-text">
@@ -32,7 +32,7 @@ export default function WorkProcess() {
                             </div>
                         </div>
 
-                        <div className="card col-5 bg-secondary py-5 ms-3">
+                        <div className="card col-12 col-lg-5 bg-secondary py-5 ms-lg-3 my-2 my-lg-auto">
                             <div className="card-body">
                                 <h2> Website design </h2>
                                 <p className="card-text">
@@ -43,7 +43,7 @@ export default function WorkProcess() {
                             </div>
                         </div>
 
-                        <div className="card col-5 bg-secondary py-5 ms-3">
+                        <div className="card col-12 col-lg-5 bg-secondary py-5 ms-lg-3 my-2 my-lg-auto">
                             <div className="card-body">
                                 <h2> Website Development </h2>
                                 <p className="card-text">
@@ -54,7 +54,7 @@ export default function WorkProcess() {
                             </div>
                         </div>
 
-                        <div className="card col-5 bg-secondary py-5 ms-3">
+                        <div className="card col-12 col-lg-5 bg-secondary py-5 ms-lg-3 my-2 my-lg-auto">
                             <div className="card-body">
                                 <h2> Website Deployment </h2>
                                 <p className="card-text">

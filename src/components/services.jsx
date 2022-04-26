@@ -12,7 +12,7 @@ export default function Services() {
             </h1>
 
             <div className={`row ${styles.service}`}>
-                <div className="col-12 col-sm-12 col-lg-6">
+                <div className="col-12 col-lg-6">
                     <img
                         src="assets/profile.jpg"
                         className="d-block mx-lg-auto my-5 my-md-auto img-fluid"
