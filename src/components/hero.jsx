@@ -4,34 +4,40 @@ import styles from "../styles/styles.module.css"
 export default function Hero() {
     return (
         <div className={styles.heroSection}>
-            <div className="container col-xxl-8 px-4">
-                <div className="row flex-lg-row-reverse align-items-center">
-                    <div className="col-12 col-sm-12 col-lg-6">
-                        <img
-                            src="assets/profile.jpg"
-                            className="img-fluid d-block mx-lg-auto my-5 my-md-auto"
-                            alt="hero"
-                            width="700"
-                            height="500"
-                            loading="lazy"
-                        />
-                    </div>
+            <div className="container">
+                <div className=" col-xxl-8 px-4 my-5">
+                    <div className="row flex-lg-row-reverse align-items-center">
+                        <div className="col-12 col-sm-12 col-lg-5">
+                            <div className="position-relative">
+                                <img
+                                    src="assets/hero.png"
+                                    className={`${styles.heroImage} img-fluid mx-lg-auto my-5 my-md-auto`}
+                                    alt="hero"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </div>
 
-                    <div className="col-lg-6">
-                        <h1 className="display-5 fw-bolder lh-1 mb-3">
-                            I am a freelancer, web developer
-                        </h1>
-                        <p className="lead">
-                            I craft high-quality, beautiful websites that are brand-accurate and user-friendly
-                        </p>
-                        <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <a
-                                type="button"
-                                className="btn btn-dark btn-lg px-4"
-                                href="/contact"
-                            >
-                                Lets build your website together
-                            </a>
+                        <div className="col-lg-7">
+                            <h5 className="text-secondary"> Hi There! My name is Tawanda M.</h5>
+                            <h1 className="display-5 fw-bolder lh-1 mb-3">
+                                I'm a freelancer, <br />
+                                Web developer <br />
+                            </h1>
+                            <p className="lead mt-3">
+                                I craft high-quality, beautiful websites that are brand-accurate, user-friendly
+                                and well-designed to stand for your presence on the internet.
+
+                            </p>
+                            <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
+                                <a
+                                    type="button"
+                                    className="btn btn-dark btn-lg px-4"
+                                    href="/contact"
+                                >
+                                    Lets build your website together
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
