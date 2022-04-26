@@ -42,7 +42,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 className="nav-link"
-                                to="#services"
+                                to="/services"
                             >
                                 Services
                             </NavLink>
@@ -50,7 +50,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 className="nav-link"
-                                to="#about"
+                                to="/about"
                             >
                                 About
                             </NavLink>
@@ -58,7 +58,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 className="nav-link"
-                                to="#footer"
+                                to="/contact"
                             >
                                 Contact
                             </NavLink>
@@ -66,7 +66,7 @@ export default function Navbar() {
                     </ul>
                     <Link
                         to="/"
-                        className="btn btn-outline-secondary btn-sm ms-3"
+                        className="btn btn-outline-dark btn-sm ms-3"
                     >
                         Get in touch
                     </Link>

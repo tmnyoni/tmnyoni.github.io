@@ -43,3 +43,115 @@
   font-size: calc(1.5vw + 3.5rem);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+/*
+** Services Styles.
+*/
+
+.service {
+  justify-content: space-between;
+  padding: 5.5rem 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/*
+** Work Process Styles.
+*/
+
+.workProcess {
+  min-height: 100vh;
+  color: rgb(251, 248, 248);
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.workProcess .bigHeading {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.workProcess .processes {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem 0.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/*
+** Call To Action Styles.
+*/
+
+.callToAction {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  padding: 2.5rem 3rem;
+}
+
+.callToAction .bigHeading {
+  margin-top: 0.7rem;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  line-height: 0.8;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  .callToAction .bigHeading {
+    font-size: 4rem;
+  }
+}
+
+.callToAction .buttonGroup {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.callToAction .buttonGroup > * {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .callToAction .buttonGroup {
+    flex-direction: row;
+  }
+
+  .callToAction .buttonGroup > * {
+    width: auto;
+    margin-top: 0.5rem;
+  }
+}
+
+.callToAction .footer {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: auto;
+}
+
+.callToAction .footerText {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: rgb(130, 128, 128);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
