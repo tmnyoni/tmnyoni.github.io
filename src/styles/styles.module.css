@@ -40,6 +40,10 @@
 }
 
 .navbarToggler.active {
+  background-color: yellow;
+}
+
+.navbarToggler.active > span {
   transition-delay: 0.8s;
   transform: rotate(45deg);
 }
@@ -91,11 +95,30 @@
 .heroSection h1 {
   font-size: calc(1.5vw + 2.5rem);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  opacity: 0;
+  animation: revealAnimation 0.5s forwards;
 }
 
 @media (min-width: 512px) {
   .heroSection h1 {
     font-size: calc(1.5vw + 3.5rem);
+  }
+}
+
+.heroSection .lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  animation: revealAnimation 1s forwards;
+}
+
+@keyframes revealAnimation {
+  from {
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -268,7 +291,10 @@
 }
 
 /* animations */
-.growAnimation {
-  transition: transform 5s ease-out;
-  transform: scale(1.5);
+
+@media (min-width: 992px) {
+  .growAnimation {
+    transition: transform 5s ease-in-out;
+    transform: scale(1.3);
+  }
 }

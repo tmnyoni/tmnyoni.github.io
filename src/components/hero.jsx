@@ -1,7 +1,25 @@
-import React from "react";
-import styles from "../styles/styles.module.css"
+import React, { useEffect, useRef } from "react";
+import typingEffect from "typing-effect";
+import styles from "../styles/styles.module.css";
 
 export default function Hero() {
+    const salutationMsg = useRef();
+
+    useEffect(() => {
+
+    })
+
+    useEffect(() => {
+        typingEffect(
+            salutationMsg.current,
+            {
+                speed: 100,
+                delay: 30,
+                reset: false
+            }
+        )
+    }, []);
+
     return (
         <div className={styles.heroSection}>
             <div className="container">
@@ -19,15 +37,16 @@ export default function Hero() {
                         </div>
 
                         <div className="col-lg-7">
-                            <h5 className="text-secondary"> Hi There! My name is Tawanda M.</h5>
+                            <h5 className="text-secondary" ref={salutationMsg}>
+                                Hi There! My name is Tawanda M.
+                            </h5>
                             <h1 className="display-5 fw-bolder lh-1 mb-3">
                                 I'm a freelancer, <br />
                                 Web developer <br />
                             </h1>
-                            <p className="lead mt-3">
+                            <p className={styles.lead}>
                                 I craft high-quality, beautiful websites that are brand-accurate, user-friendly
                                 and well-designed to stand for your presence on the internet.
-
                             </p>
                             <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
                                 <a
