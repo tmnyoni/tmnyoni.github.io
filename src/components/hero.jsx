@@ -5,10 +5,12 @@ import styles from "../styles/styles.module.css";
 export default function Hero() {
     const salutationMsg = useRef();
 
-    useEffect(() => {
-
-    })
-
+    /**
+     * This will trigger the typing effect
+     * soon after the component has rendered.
+     * 
+     * Todo: Typing refreshed and types other things.
+     */
     useEffect(() => {
         typingEffect(
             salutationMsg.current,
@@ -51,8 +53,8 @@ export default function Hero() {
                             <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
                                 <a
                                     type="button"
-                                    className="btn btn-dark btn-lg px-4"
-                                    href="/contact"
+                                    className={`btn ${styles.ctaBtn}`}
+                                    href="#"
                                 >
                                     Lets build your website together
                                 </a>

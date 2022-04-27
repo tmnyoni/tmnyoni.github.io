@@ -122,6 +122,45 @@
   }
 }
 
+.heroSection .ctaBtn {
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: rgb(241, 241, 241);
+  background-color: #1a1e21;
+  outline: 2px solid #1a1e21;
+  padding: 0.8rem 2rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  transition: color 1s;
+}
+
+.heroSection .ctaBtn:hover {
+  color: #fff;
+  border-color: #1a1e21e1;
+}
+
+.heroSection .ctaBtn:focus {
+  border-color: #1a1e21;
+  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+}
+
+.heroSection .ctaBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.804);
+  transform: skew(35deg);
+  transition: width 1s;
+}
+
+.heroSection .ctaBtn:hover::before {
+  width: 150%;
+}
+
 /*
 ** Services Styles.
 */
