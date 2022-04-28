@@ -45,7 +45,7 @@ export default function Navbar() {
                     </span>
                 </button>
                 <div
-                    className={`navbar-collapse ${!isOpen && "collapse"}`}
+                    className={`${styles.navbarCollapse} ${!isOpen && "collapse"}`}
                     id="navbarText"
                 >
                     <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
@@ -76,7 +76,7 @@ export default function Navbar() {
                     </ul>
                     <Link
                         to="/"
-                        className="btn btn-outline-dark btn-sm ms-3"
+                        className="btn btn-outline-dark btn-sm ms-lg-3"
                     >
                         Get in touch
                     </Link>
