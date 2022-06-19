@@ -98,3 +98,13 @@ body {
 .section-heading {
  color: rgb(125, 154, 182);
 }
+
+@media (min-width: 700px) {
+  .section-description {
+    width: 40rem;
+  }
+}
+
+.max-w-40{
+  max-width: 40rem !important;
+}

@@ -54,6 +54,16 @@ export default function Product() {
                                 </div>
                             </li>
                         </ul>
+                        <div className="row justify-content-center">
+                            <div className="mt-4">
+                                <a
+                                    className="btn btn-outline-dark rounded-1"
+                                    href="#call-now"
+                                >
+                                    Get your website now
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-12 col-lg-6 mt-3 mt-lg-0">
                         <div>

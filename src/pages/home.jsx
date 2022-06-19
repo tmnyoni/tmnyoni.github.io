@@ -5,7 +5,8 @@ import {
     Product,
     WorkProcess,
     About, 
-    BlogHeadings
+    BlogHeadings,
+    SocialProof
 } from "../components";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
             <WorkProcess />
             <About />
             <BlogHeadings />
+            <SocialProof />
             <CallToAction />
         </div>
     )

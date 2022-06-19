@@ -4,5 +4,6 @@ export { default as Hero } from "./hero";
 export { default as About } from "./about.tsx";
 export { default as BlogHeadings } from "./blog.headings.tsx";
 export { default as Product } from "./products.tsx";
+export { default as SocialProof } from "./social.proof.tsx";
 export { default as WorkProcess } from "./work.process.tsx";
 export { default as Layout } from "./layout";

@@ -14,8 +14,8 @@ export default function BlogHeadings() {
                         improve your business.
                     </p>
                 </div>
-                <div className="row py-3 py-sm-4 py-lg-5 align-items-center">
-                    <div className="col-12 col-md-4">
+                <div className="row row-cols-1 row-cols-md-3 g-4 py-3 py-sm-4 py-lg-5 align-items-center">
+                    <div className="col mt-2 mt-md-0">
                         <div className="card">
                             <img
                                 src="assets/images/pakata-goh-EJMTKCZ00I0-unsplash.jpg"
@@ -33,7 +33,7 @@ export default function BlogHeadings() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-4 mt-2 mt-md-0">
+                    <div className="col mt-2 mt-md-0">
                         <div className="card">
                             <img
                                 src="assets/images/pakata-goh-EJMTKCZ00I0-unsplash.jpg"
@@ -51,7 +51,7 @@ export default function BlogHeadings() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-4 mt-2 mt-md-0">
+                    <div className="col mt-2 mt-md-0">
                         <div className="card">
                             <img
                                 src="assets/images/pakata-goh-EJMTKCZ00I0-unsplash.jpg"
@@ -68,6 +68,16 @@ export default function BlogHeadings() {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="row justify-content-center text-center">
+                    <div className="mt-4">
+                        <a
+                            className="btn btn-outline-dark rounded-1"
+                            href="#call-now"
+                        >
+                            Read more articles
+                        </a>
                     </div>
                 </div>
             </div>
