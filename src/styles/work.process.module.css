@@ -1,0 +1,51 @@
+.workProcess {
+    background-color: rgb(255, 255, 255);
+}
+
+.heading {
+    font-size: 4rem;
+    font-weight: 800;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 3px rgb(45, 45, 45);
+}
+
+.workProcessItem {
+    transition: all ease-in-out .3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.workProcessItem:hover {
+    transform: scale(1.03);
+    z-index: 10;
+    background: #569cb335;
+}
+
+.processNumber {
+    top: -2.5rem;
+    right: -1.3rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(116, 105, 105);
+}
+
+@media (min-width: 567px) {
+    .processNumber {
+        right: -2rem;
+    }
+}
+
+.processIcon {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: rgba(12, 69, 139, 0.638);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgb(198, 209, 219);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
