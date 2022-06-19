@@ -1,12 +1,12 @@
 import React from "react";
-import { CallToAction, Hero, Services, WorkProcess } from "../components";
+import { CallToAction, Hero, Product, WorkProcess } from "../components";
 import Tools from "../components/tools";
 
 export default function Home() {
     return (
         <div>
             <Hero />
-            <Services />
+            <Product />
             <Tools /> {/* !Todo: remove this */}
             <WorkProcess />
             <CallToAction />

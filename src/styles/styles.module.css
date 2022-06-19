@@ -80,9 +80,11 @@
     height: auto;
   }
 }
+
 /*
 ** Hero Section Styles.
 */
+
 .heroSection {
   position: relative;
   min-height: 100vh;
@@ -185,52 +187,6 @@
   width: 150%;
 }
 
-/*
-** Services Styles.
-*/
-
-.services > *:not(:last-child),
-.services > *:not(:first-child) {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.service {
-  justify-content: space-between;
-  border: 1px solid rgb(187, 187, 187);
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  font-size: 1.1rem;
-}
-
-@media (min-width: 992px) {
-  .service {
-    justify-content: space-between;
-    padding: 5.5rem 1.25rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    border: none;
-  }
-}
-
-.servicesCta {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1a1e21;
-  color: white;
-}
-
-.servicesCta {
-  font-size: calc(1.5vw + 2.5rem);
-}
-
-@media (min-width: 512px) {
-  .servicesCta h1 {
-    font-size: calc(1.5vw + 3rem);
-  }
-}
 /*
 ** Work Process Styles.
 */

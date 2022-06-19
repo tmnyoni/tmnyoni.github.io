@@ -1,0 +1,28 @@
+.product {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+.counter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    border-radius: .25rem;
+    background-color: transparent;
+}
+
+.counterSuccess {
+    background-color: rgb(129, 177, 107, 0.427);
+}
+
+.counterSecondary {
+    background-color: rgba(135, 75, 75, 0.534);
+}
+
+.counterPrimary {
+    background-color: rgba(88, 118, 140, 0.427);
+}
