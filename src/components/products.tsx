@@ -1,6 +1,6 @@
 import React from "react";
 import { } from "react-bootstrap-icons";
-import styles from "../styles/services.module.css";
+import styles from "../styles/products.module.css";
 
 export default function Product() {
 
