@@ -1,16 +1,35 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home, Page404 } from "./pages";
+import {  Page404 } from "./pages";
 import { Layout } from "./components";
 
 import "./styles/styles.css";
 import "./styles/bootstrap.css"
-/**
- * In this function I put all the routes to
- * navigate the website.
- * 
- * @returns jsx.
- */
+
+import {
+    CallToAction,
+    Hero,
+    Product,
+    WorkProcess,
+    About, 
+    BlogHeadings,
+    SocialProof
+} from "./components";
+
+const Home = () => {
+    return (
+        <>
+            <Hero />
+            <Product />
+            <WorkProcess />
+            <About />
+            <BlogHeadings />
+            <SocialProof />
+            <CallToAction />
+        </>
+    )
+}
+
 export default function App() {
     return (
         <Layout>

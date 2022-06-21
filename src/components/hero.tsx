@@ -61,10 +61,10 @@ export default function Hero() {
                             <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
                                 <a
                                     type="button"
-                                    className={`${styles.ctaBtn}`}
+                                    className={`${styles.ctaBtn} text-center`}
                                     href="/contact"
                                 >
-                                    Lets build your website together
+                                    Contact me right now
                                 </a>
                             </div>
                         </div>

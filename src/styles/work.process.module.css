@@ -28,7 +28,7 @@
     font-size: 3rem;
     font-weight: 600;
     color: transparent;
-    -webkit-text-stroke: 3px rgb(116, 105, 105);
+    -webkit-text-stroke: 2px rgb(116, 105, 105);
 }
 
 @media (min-width: 567px) {
