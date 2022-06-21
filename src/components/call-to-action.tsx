@@ -1,5 +1,5 @@
 import React from "react";
-import SocialMedia from "./social-networks";
+import SocialMedia from "./social.networks.tsx";
 import styles from "../styles/styles.module.css";
 
 

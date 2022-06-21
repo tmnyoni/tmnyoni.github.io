@@ -41,22 +41,28 @@ export default function Hero() {
                         </div>
 
                         <div className="col-lg-7">
-                            <h6 className={styles.salutation} ref={salutationMsg}>
+                            <h6
+                                className={styles.salutation}
+                                ref={salutationMsg}
+                            >
                                 Hi There! My name is Tawanda M.
                             </h6>
                             <h1 className="display-5 fw-bolder lh-1 mb-3">
-                                I'm a freelancer, <br />
-                                Web developer <br />
+                                I'm a freelancer,
+                                <br />
+                                Web developer
+                                <br />
                             </h1>
                             <p className={styles.lead}>
-                                I craft <strong className="text-dager">high-quality</strong>, beautiful websites that are brand-accurate, user-friendly
+                                I craft <strong className="text-danger"> high-quality </strong>, 
+                                beautiful websites that are brand-accurate, user-friendly
                                 and well-designed to stand for your presence on the internet.
                             </p>
                             <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
                                 <a
                                     type="button"
                                     className={`btn ${styles.ctaBtn}`}
-                                    href="#"
+                                    href="/contact"
                                 >
                                     Lets build your website together
                                 </a>

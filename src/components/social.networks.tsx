@@ -12,29 +12,29 @@ export default function SocialMedia() {
         <div className="social-media d-flex justify-content-around">
             <a
                 href="https://www.linkedin.com/in/tmnyoni/"
-                className=""
+                className="nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <Linkedin width={"1.5rem"} height="1.5rem" />
+                <Linkedin width={"1.5rem"} height="1.5rem" /> {''}
             </a>
 
             <a
                 href="https://github.com/tmnyoni"
-                className=""
+                className="nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <Github width={"1.5rem"} height="1.5rem" />
+                <Github width={"1.5rem"} height="1.5rem" />  {''}
             </a>
 
             <a
                 href="mailto:tmnyoni@outlook.com"
-                className=""
+                className="nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <Whatsapp width={"1.5rem"} height="1.5rem" />
+                <Whatsapp width={"1.5rem"} height="1.5rem" />  {''}
             </a>
         </div>
     )
