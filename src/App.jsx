@@ -4,8 +4,7 @@ import { Home, Page404 } from "./pages";
 import { Layout } from "./components";
 
 import "./styles/styles.css";
-import "bootstrap/dist/css/bootstrap.css";
-
+import "./styles/bootstrap.css"
 /**
  * In this function I put all the routes to
  * navigate the website.

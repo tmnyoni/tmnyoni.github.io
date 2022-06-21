@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import typingEffect from "typing-effect";
-import styles from "../styles/styles.module.css";
+import styles from "../styles/hero.module.css";
 
 export default function Hero() {
-    const salutationMsg = useRef(null);
+    const greetingMessageRef = useRef(null);
     const heroRef = useRef(null);
     /**
      * This will trigger the typing effect
@@ -13,7 +13,7 @@ export default function Hero() {
      */
     useEffect(() => {
         typingEffect(
-            salutationMsg.current,
+            greetingMessageRef.current,
             {
                 speed: 100,
                 delay: 30,
@@ -27,9 +27,9 @@ export default function Hero() {
     return (
         <div className={styles.heroSection} ref={heroRef}>
             <div className="container">
-                <div className=" col-xxl-8 px-4 my-5">
+                <div className="px-4 my-5">
                     <div className="row flex-lg-row-reverse align-items-center">
-                        <div className="col-12 col-sm-12 col-lg-5">
+                        <div className="col-12 col-sm-12 col-lg-6">
                             <div className="position-relative">
                                 <img
                                     src="assets/hero.png"
@@ -40,14 +40,14 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        <div className="col-lg-7">
-                            <h6
-                                className={styles.salutation}
-                                ref={salutationMsg}
+                        <div className="col-lg-6">
+                            <p
+                                className={styles.greetingMessage}
+                                ref={greetingMessageRef}
                             >
-                                Hi There! My name is Tawanda M.
-                            </h6>
-                            <h1 className="display-5 fw-bolder lh-1 mb-3">
+                                Hi There! I am Tawanda M.
+                            </p>
+                            <h1 className={styles.heading}>
                                 I'm a freelancer,
                                 <br />
                                 Web developer
@@ -61,7 +61,7 @@ export default function Hero() {
                             <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
                                 <a
                                     type="button"
-                                    className={`btn ${styles.ctaBtn}`}
+                                    className={`${styles.ctaBtn}`}
                                     href="/contact"
                                 >
                                     Lets build your website together
