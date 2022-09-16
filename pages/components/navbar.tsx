@@ -3,9 +3,9 @@ const Navbar = () => {
     return (
         <nav className="py-6">
             <div className="container m-auto">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mx-2 md:mx-10">
                     <div></div>
-                    <div className="border shadow-md rounded-full px-4 py-2 font-semibold text-xs">
+                    <div className="border shadow-md rounded-full px-4 py-2 font-semibold text-xs hidden md:block">
                         <Link href={"about"}>
                             <a className="px-4 py-2">
                                 About
