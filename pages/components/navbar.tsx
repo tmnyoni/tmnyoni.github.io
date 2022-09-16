@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="py-6">
       <div className="container m-auto">
-        <div className="mx-2 flex items-center justify-between md:mx-10">
+        <div className="flex items-center justify-between">
           <div className="rounded-l-full">
             <Link href={"/"}>
               <a className="flex items-center text-sm font-semibold">

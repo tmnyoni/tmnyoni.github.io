@@ -15,7 +15,7 @@ const Skills: NextPageWithLayout = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="mx-10 mt-20 max-w-xl">
+        <div className="mt-20 max-w-xl">
           <h2 className="text-4xl font-bold text-slate-800">
             You already know that I am a genius, but you want to get know
             exactly what I am good, then well, let&apos;s find out
@@ -25,7 +25,7 @@ const Skills: NextPageWithLayout = () => {
             transform the world through my designs and creativity.
           </p>
         </div>
-        <div className="mx-10 mt-10 max-w-3xl">
+        <div className="mt-10 max-w-3xl">
           <div className="mt-8 border-l">
             <div className="grid md:grid-cols-3">
               <div className="ml-8 md:mt-9">

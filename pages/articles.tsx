@@ -15,7 +15,7 @@ const Articles: NextPageWithLayout = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="mx-10 mt-20 max-w-xl">
+        <div className="mt-20 max-w-xl">
           <h2 className="text-4xl font-bold text-slate-800">
             I am software Developer, engineer and ui & ux designer based in
             Zimbabwe
@@ -26,7 +26,7 @@ const Articles: NextPageWithLayout = () => {
           </p>
         </div>
 
-        <div className="mx-10 mt-7 grid gap-4 md:grid-cols-6">
+        <div className="mt-7 grid gap-4 md:grid-cols-6">
           <div className="col-span-4 mt-8 border-l">
             <div className="grid md:grid-cols-3">
               <div className="ml-8 md:mt-9">

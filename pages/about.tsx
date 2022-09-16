@@ -13,29 +13,33 @@ const About: NextPageWithLayout = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="mx-10 grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <div className="mt-20">
             <h2 className="text-4xl font-bold text-slate-800">
               I am software Developer, engineer and ui & ux designer based in
               Zimbabwe
             </h2>
             <p className="mt-6 text-base text-slate-800">
-              I am a highly motivated IT enthusiast prepared to offer everything
-              I have to any venture. My main area of expertise is web
-              development. But I&apos;m not only a web developer; occasion, I
-              also make desktop and mobile applications. Creativity and
-              innovation are important to me.
+              I am an enthusiastic software developer willing to
+              contribute everything I have to any venture.
+              Web development is my primary area of expertise.
+              But I&apos;m not just a web developer; I also create
+              desktop applications on occasion. I value both
+              creativity and innovation.
             </p>
             <p className="mt-6 text-base text-slate-800">
-              My life goal is to use technology to improve the human society. So
-              I spend the most of my time studying about new technology on the
-              market and how they may benefit human civilization.
+              When I was in O level, I was introduced to programming through
+              Visual Basic 6. I developed an interest in building
+              amazing things and embraced it, learning to create cool
+              apps but failing due to a lack of resources and knowledge
+              until I reached A level.
             </p>
             <p className="mt-6 text-base text-slate-800">
-              In my leisure time, I enjoy learning new programming techniques as
-              well as enjoying video games. Which is what I usually do when
-              I&apos;m bored. I enjoy open-world computer games such as COD and
-              others. COD is my favorite game.
+              Since then, Ive dedicated my life to learning how to write
+              better code and using my coding abilities to create
+              amazing things that will change the world. I&apos;ve been
+              doing research and practicing to get ready for my purpose.
+              I&apos;ve done my homework.
             </p>
             <div className="mt-5 flex items-center text-slate-500">
               Find me on:
@@ -61,8 +65,8 @@ const About: NextPageWithLayout = () => {
           <div className="mt-20">
             <div className="py-1 px-2">
               <Image
-                src="/assets/hero-image.jpg"
-                width={400}
+                src="/assets/images/hero-image.png"
+                width={350}
                 height={400}
                 alt="me-on-laptop"
               />

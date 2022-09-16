@@ -4,11 +4,11 @@ import Footer from "./footer";
 
 const Layout = (props: PropsWithChildren) => {
   return (
-    <React.Fragment>
+    <div className="mx-2 md:mx-24 md:px-12">
       <Navbar />
       <main>{props.children}</main>
       <Footer />
-    </React.Fragment>
+    </div>
   );
 };
 

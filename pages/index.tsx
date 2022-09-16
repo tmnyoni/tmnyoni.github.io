@@ -21,16 +21,18 @@ import Layout from "./components/layout";
 const Home: NextPageWithLayout = () => {
     return (
         <div>
-            <div className="container m-auto">
-                <div className="mx-2 mt-12 max-w-2xl md:mx-10">
-                    <div className="mb-6 rounded-l-full">
-                        <Image
-                            src={"/assets/hero-image.jpg"}
-                            width={60}
-                            height={60}
-                            alt="bobo"
-                            className="rounded-full"
-                        />
+            <div className="container m-auto ">
+                <div className="mt-12 max-w-2xl">
+                    <div className="mb-6">.
+                        <div className="w-16 h-16 border rounded-full">
+                            <Image
+                                src={"/assets/images/icon.png"}
+                                width={60}
+                                height={60}
+                                alt="icon"
+                                className="rounded-full"
+                            />
+                        </div>
                     </div>
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
                         Software engineer, developer and ui & ux designer
@@ -70,7 +72,7 @@ const Home: NextPageWithLayout = () => {
 
             <div className="mt-12">
                 <div className="container mx-auto">
-                    <div className="mx-2 py-10 text-4xl font-extrabold md:mx-10">
+                    <div className="mx-2 py-10 text-4xl font-extrabold">
                         <div className="align-center flex justify-between">
                             <h1>TypeScript</h1>
                             <h1>JavaScript</h1>
@@ -86,7 +88,7 @@ const Home: NextPageWithLayout = () => {
        */}
             <div>
                 <div className="container mx-auto">
-                    <div className="mx-2 my-10 md:mx-10">
+                    <div className="mx-2 my-10">
                         <div className="grid gap-4 md:grid-cols-3">
                             <div className="grid grid-cols-1 gap-4 md:col-span-2">
                                 <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
@@ -187,13 +189,13 @@ const Home: NextPageWithLayout = () => {
        */}
             <div className="mt-10 py-6">
                 <div className="container mx-auto">
-                    <div className="mx-2 my-10 md:mx-10">
+                    <div className="mx-2 my-10">
                         <h1 className="max-w-xl text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
                             I know you have trust issues, so listen to what others have to say about me.
                         </h1>
                     </div>
 
-                    <div className="mx-2 my-12 grid gap-4 md:mx-10 md:grid-cols-3">
+                    <div className="mx-2 my-12 grid gap-4 md:grid-cols-3">
                         <div className="rounded bg-gray-100 py-6 px-4">
                             <div className="flex items-center">
                                 <Image
@@ -269,12 +271,12 @@ const Home: NextPageWithLayout = () => {
 
             <div>
                 <div className="container mx-auto">
-                    <div className="mx-2 my-10 md:mx-10">
+                    <div className="mx-2 my-10">
                         <div className="grid gap-4 md:grid-cols-2">
                             <div className="py-1 px-2">
                                 <Image
-                                    src="/assets/hero-image.jpg"
-                                    width={400}
+                                    src="/assets/images/hero-image.png"
+                                    width={350}
                                     height={400}
                                     alt="me-on-laptop"
                                 />

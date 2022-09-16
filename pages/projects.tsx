@@ -14,7 +14,7 @@ const Projects: NextPageWithLayout = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="mx-10 mt-20 max-w-xl">
+        <div className="mt-20 max-w-xl">
           <h2 className="text-4xl font-bold text-slate-800">
             I am software Developer, engineer and ui & ux designer based in
             Zimbabwe
@@ -25,7 +25,7 @@ const Projects: NextPageWithLayout = () => {
           </p>
         </div>
 
-        <div className="mx-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <div className="mt-8">
             <div className="rounded-xl px-4 py-7 hover:bg-slate-50">
               <CursorArrowRaysIcon className="h-10 w-10 rounded-full border p-2 shadow" />
