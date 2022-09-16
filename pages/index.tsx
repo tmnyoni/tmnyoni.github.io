@@ -1,17 +1,34 @@
 import type { ReactElement } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PhoneIcon, GlobeAltIcon, BugAntIcon, ChatBubbleBottomCenterTextIcon, ArrowPathIcon, CommandLineIcon, AcademicCapIcon, BriefcaseIcon, CursorArrowRaysIcon, Cog6ToothIcon, ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/outline";
-import { NextPageWithLayout } from './_app';
+import {
+    PhoneIcon,
+    GlobeAltIcon,
+    BugAntIcon,
+    ChatBubbleBottomCenterTextIcon,
+    ArrowPathIcon,
+    CommandLineIcon,
+    AcademicCapIcon,
+    BriefcaseIcon,
+    CursorArrowRaysIcon,
+    Cog6ToothIcon,
+    ChatBubbleLeftEllipsisIcon,
+    ArrowRightIcon,
+} from "@heroicons/react/24/outline";
+import { NextPageWithLayout } from "./_app";
 import Layout from "./components/layout";
 
 const Home: NextPageWithLayout = () => {
     return (
         <div>
             <div className="container m-auto">
-                <div className="max-w-2xl mx-2 md:mx-10 mt-12">
-                    <div className="rounded-l-full mb-6">
-                        <Image src={"/assets/hero-image.jpg"} width={60} height={60} alt="bobo"
+                <div className="mx-2 mt-12 max-w-2xl md:mx-10">
+                    <div className="mb-6 rounded-l-full">
+                        <Image
+                            src={"/assets/hero-image.jpg"}
+                            width={60}
+                            height={60}
+                            alt="bobo"
                             className="rounded-full"
                         />
                     </div>
@@ -19,29 +36,32 @@ const Home: NextPageWithLayout = () => {
                         Software engineer, developer and ui & ux designer
                     </h1>
                     <p className="mt-8 text-zinc-700">
-                        I am Tawanda M, a passionate software developer, engineer and ui & ux based in Zimbabwe,
-                        who is inspired to change the world through technological solutions. I am an active research,
-                        being eager to know the cutting edge technology to make development easier.
+                        I am Tawanda M, a passionate software developer, engineer and ui &
+                        ux based in Zimbabwe, who is inspired to change the world through
+                        technological solutions. I am also an enthusiastic researcher who is
+                        keen to learn about cutting-edge technology that can help with
+                        development.
                     </p>
-                    <div className="flex items-center mt-8">
+                    <div className="mt-8 flex items-center">
                         <Link href="contact">
-                            <a className="border rounded-full mr-2 px-6 py-2 text-sm font-semibold">
-                                Contact me <PhoneIcon className="w-6 h-4 ml-2  inline-block transform -rotate-180" />
+                            <a className="mr-2 rounded-full border px-6 py-2 text-sm font-semibold">
+                                Contact me{" "}
+                                <PhoneIcon className="ml-2 inline-block h-4  w-6 -rotate-180 transform" />
                             </a>
                         </Link>
                         <Link href="https://github.com/tmnyoni">
-                            <a className="ml-3 text-slate-600 w-8 h-8 p-1 flex items-center justify-center">
-                                <ChatBubbleBottomCenterTextIcon className="inline w-6 h-6" />
+                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                <ChatBubbleBottomCenterTextIcon className="inline h-6 w-6" />
                             </a>
                         </Link>
                         <Link href="https://linkedin/in/tmnyoni">
-                            <a className="ml-3 text-slate-600 w-8 h-8 p-1 flex items-center justify-center">
-                                <BugAntIcon className="inline w-6 h-6" />
+                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                <BugAntIcon className="inline h-6 w-6" />
                             </a>
                         </Link>
                         <Link href="https://tmnyoni.ml">
-                            <a className="ml-3 text-slate-600 w-8 h-8 p-1 flex items-center justify-center">
-                                <GlobeAltIcon className="inline w-6 h-6" />
+                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                <GlobeAltIcon className="inline h-6 w-6" />
                             </a>
                         </Link>
                     </div>
@@ -50,119 +70,109 @@ const Home: NextPageWithLayout = () => {
 
             <div className="mt-12">
                 <div className="container mx-auto">
-                    <div className="mx-2 md:mx-10 py-10 text-4xl font-extrabold">
-                        <div className="flex align-center justify-between">
-                            <h1>
-                                TypeScript
-                            </h1>
-                            <h1>
-                                JavaScript
-                            </h1>
-                            <h1>
-                                ReactJS
-                            </h1>
-                            <h1>
-                                Next.JS
-                            </h1>
+                    <div className="mx-2 py-10 text-4xl font-extrabold md:mx-10">
+                        <div className="align-center flex justify-between">
+                            <h1>TypeScript</h1>
+                            <h1>JavaScript</h1>
+                            <h1>ReactJS</h1>
+                            <h1>Next.JS</h1>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/**
-             * Skills and Projects.
-             */}
+       * Skills and Projects.
+       */}
             <div>
                 <div className="container mx-auto">
-                    <div className="mx-2 md:mx-10 my-10">
-                        <div className="grid md:grid-cols-3 gap-4">
-                            <div className="md:col-span-2 grid grid-cols-1 gap-4">
-                                <div className="py-8 px-6 rounded-xl hover:bg-gray-50">
-                                    <ArrowPathIcon className="inline w-6 h-6 text-slate-500" />
-                                    <h1 className="text-sm font-semibold ml-3 inline-block text-slate-800">
+                    <div className="mx-2 my-10 md:mx-10">
+                        <div className="grid gap-4 md:grid-cols-3">
+                            <div className="grid grid-cols-1 gap-4 md:col-span-2">
+                                <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
+                                    <ArrowPathIcon className="inline h-6 w-6 text-slate-500" />
+                                    <h1 className="ml-3 inline-block text-sm font-semibold text-slate-800">
                                         Plan, Execute, Iterate
                                     </h1>
-                                    <p className="text-sm mt-3 text-gray-800">
-                                        I work out a good plan for my project, and execute
-                                        my plan and make improvements. That&apos;s what I do everyday.
+                                    <p className="mt-3 text-sm text-gray-800">
+                                        I devise a plan for my project, carry it out, and then repeat the
+                                        procedure. That is what I do on a daily basis.
                                     </p>
                                 </div>
-                                <div className="py-8 px-6 rounded-xl hover:bg-gray-50">
-                                    <CommandLineIcon className="inline w-6 h-6 text-slate-500" />
-                                    <h1 className="text-sm font-semibold ml-3 inline-block text-slate-800">
+                                <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
+                                    <CommandLineIcon className="inline h-6 w-6 text-slate-500" />
+                                    <h1 className="ml-3 inline-block text-sm font-semibold text-slate-800">
                                         Eat, Code, Sleep, Repeat
                                     </h1>
-                                    <p className="text-sm mt-3 text-gray-800">
-                                        I am a professional passionate programmer with unquestionable
-                                        knowledge across many langauges in the industry, willing to learn
-                                        more and better tools.
+                                    <p className="mt-3 text-sm text-gray-800">
+                                        I am a professional, passionate programmer who writes code every day with the goal of
+                                        making the world a better place using my skills.
                                     </p>
                                 </div>
-                                <div className="py-8 px-6 rounded-xl hover:bg-gray-50">
-                                    <AcademicCapIcon className="inline w-6 h-6 text-slate-500" />
-                                    <h1 className="text-sm font-semibold ml-3 inline-block text-slate-800">
+                                <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
+                                    <AcademicCapIcon className="inline h-6 w-6 text-slate-500" />
+                                    <h1 className="ml-3 inline-block text-sm font-semibold text-slate-800">
                                         Research, Practice, Research Again
                                     </h1>
-                                    <p className="text-sm mt-3 text-gray-800">
-                                        I never stop learning, because I get to learn new things that
-                                        are so important in my stake and get to know new cutting edge
-                                        technology.
+                                    <p className="mt-3 text-sm text-gray-800">
+                                        I never stop learning because I get to study new topics that are vital to my field
+                                        and become acquainted with cutting-edge technologies.
                                     </p>
                                 </div>
-                                <div className="py-8 px-6 rounded-xl hover:bg-gray-50">
-                                    <ChatBubbleLeftEllipsisIcon className="inline w-6 h-6 text-slate-500" />
-                                    <h1 className="text-sm font-semibold ml-3 inline-block text-slate-800">
-                                        Communicate, Team-player, Collaborate
+                                <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
+                                    <ChatBubbleLeftEllipsisIcon className="inline h-6 w-6 text-slate-500" />
+                                    <h1 className="ml-3 inline-block text-sm font-semibold text-slate-800">
+                                        Communicate, Collaborate
                                     </h1>
-                                    <p className="text-sm mt-3 text-gray-800">
-                                        I work with people and people work with me and I have
-                                        partook in great projects. All I can say there is power in unit,
-                                        especially when communication is good.
+                                    <p className="mt-3 text-sm text-gray-800">
+                                        I collaborate with others, and I&apos;ve been a part of some exciting projects. All I
+                                        can say is that there is strength in numbers, especially when
+                                        communication is effective.
                                     </p>
                                 </div>
                             </div>
                             <div className="w-full">
-                                <div className="rounded-xl border mt-8 px-3 py-5">
-                                    <BriefcaseIcon className="inline w-6 h-6 text-slate-500" />
-                                    <h4 className="text-sm font-semibold inline-block text-slate-800 ml-3">
+                                <div className="mt-8 rounded-xl border px-3 py-5">
+                                    <BriefcaseIcon className="inline h-6 w-6 text-slate-500" />
+                                    <h4 className="ml-3 inline-block text-sm font-semibold text-slate-800">
                                         Projects
                                     </h4>
 
                                     <div className="mt-3 py-3">
-                                        <CursorArrowRaysIcon className="inline w-6 h-6 text-slate-500" />
-                                        <h4 className="text-sm font-semibold inline-block text-slate-800 ml-3">
+                                        <CursorArrowRaysIcon className="inline h-6 w-6 text-slate-500" />
+                                        <h4 className="ml-3 inline-block text-sm font-semibold text-slate-800">
                                             Lecui User Interface Library
                                         </h4>
-                                        <p className="text-sm mt-3 text-gray-800">
-                                            I am an active contributor to the lecui C++ Library
-                                            for building User Interface using the modern C++.
+                                        <p className="mt-3 text-sm text-gray-800">
+                                            I am an active contributor to the lecui C++ Library, which is
+                                            used to create user interfaces using modern C++.
                                         </p>
                                         <Link href="https://github.com/alecmus/lecui">
-                                            <a className="text-sm text-gray-500 hover:text-gray-700">
+                                            <a className="text-xs text-gray-500 hover:text-gray-700">
                                                 Check it out
                                             </a>
                                         </Link>
                                     </div>
 
                                     <div className="mt-1 py-3">
-                                        <Cog6ToothIcon className="inline w-6 h-6 text-slate-500" />
-                                        <h4 className="text-sm font-semibold inline-block text-slate-800 ml-3">
+                                        <Cog6ToothIcon className="inline h-6 w-6 text-slate-500" />
+                                        <h4 className="ml-3 inline-block text-sm font-semibold text-slate-800">
                                             Automated Fault Report System
                                         </h4>
-                                        <p className="text-sm mt-3 text-gray-800">
-                                            I am an lead developer on the team of 2 developing
-                                            the Automated Fault Support System built using Django.
+                                        <p className="mt-3 text-sm text-gray-800">
+                                            I am a developer on a two-person team working on the
+                                            Django-based Automated Fault Support System.
                                         </p>
                                         <Link href="https://github.com/qhelie/afss">
-                                            <a className="text-sm text-gray-500 hover:text-gray-700">
+                                            <a className="text-xs text-gray-500 hover:text-gray-700">
                                                 Check it out
                                             </a>
                                         </Link>
                                     </div>
 
                                     <Link href="projects">
-                                        <a className="text-sm text-gray-500 hover:text-gray-700">
-                                            Check out more
+                                        <a className="text-xs text-gray-500 hover:text-gray-700 border-b pb-0.5">
+                                            Check out more projects <ArrowRightIcon className="w-3 h-3 inline" />
                                         </a>
                                     </Link>
                                 </div>
@@ -173,23 +183,27 @@ const Home: NextPageWithLayout = () => {
             </div>
 
             {/**
-             ** Social Proof.
-             */}
+       ** Social Proof.
+       */}
             <div className="mt-10 py-6">
                 <div className="container mx-auto">
-                    <div className="mx-2 md:mx-10 my-10">
-                        <h1 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl max-w-xl">
-                            I know you got trust issues, so hear what other people say about me
+                    <div className="mx-2 my-10 md:mx-10">
+                        <h1 className="max-w-xl text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
+                            I know you have trust issues, so listen to what others have to say about me.
                         </h1>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-4 mx-2 md:mx-10 my-12">
-                        <div className="py-6 px-4 rounded-md bg-gray-100">
+                    <div className="mx-2 my-12 grid gap-4 md:mx-10 md:grid-cols-3">
+                        <div className="rounded bg-gray-100 py-6 px-4">
                             <div className="flex items-center">
-                                <Image src={"/assets/hero-image.jpg"} width={45} height={45} alt="bobo"
-                                    className="rounded-full inline-block"
+                                <Image
+                                    src={"/assets/hero-image.jpg"}
+                                    width={45}
+                                    height={45}
+                                    alt="bobo"
+                                    className="inline-block rounded-full"
                                 />
-                                <div className="inline-block ml-4">
+                                <div className="ml-4 inline-block">
                                     <h4 className="text-sm font-semibold text-slate-800">
                                         Alec Musasa
                                     </h4>
@@ -198,36 +212,44 @@ const Home: NextPageWithLayout = () => {
                                     </p>
                                 </div>
                             </div>
-                            <p className="text-sm text-slate-800 mt-6">
-                                This guy is a true genius, Its been a pleasure
-                                working with him. He is a young ambious developer.
+                            <p className="mt-6 text-xs text-slate-800">
+                                Tawanda is a great talent, and it has been a pleasure to collaborate with him.
+                                He is a young, ambitious developer that is dedicated to his profession.
                             </p>
                         </div>
-                        <div className="py-6 px-4 rounded-md bg-gray-100">
+                        <div className="rounded bg-gray-100 py-6 px-4">
                             <div className="flex items-center">
-                                <Image src={"/assets/hero-image.jpg"} width={45} height={45} alt="bobo"
-                                    className="rounded-full inline-block"
+                                <Image
+                                    src={"/assets/hero-image.jpg"}
+                                    width={45}
+                                    height={45}
+                                    alt="bobo"
+                                    className="inline-block rounded-full"
                                 />
-                                <div className="inline-block ml-4">
+                                <div className="ml-4 inline-block">
                                     <h4 className="text-sm font-semibold text-slate-800">
-                                        Alec Musasa
+                                        Cephas Fumhanda
                                     </h4>
                                     <p className="text-sm text-slate-400">
-                                        CEO & Founder of Leafsoft
+                                        Founder & CEO Icotech Africa
                                     </p>
                                 </div>
                             </div>
-                            <p className="text-sm text-slate-800 mt-6">
-                                This guy is a true genius, Its been a pleasure
-                                working with him. He is a young ambious developer.
+                            <p className="mt-6 text-xs text-slate-800">
+                                I&apos;ve seen Tawanda M.&apos;s work and I&apos;ve seen him work; he&apos;s a genius.
+                                His work demonstrates his obsession with perfection.
                             </p>
                         </div>
-                        <div className="py-6 px-4 rounded-md bg-gray-100">
+                        <div className="rounded bg-gray-100 py-6 px-4">
                             <div className="flex items-center">
-                                <Image src={"/assets/hero-image.jpg"} width={45} height={45} alt="bobo"
-                                    className="rounded-full inline-block"
+                                <Image
+                                    src={"/assets/hero-image.jpg"}
+                                    width={45}
+                                    height={45}
+                                    alt="bobo"
+                                    className="inline-block rounded-full"
                                 />
-                                <div className="inline-block ml-4">
+                                <div className="ml-4 inline-block">
                                     <h4 className="text-sm font-semibold text-slate-800">
                                         Alec Musasa
                                     </h4>
@@ -236,9 +258,9 @@ const Home: NextPageWithLayout = () => {
                                     </p>
                                 </div>
                             </div>
-                            <p className="text-sm text-slate-800 mt-6">
-                                This guy is a true genius, Its been a pleasure
-                                working with him. He is a young ambious developer.
+                            <p className="mt-6 text-xs text-slate-800">
+                                This guy is a true genius, Its been a pleasure working with him.
+                                He is a young ambious developer.
                             </p>
                         </div>
                     </div>
@@ -247,50 +269,59 @@ const Home: NextPageWithLayout = () => {
 
             <div>
                 <div className="container mx-auto">
-                    <div className="mx-2 md:mx-10 my-10">
-                        <div className="grid md:grid-cols-2 gap-4">
+                    <div className="mx-2 my-10 md:mx-10">
+                        <div className="grid gap-4 md:grid-cols-2">
                             <div className="py-1 px-2">
-                                <Image src="/assets/hero-image.jpg" width={400} height={400} alt="me-on-laptop" />
+                                <Image
+                                    src="/assets/hero-image.jpg"
+                                    width={400}
+                                    height={400}
+                                    alt="me-on-laptop"
+                                />
                             </div>
                             <div>
-                                <h5> Hi there, I&apos;m Tawanda M. Nyoni </h5>
+                                <h5 className="font-semibold text-gray-800"> Hi there, I&apos;m Tawanda M. Nyoni </h5>
                                 <h3 className="mt-2 text-4xl font-light">
                                     Software Developer, Engineer Based in Zimbabwe
                                 </h3>
-                                <p className="text-base text-slate-800 mt-6">
-                                    I am a highly motivated IT enthusiast prepared to offer
-                                    everything I have to any venture. My main area of expertise
-                                    is web development. But I&apos;m not only a web developer;
-                                    occasion, I also make desktop and mobile applications.
-                                    Creativity and innovation are important to me.
+                                <p className="mt-6 text-base text-slate-800">
+                                    I am an enthusiastic software developer willing to
+                                    contribute everything I have to any venture.
+                                    Web development is my primary area of expertise.
+                                    But I&apos;m not just a web developer; I also create
+                                    desktop applications on occasion. I value both
+                                    creativity and innovation.
                                 </p>
-                                <p className="text-base text-slate-800 mt-6">
-                                    My life goal is to use technology to improve the human society. So I spend the most
-                                    of my time studying about new technology on the market and how
-                                    they may benefit human civilization.
+                                <p className="mt-6 text-base text-slate-800">
+                                    When I was in O level, I was introduced to programming through
+                                    Visual Basic 6. I developed an interest in building
+                                    amazing things and embraced it, learning to create cool
+                                    apps but failing due to a lack of resources and knowledge
+                                    until I reached A level.
                                 </p>
-                                <p className="text-base text-slate-800 mt-6">
-                                    In my leisure time, I enjoy learning new programming techniques
-                                    as well as enjoying video games. Which is what I usually do when
-                                    I&apos;m bored. I enjoy open-world computer games such as COD and
-                                    others. COD is my favorite game.
+                                <p className="mt-6 text-base text-slate-800">
+                                    Since then, Ive dedicated my life to learning how to write
+                                    better code and using my coding abilities to create
+                                    amazing things that will change the world. I&apos;ve been
+                                    doing research and practicing to get ready for my purpose.
+                                    I&apos;ve done my homework.
                                 </p>
-                                <div className="flex items-center mt-5 text-slate-500">
+                                <div className="mt-5 flex items-center text-slate-500">
                                     Find me on:
                                     <div className="inline-flex items-center">
                                         <Link href="https://github.com/tmnyoni">
-                                            <a className="ml-3 text-slate-600 w-8 h-8 p-1 flex items-center justify-center">
-                                                <ChatBubbleBottomCenterTextIcon className="inline w-6 h-6" />
+                                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                                <ChatBubbleBottomCenterTextIcon className="inline h-6 w-6" />
                                             </a>
                                         </Link>
                                         <Link href="https://linkedin/in/tmnyoni">
-                                            <a className="ml-3 text-slate-600 w-8 h-8 p-1 flex items-center justify-center">
-                                                <BugAntIcon className="inline w-6 h-6" />
+                                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                                <BugAntIcon className="inline h-6 w-6" />
                                             </a>
                                         </Link>
                                         <Link href="https://tmnyoni.ml">
-                                            <a className="ml-3 text-slate-600 w-8 h-8 p-1 flex items-center justify-center">
-                                                <GlobeAltIcon className="inline w-6 h-6" />
+                                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                                <GlobeAltIcon className="inline h-6 w-6" />
                                             </a>
                                         </Link>
                                     </div>
@@ -301,15 +332,11 @@ const Home: NextPageWithLayout = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 Home.getLayout = function getLayout(page: ReactElement) {
-    return (
-        <Layout>
-            {page}
-        </Layout>
-    )
-}
+    return <Layout>{page}</Layout>;
+};
 
 export default Home;
