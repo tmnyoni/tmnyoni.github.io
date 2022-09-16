@@ -5,6 +5,7 @@ import {
   GlobeAltIcon,
   BugAntIcon,
   ChatBubbleBottomCenterTextIcon,
+  LinkIcon
 } from "@heroicons/react/24/outline";
 import Layout from "./components/layout";
 import type { NextPageWithLayout } from "./_app";
