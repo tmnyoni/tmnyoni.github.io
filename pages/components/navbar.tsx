@@ -20,7 +20,7 @@ const Navbar = () => {
               </a>
             </Link>
           </div>
-          <div className="hidden rounded-full border px-4 py-2 text-xs font-semibold shadow-md md:block">
+          <div className="hidden rounded-lg border px-4 py-2 text-xs font-semibold shadow-md md:block">
             <Link href={"about"}>
               <a className="px-4 py-2">About</a>
             </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
           <div className="right-0">
             <Link href="contact">
-              <a className="rounded-full border py-2 px-4  text-xs font-semibold shadow-sm">
+              <a className="rounded-lg border py-2 px-4  text-xs font-semibold shadow-sm">
                 Contact me
               </a>
             </Link>

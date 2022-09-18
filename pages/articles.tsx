@@ -27,7 +27,7 @@ const Articles: NextPageWithLayout = () => {
         </div>
 
         <div className="mt-7 grid gap-4 md:grid-cols-6">
-          <div className="col-span-4 mt-8 border-l">
+          <div className="col-span-4 mt-8 md:border-l">
             <div className="grid md:grid-cols-3">
               <div className="ml-8 md:mt-9">
                 <h6 className="text-sm text-gray-400"> 12 Sept, 2022 </h6>

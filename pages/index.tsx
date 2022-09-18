@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -15,10 +15,16 @@ import {
     ChatBubbleLeftEllipsisIcon,
     ArrowRightIcon,
 } from "@heroicons/react/24/outline";
+import AOS from 'aos';
+
 import { NextPageWithLayout } from "./_app";
 import Layout from "./components/layout";
 
 const Home: NextPageWithLayout = () => {
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    },[]);
+
     return (
         <div>
             <div className="container m-auto ">
@@ -34,10 +40,10 @@ const Home: NextPageWithLayout = () => {
                             />
                         </div>
                     </div>
-                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
+                    <h1 className="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl animate-[reveal_1s_forwards]">
                         Software engineer, developer and ui & ux designer
                     </h1>
-                    <p className="mt-8 text-zinc-700">
+                    <p className="mt-8 text-gray-700 animate-reveal">
                         I am Tawanda M, a passionate software developer, engineer and ui &
                         ux based in Zimbabwe, who is inspired to change the world through
                         technological solutions. I am also an enthusiastic researcher who is
@@ -45,24 +51,24 @@ const Home: NextPageWithLayout = () => {
                         development.
                     </p>
                     <div className="mt-8 flex items-center">
-                        <Link href="contact">
-                            <a className="mr-2 rounded-full border px-6 py-2 text-sm font-semibold">
-                                Contact me{" "}
-                                <PhoneIcon className="ml-2 inline-block h-4  w-6 -rotate-180 transform" />
+                        <Link href="#">
+                            <a className="mr-2 rounded-lg border px-6 py-2 font-semibold shadow bg-gray-900 text-gray-100 focus:bg-gray-800 focus:text-gray-100 hover:text-gray-100 focus:ring-gray-400 focus:outline-none focus:ring-2">
+                                Contact me
+                                <PhoneIcon className="ml-3 inline-block h-4  w-6 -rotate-180" />
                             </a>
                         </Link>
                         <Link href="https://github.com/tmnyoni">
-                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-gray-600">
                                 <ChatBubbleBottomCenterTextIcon className="inline h-6 w-6" />
                             </a>
                         </Link>
                         <Link href="https://linkedin/in/tmnyoni">
-                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-gray-600">
                                 <BugAntIcon className="inline h-6 w-6" />
                             </a>
                         </Link>
                         <Link href="https://tmnyoni.ml">
-                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-gray-600">
                                 <GlobeAltIcon className="inline h-6 w-6" />
                             </a>
                         </Link>
@@ -89,11 +95,11 @@ const Home: NextPageWithLayout = () => {
             <div>
                 <div className="container mx-auto">
                     <div className="mx-2 my-10">
-                        <div className="grid gap-4 md:grid-cols-3">
-                            <div className="grid grid-cols-1 gap-4 md:col-span-2">
+                        <div className="grid gap-4 md:grid-cols-5">
+                            <div className="grid grid-cols-1 gap-4 md:col-span-3">
                                 <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
-                                    <ArrowPathIcon className="inline h-6 w-6 text-slate-500" />
-                                    <h1 className="ml-3 inline-block text-sm font-semibold text-slate-800">
+                                    <ArrowPathIcon className="inline h-6 w-6 text-gray-500" />
+                                    <h1 className="ml-3 inline-block text-sm font-semibold text-gray-800">
                                         Plan, Execute, Iterate
                                     </h1>
                                     <p className="mt-3 text-sm text-gray-800">
@@ -102,8 +108,8 @@ const Home: NextPageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
-                                    <CommandLineIcon className="inline h-6 w-6 text-slate-500" />
-                                    <h1 className="ml-3 inline-block text-sm font-semibold text-slate-800">
+                                    <CommandLineIcon className="inline h-6 w-6 text-gray-500" />
+                                    <h1 className="ml-3 inline-block text-sm font-semibold text-gray-800">
                                         Eat, Code, Sleep, Repeat
                                     </h1>
                                     <p className="mt-3 text-sm text-gray-800">
@@ -112,8 +118,8 @@ const Home: NextPageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
-                                    <AcademicCapIcon className="inline h-6 w-6 text-slate-500" />
-                                    <h1 className="ml-3 inline-block text-sm font-semibold text-slate-800">
+                                    <AcademicCapIcon className="inline h-6 w-6 text-gray-500" />
+                                    <h1 className="ml-3 inline-block text-sm font-semibold text-gray-800">
                                         Research, Practice, Research Again
                                     </h1>
                                     <p className="mt-3 text-sm text-gray-800">
@@ -122,8 +128,8 @@ const Home: NextPageWithLayout = () => {
                                     </p>
                                 </div>
                                 <div className="rounded-xl py-8 px-6 hover:bg-gray-50">
-                                    <ChatBubbleLeftEllipsisIcon className="inline h-6 w-6 text-slate-500" />
-                                    <h1 className="ml-3 inline-block text-sm font-semibold text-slate-800">
+                                    <ChatBubbleLeftEllipsisIcon className="inline h-6 w-6 text-gray-500" />
+                                    <h1 className="ml-3 inline-block text-sm font-semibold text-gray-800">
                                         Communicate, Collaborate
                                     </h1>
                                     <p className="mt-3 text-sm text-gray-800">
@@ -133,7 +139,7 @@ const Home: NextPageWithLayout = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="w-full">
+                            <div className="w-full col-span-2">
                                 <div className="mt-8 rounded-xl border px-3 py-5">
                                     <BriefcaseIcon className="inline h-6 w-6 text-slate-500" />
                                     <h4 className="ml-3 inline-block text-sm font-semibold text-slate-800">
@@ -190,7 +196,7 @@ const Home: NextPageWithLayout = () => {
             <div className="mt-10 py-6">
                 <div className="container mx-auto">
                     <div className="mx-2 my-10">
-                        <h1 className="max-w-xl text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
+                        <h1 className="max-w-xl text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
                             I know you have trust issues, so listen to what others have to say about me.
                         </h1>
                     </div>
@@ -207,10 +213,10 @@ const Home: NextPageWithLayout = () => {
                                 />
                                 <div className="ml-4 inline-block">
                                     <h4 className="text-sm font-semibold text-slate-800">
-                                        Alec Musasa
+                                        Some on Stakeoverflow
                                     </h4>
                                     <p className="text-sm text-slate-400">
-                                        CEO & Founder of Leafsoft
+                                        Developer
                                     </p>
                                 </div>
                             </div>
@@ -230,10 +236,10 @@ const Home: NextPageWithLayout = () => {
                                 />
                                 <div className="ml-4 inline-block">
                                     <h4 className="text-sm font-semibold text-slate-800">
-                                        Cephas Fumhanda
+                                        Some Random Guy
                                     </h4>
                                     <p className="text-sm text-slate-400">
-                                        Founder & CEO Icotech Africa
+                                        Internet Surfer
                                     </p>
                                 </div>
                             </div>
@@ -253,10 +259,10 @@ const Home: NextPageWithLayout = () => {
                                 />
                                 <div className="ml-4 inline-block">
                                     <h4 className="text-sm font-semibold text-slate-800">
-                                        Alec Musasa
+                                        Coffee-Code Converter
                                     </h4>
                                     <p className="text-sm text-slate-400">
-                                        CEO & Founder of Leafsoft
+                                        Code
                                     </p>
                                 </div>
                             </div>
