@@ -15,7 +15,7 @@ const SkillsSection = () => {
         <section>
             <div className="container mx-auto pt-10">
                 <div className="text-center flex flex-col items-center">
-                    <h1 className="max-w-xl text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
+                    <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
                         My Top Skills
                     </h1>
                     <p className="w-96 text-center text-sm text-gray-400 mt-3">

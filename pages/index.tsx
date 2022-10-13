@@ -13,20 +13,22 @@ import Layout from "./components/layout";
 import HeroSection from "./components/hero";
 import SkillsSection from "./components/skills";
 
+import { motion } from "framer-motion"
+
 const Home: NextPageWithLayout = () => {
 
     return (
-        <React.Fragment>
+        <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <HeroSection />
             <SkillsSection />
 
             {/**
-       ** Social Proof.
-       */}
+             ** Social Proof.
+            */}
             <div className="mt-10 py-6 min-h-screen">
                 <div className="container mx-auto">
                     <div className="text-center flex flex-col items-center">
-                        <h1 className="max-w-xl text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
+                        <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
                             Testimonals
                         </h1>
                         <p className="w-96 text-center text-sm text-gray-400 mt-3">
@@ -172,7 +174,7 @@ const Home: NextPageWithLayout = () => {
                     </div>
                 </div>
             </div>
-        </React.Fragment>
+        </motion.div>
     );
 };
 
