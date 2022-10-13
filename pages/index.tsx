@@ -6,6 +6,7 @@ import {
     GlobeAltIcon,
     BugAntIcon,
     ChatBubbleBottomCenterTextIcon,
+    LinkIcon,
 } from "@heroicons/react/24/outline";
 
 import { NextPageWithLayout } from "./_app";
@@ -14,6 +15,37 @@ import HeroSection from "./components/hero";
 import SkillsSection from "./components/skills";
 
 import { motion } from "framer-motion"
+import Testimonals from "./components/testimonials";
+
+type Project = {
+    image: string;
+};
+
+const Project = ({image}: Project) => {
+    return (
+        <div className="bg-gray-50 rounded">
+            <img src={image} alt="lecui-demo"
+                className="h-48 w-full object-top object-cover rounded-t"
+            />
+
+            <div className="px-4 mb-4">
+                <h4 className="mt-6 inline-block text-lg font-bold text-gray-700">
+                    Lecui User Interface Library
+                </h4>
+                <p className="mt-3 mb-6 text-sm text-gray-800">
+                    I am an active contributor to the lecui C++ Library, which is
+                    used to create user interfaces using modern C++.
+                </p>
+                <Link href="https:github.com/alecmus/lecui">
+                    <a className="text-sm font-semibold  text-gray-500">
+                        <LinkIcon className="w-4 h-4 inline mr-2" />
+                        check it out on github.com
+                    </a>
+                </Link>
+            </div>
+        </div>
+    )
+}
 
 const Home: NextPageWithLayout = () => {
 
@@ -22,93 +54,30 @@ const Home: NextPageWithLayout = () => {
             <HeroSection />
             <SkillsSection />
 
-            {/**
-             ** Social Proof.
-            */}
-            <div className="mt-10 py-6 min-h-screen">
+            <section>
                 <div className="container mx-auto">
-                    <div className="text-center flex flex-col items-center">
-                        <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
-                            Testimonals
-                        </h1>
-                        <p className="w-96 text-center text-sm text-gray-400 mt-3">
-                            I know you have trust issues, so listen to what others have to say about me.
-                        </p>
-                    </div>
+                    <div className="mx-2 my-10">
+                        <div className="text-center flex flex-col items-center">
+                            <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
+                                Featured Projects
+                            </h1>
+                            <p className="w-96 text-center text-sm text-gray-400 mt-3">
+                                I know you have trust issues, so listen to what others have to say about me.
+                            </p>
+                        </div>
 
-                    <div className="mx-2 my-12 grid gap-4 md:grid-cols-3">
-                        <div className="rounded bg-gray-100 py-6 px-4">
-                            <div className="flex items-center">
-                                <Image
-                                    src={"/assets/hero-image.jpg"}
-                                    width={45}
-                                    height={45}
-                                    alt="bobo"
-                                    className="inline-block rounded-full"
-                                />
-                                <div className="ml-4 inline-block">
-                                    <h4 className="text-sm font-semibold text-slate-800">
-                                        Some on Stakeoverflow
-                                    </h4>
-                                    <p className="text-sm text-slate-400">
-                                        Developer
-                                    </p>
-                                </div>
-                            </div>
-                            <p className="mt-6 text-xs text-slate-800">
-                                Tawanda is a great talent, and it has been a pleasure to collaborate with him.
-                                He is a young, ambitious developer that is dedicated to his profession.
-                            </p>
-                        </div>
-                        <div className="rounded bg-gray-100 py-6 px-4">
-                            <div className="flex items-center">
-                                <Image
-                                    src={"/assets/hero-image.jpg"}
-                                    width={45}
-                                    height={45}
-                                    alt="bobo"
-                                    className="inline-block rounded-full"
-                                />
-                                <div className="ml-4 inline-block">
-                                    <h4 className="text-sm font-semibold text-slate-800">
-                                        Some Random Guy
-                                    </h4>
-                                    <p className="text-sm text-slate-400">
-                                        Internet Surfer
-                                    </p>
-                                </div>
-                            </div>
-                            <p className="mt-6 text-xs text-slate-800">
-                                I&apos;ve seen Tawanda M.&apos;s work and I&apos;ve seen him work; he&apos;s a genius.
-                                His work demonstrates his obsession with perfection.
-                            </p>
-                        </div>
-                        <div className="rounded bg-gray-100 py-6 px-4">
-                            <div className="flex items-center">
-                                <Image
-                                    src={"/assets/hero-image.jpg"}
-                                    width={45}
-                                    height={45}
-                                    alt="bobo"
-                                    className="inline-block rounded-full"
-                                />
-                                <div className="ml-4 inline-block">
-                                    <h4 className="text-sm font-semibold text-slate-800">
-                                        Coffee-Code Converter
-                                    </h4>
-                                    <p className="text-sm text-slate-400">
-                                        Code
-                                    </p>
-                                </div>
-                            </div>
-                            <p className="mt-6 text-xs text-slate-800">
-                                This guy is a true genius, Its been a pleasure working with him.
-                                He is a young ambious developer.
-                            </p>
+                        <div className="grid md:grid-cols-2 gap-4 mt-16">
+                            <Project image="assets/images/lecui.jpeg"/>
+                            <Project image="assets/images/pakata-goh-EJMTKCZ00I0-unsplash.jpg"/>
+                            <Project image="assets/images/mohammad-rahmani-gA396xahf-Q-unsplash.jpg"/>
+                            <Project image="assets/images/windows-C6T6vr1sQI0-unsplash (1).jpg"/>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <Testimonals />
+
 
             <div>
                 <div className="container mx-auto">
