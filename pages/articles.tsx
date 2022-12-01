@@ -10,11 +10,10 @@ import {
 } from "@heroicons/react/24/outline";
 import Layout from "./components/layout";
 import type { NextPageWithLayout } from "./_app";
-import {motion} from "framer-motion";
 
 const Articles: NextPageWithLayout = () => {
   return (
-    <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+    <div>
       <div className="container mx-auto">
         <div className="mt-20 max-w-xl">
           <h2 className="text-4xl font-bold text-slate-800">
@@ -106,7 +105,7 @@ const Articles: NextPageWithLayout = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

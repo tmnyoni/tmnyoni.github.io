@@ -10,11 +10,10 @@ import {
 } from "@heroicons/react/24/outline";
 import Layout from "./components/layout";
 import type { NextPageWithLayout } from "./_app";
-import {motion} from "framer-motion";
 
 const Projects: NextPageWithLayout = () => {
     return (
-        <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+        <div >
             <div className="container mx-auto">
                 <div className="mt-20 max-w-xl">
                     <h2 className="text-4xl font-bold text-slate-800">
@@ -36,19 +35,15 @@ const Projects: NextPageWithLayout = () => {
                             </h3>
                             <p className="mt-3 text-sm">
                                 I am a contributor to the Lecui library which is a rapid UI development library created by
-                                <Link href="https:github.com/alecmus">
-                                    <a className="text-blue-900">
+                                <Link href="https:github.com/alecmus" className="text-blue-900">
                                         Alec T. Musasa
-                                    </a>
                                 </Link>{" "}
                                 using modern c++, and the Direct 2D library.
                             </p>
                             <div className="text-sm font-semibold mt-3 text-slate-600">
                                 <Link href="https:github.com/alecmus/lecui">
-                                    <a className="">
                                         <LinkIcon className="w-4 h-4 inline mr-2" />
                                         github.com
-                                    </a>
                                 </Link>
 
                             </div>
@@ -122,7 +117,7 @@ const Projects: NextPageWithLayout = () => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

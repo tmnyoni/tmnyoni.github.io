@@ -9,23 +9,51 @@ import {
     LinkIcon,
 } from "@heroicons/react/24/outline";
 
-import { NextPageWithLayout } from "./_app";
-import Layout from "./components/layout";
-import HeroSection from "./components/hero";
-import SkillsSection from "./components/skills";
+import { NextPageWithLayout } from "../pages/_app";
+import Layout from "../pages/components/layout";
+import HeroSection from "../pages/components/hero";
+import SkillsSection from "../pages/components/skills";
 
-import { motion } from "framer-motion"
-import Testimonals from "./components/testimonials";
+import Testimonals from "../pages/components/testimonials";
 
 type Project = {
     image: string;
 };
 
-const Project = ({image}: Project) => {
+const easing = [.6, -0.5, .01, .99]
+
+const fadeInUp = {
+    initial: {
+        y: 60,
+        opacity: 0
+    },
+    animate: {
+        y: 1,
+        opacity: 1,
+        transition: {
+            duration: .6,
+            ease: easing
+        }
+    }
+}
+
+const stagger = {
+    animate: {
+        transition: {
+            staggerChildren: 0.1,
+        }
+    }
+}
+
+const Project = ({ image }: Project) => {
     return (
         <div className="bg-gray-50 rounded">
-            <img src={image} alt="lecui-demo"
-                className="h-48 w-full object-top object-cover rounded-t"
+            <Image src={image}
+                alt="lecui-demo"
+                width={500}
+                height={192}
+                className="w-full object-top object-cover rounded-t"
+                loading="lazy"
             />
 
             <div className="px-4 mb-4">
@@ -36,11 +64,10 @@ const Project = ({image}: Project) => {
                     I am an active contributor to the lecui C++ Library, which is
                     used to create user interfaces using modern C++.
                 </p>
-                <Link href="https:github.com/alecmus/lecui">
-                    <a className="text-sm font-semibold  text-gray-500">
-                        <LinkIcon className="w-4 h-4 inline mr-2" />
-                        check it out on github.com
-                    </a>
+                <Link href="https:github.com/alecmus/lecui" className="text-sm font-semibold  text-gray-500">
+
+                    <LinkIcon className="w-4 h-4 inline mr-2" />
+                    check it out on github.com
                 </Link>
             </div>
         </div>
@@ -50,7 +77,7 @@ const Project = ({image}: Project) => {
 const Home: NextPageWithLayout = () => {
 
     return (
-        <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+        <div>
             <HeroSection />
             <SkillsSection />
 
@@ -67,10 +94,10 @@ const Home: NextPageWithLayout = () => {
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-4 mt-16">
-                            <Project image="assets/images/lecui.jpeg"/>
-                            <Project image="assets/images/pakata-goh-EJMTKCZ00I0-unsplash.jpg"/>
-                            <Project image="assets/images/mohammad-rahmani-gA396xahf-Q-unsplash.jpg"/>
-                            <Project image="assets/images/windows-C6T6vr1sQI0-unsplash (1).jpg"/>
+                            <Project image="/assets/images/lecui.jpeg" />
+                            <Project image="/assets/images/lecui.jpeg" />
+                            <Project image="/assets/images/lecui.jpeg" />
+                            <Project image="/assets/images/lecui.jpeg" />
                         </div>
                     </div>
                 </div>
@@ -121,20 +148,14 @@ const Home: NextPageWithLayout = () => {
                                 <div className="mt-5 flex items-center text-slate-500">
                                     Find me on:
                                     <div className="inline-flex items-center">
-                                        <Link href="https://github.com/tmnyoni">
-                                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
-                                                <ChatBubbleBottomCenterTextIcon className="inline h-6 w-6" />
-                                            </a>
+                                        <Link href="https://github.com/tmnyoni" className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                            <ChatBubbleBottomCenterTextIcon className="inline h-6 w-6" />
                                         </Link>
-                                        <Link href="https://linkedin/in/tmnyoni">
-                                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
-                                                <BugAntIcon className="inline h-6 w-6" />
-                                            </a>
+                                        <Link href="https://linkedin/in/tmnyoni" className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                            <BugAntIcon className="inline h-6 w-6" />
                                         </Link>
-                                        <Link href="https://tmnyoni.ml">
-                                            <a className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
-                                                <GlobeAltIcon className="inline h-6 w-6" />
-                                            </a>
+                                        <Link href="https://tmnyoni.ml" className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
+                                            <GlobeAltIcon className="inline h-6 w-6" />
                                         </Link>
                                     </div>
                                 </div>
@@ -143,7 +164,7 @@ const Home: NextPageWithLayout = () => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
