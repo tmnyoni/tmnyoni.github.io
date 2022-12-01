@@ -6,6 +6,7 @@ importers:
     specifiers:
       '@headlessui/react': ^1.7.2
       '@heroicons/react': ^2.0.11
+      '@next/font': ^13.0.5
       '@types/aos': ^3.0.4
       '@types/node': 18.7.18
       '@types/react': 18.0.20
@@ -26,6 +27,7 @@ importers:
     dependencies:
       '@headlessui/react': 1.7.2_biqbaboplfbrettd7655fr4n2y
       '@heroicons/react': 2.0.11_react@18.2.0
+      '@next/font': 13.0.5
       aos: 2.3.4
       framer-motion: 7.5.3_biqbaboplfbrettd7655fr4n2y
       next: 13.0.5_biqbaboplfbrettd7655fr4n2y
@@ -191,6 +193,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.0.5:
+    resolution: {integrity: sha512-NrP4B8pxwerrkkuG/m7MQv0ks89Kk4Lc0kzbiRaYX+Xb0coDaw+I9T+g42aOHf8j8ta1vtKqb5XE1+troZ4CoQ==}
+    dev: false
 
   /@next/swc-android-arm-eabi/13.0.5:
     resolution: {integrity: sha512-YO691dxHlviy6H0eghgwqn+5kU9J3iQnKERHTDSppqjjGDBl6ab4wz9XfI5AhljjkaTg3TknHoIEWFDoZ4Ve8g==}

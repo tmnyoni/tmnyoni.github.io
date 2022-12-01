@@ -2,16 +2,11 @@ import { ReactElement } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
-    GlobeAltIcon,
-    BugAntIcon,
-    ChatBubbleBottomCenterTextIcon,
     CursorArrowRaysIcon,
     LinkIcon,
 } from "@heroicons/react/24/outline";
-import Layout from "./components/layout";
-import type { NextPageWithLayout } from "./_app";
 
-const Projects: NextPageWithLayout = () => {
+export default function Page(){
     return (
         <div >
             <div className="container mx-auto">
@@ -119,10 +114,4 @@ const Projects: NextPageWithLayout = () => {
             </div>
         </div>
     );
-};
-
-Projects.getLayout = function getLayout(page: ReactElement) {
-    return <Layout>{page}</Layout>;
-};
-
-export default Projects;
+}

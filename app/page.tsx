@@ -15,6 +15,7 @@ import HeroSection from "../pages/components/hero";
 import SkillsSection from "../pages/components/skills";
 
 import Testimonals from "../pages/components/testimonials";
+import SocialProof from "./social-proof";
 
 type Project = {
     image: string;
@@ -103,8 +104,7 @@ const Home: NextPageWithLayout = () => {
                 </div>
             </section>
 
-            <Testimonals />
-
+            <SocialProof />
 
             <div>
                 <div className="container mx-auto">

@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)']
+      },
       keyframes: {
         reveal: {
           '0%': { transform: 'translateY(20px)' },
