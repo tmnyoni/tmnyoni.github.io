@@ -18,7 +18,7 @@ const Navbar = () => {
                             Tawanda M.
                         </Link>
                     </div>
-                    <button className="inline-block md:hidden px-2 hover:bg-gray-100 rounded"
+                    <button className="inline-flex md:hidden px-2 hover:bg-gray-100 rounded"
                         onClick={handleMenuToggle}>
                         <Bars3Icon className="h-6 w-6 text-gray-800" />
                     </button>

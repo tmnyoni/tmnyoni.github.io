@@ -1,5 +1,6 @@
 import "./globals.css"
-import Navbar from "../pages/components/navbar";
+import Navbar from "./navbar";
+import Footer from "./footer";
 import { Inter } from "@next/font/google";
 
 interface RootLayoutProps {
@@ -21,6 +22,7 @@ export default function RootLayout(props: RootLayoutProps) {
                 <main className="mx-4 md:mx-auto md:w-10/12 lg:w-8/12">
                     <Navbar />
                     {children}
+                    <Footer />
                 </main>
             </body>
         </html>

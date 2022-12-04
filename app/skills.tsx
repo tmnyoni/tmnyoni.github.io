@@ -16,10 +16,10 @@ const Skill = ({ icon, title, description }: Skill): JSX.Element => {
     return (
         <div className="rounded-md border border-gray-100 py-8 px-6 hover:bg-gray-50">
             {icon}
-            <h1 className="ml-3 inline-block text-sm font-semibold text-gray-800">
+            <h1 className="ml-3 inline-block font-medium text-gray-800">
                 {title}
             </h1>
-            <p className="mt-3 text-sm text-gray-800">
+            <p className="mt-3 text-gray-800">
                 {description}
             </p>
         </div>
@@ -35,7 +35,7 @@ const SkillsSection = () => {
                         My Top Skills
                     </h1>
                     <p className="w-96 text-center text-sm text-gray-400 mt-3">
-                        I know you have trust issues, so listen to what others have to say about me.
+                        These are the attributes that makes me unique from other developers
                     </p>
                 </div>
 

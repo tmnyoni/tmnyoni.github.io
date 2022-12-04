@@ -1,7 +1,7 @@
 import { PhoneIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
 import Link from "next/link"
-// import SocialNetworks from "./socials"
+import SocialNetworks from "./socials"
 // import { motion } from "framer-motion";
 
 const easing = [.6, -0.5, .01, .99]
@@ -43,7 +43,7 @@ export default function HeroSection(){
                             className="rounded-full"
                         />
                     </div>
-                    <h1 className="mt-8 text-5xl font-extrabold tracking-normal text-gray-800 sm:text-5xl">
+                    <h1 className="mt-8 text-4xl font-extrabold tracking-normal text-gray-800 sm:text-5xl">
                         Software engineer, developer and ui & ux designer
                     </h1>
                     <p className="mt-8 text-gray-700">
@@ -55,7 +55,7 @@ export default function HeroSection(){
                             Contact me
                             <PhoneIcon className="ml-3 inline-block h-4  w-6 -rotate-180" />
                         </Link>
-                        {/* <SocialNetworks /> */}
+                        <SocialNetworks />
                     </div>
                 </div>
             </div>
