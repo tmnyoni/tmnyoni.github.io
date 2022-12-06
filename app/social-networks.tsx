@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link"
-import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline"
+import { ChatBubbleBottomCenterTextIcon, EnvelopeIcon } from "@heroicons/react/24/outline"
 
 export interface ISocialNetwork {
     name: string;
@@ -21,7 +21,7 @@ export const SOCIAL_NETWORKS: ISocialNetwork[] = [
     },
     {
         name: "website",
-        link: "https://tmnyoni.ml",
+        link: "'mailto:tmnyoni@outlook.com'",
         icon: EmailIcon
     }
 ]
@@ -52,17 +52,17 @@ export function GitHubIcon() {
 
 export function LinkedInIcon() {
     return (
-        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline h-10 w-10 bg-green-100 rounded">
-            <path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M7 17V13.5V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M7 7.01L7.01 6.99889" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width="32px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline h-10 w-20 rounded">
+            <path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"  strokeLinejoin="round" />
+            <path d="M7 17V13.5V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M7 7.01L7.01 6.99889" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     )
 }
 
 export function EmailIcon(){
     return (
-        <ChatBubbleBottomCenterTextIcon className="inline h-6 w-6" />
+        <EnvelopeIcon className="inline h-6 w-6" />
     )
 }

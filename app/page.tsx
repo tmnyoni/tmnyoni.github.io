@@ -6,6 +6,7 @@ import {
     GlobeAltIcon,
     BugAntIcon,
     ChatBubbleBottomCenterTextIcon,
+    EnvelopeIcon
 } from "@heroicons/react/24/outline";
 
 import HeroSection from "./hero";
@@ -19,7 +20,26 @@ export default function Page() {
     return (
         <div>
             <HeroSection />
-            <SkillsSection />
+
+            <section>
+                <div className="container mx-auto pt-10">
+                    <div className="text-center flex flex-col items-center">
+                        <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
+                            My Top Skills
+                        </h1>
+                        <p className="w-96 text-center text-sm text-gray-400 mt-3">
+                            These are the characteristics that distinguish me from other developers.
+                        </p>
+                    </div>
+
+                    <div className="mx-2 my-12 md:my-16">
+                        <div className="grid md:grid-cols-2 gap-y-4 md:gap-x-4">
+                            <SkillsSection />
+                        </div>
+                    </div>
+                </div>
+            </section >
+
             <section>
                 <div className="container mx-auto">
                     <div className="mx-2 my-10">
@@ -28,7 +48,7 @@ export default function Page() {
                                 Featured Projects
                             </h1>
                             <p className="w-96 text-center text-sm text-gray-400 mt-3">
-                                I know you have trust issues, so listen to what others have to say about me.
+                                This is a compendium of projects that I have worked on over the years.
                             </p>
                         </div>
 
@@ -43,48 +63,28 @@ export default function Page() {
                 <div className="mx-2 my-10">
                     <div className="grid gap-4 md:grid-cols-2">
                         <div className="ml-4">
-                            <h5 className="font-medium text-gray-800">
-                                Hi there, I&apos;m Tawanda M. Nyoni
-                            </h5>
-                            <h3 className="mt-2 text-4xl font-light">
-                                Software Developer, Engineer Based in Zimbabwe
+                            <h3 className="mt-2 text-5xl font-black">
+                                Software Engineer and Developer
                             </h3>
+
                             <p className="mt-6 text-slate-800">
-                                I am an enthusiastic software developer willing to
-                                contribute everything I have to any venture.
-                                Web development is my primary area of expertise.
-                                But I&apos;m not just a web developer; I also create
-                                desktop applications on occasion. I value both
-                                creativity and innovation.
+                                I am a passionate software developer ready to give anything I have to any endeavor.
+                                My main expertise is in web development. But I&apos;m not just a web developer; occasionally,
+                                I also develop desktop applications. I value both innovation and creativity.
                             </p>
+
                             <p className="mt-6 text-base text-slate-800">
-                                When I was in O level, I was introduced to programming through
-                                Visual Basic 6. I developed an interest in building
-                                amazing things and embraced it, learning to create cool
-                                apps but failing due to a lack of resources and knowledge
-                                until I reached A level.
+                                I was first introduced to programming through Visual Basic 6 when I was in GCE Ordinary level.
+                                I discovered a passion for creating incredible things and I embraced it.
+                                I tried to learn how to make applications but failed due to a lack of information
+                                and resources until I reached the GCE Advanced level.
                             </p>
+
                             <p className="mt-6 text-base text-slate-800">
-                                Since then, Ive dedicated my life to learning how to write
-                                better code and using my coding abilities to create
-                                amazing things that will change the world. I&apos;ve been
-                                doing research and practicing to get ready for my purpose.
-                                I&apos;ve done my homework.
+                                Since then, I&apos;ve devoted my life to mastering the art of better coding and using my coding skills to
+                                produce amazing things that will alter the course of history. To prepare for my purpose,
+                                I have been conducting research and exercising. I guess I have accomplished my task.
                             </p>
-                            <div className="mt-5 flex items-center text-slate-500">
-                                Find me on:
-                                <div className="inline-flex items-center">
-                                    <Link href="https://github.com/tmnyoni" className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
-                                        <ChatBubbleBottomCenterTextIcon className="inline h-6 w-6" />
-                                    </Link>
-                                    <Link href="https://linkedin/in/tmnyoni" className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
-                                        <BugAntIcon className="inline h-6 w-6" />
-                                    </Link>
-                                    <Link href="https://tmnyoni.ml" className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-slate-600">
-                                        <GlobeAltIcon className="inline h-6 w-6" />
-                                    </Link>
-                                </div>
-                            </div>
                         </div>
                         <div className="py-1 px-2">
                             <Image
@@ -97,6 +97,6 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-        </div>
+        </div >
     );
 };

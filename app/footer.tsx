@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="container mx-auto">
                 <div className="px-2 py-6 border-t">
                     <div className="flex items-center justify-between">
-                        <div className=" hidden px-2 py-2 text-xs font-semibold md:block">
+                        <div className=" hidden px-2 py-2 text-sm font-medium md:block">
                             <Link href={"about"} className="px-4 py-2">
                                 About
                             </Link>

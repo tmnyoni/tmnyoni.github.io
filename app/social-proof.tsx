@@ -1,3 +1,5 @@
+import { LinkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 import React from "react";
 
 export default function SocialProof() {
@@ -8,7 +10,7 @@ export default function SocialProof() {
                     Testimonals
                 </h1>
                 <p className="w-96 text-center text-sm text-gray-400 mt-3">
-                    These are the attributes that makes me unique from other developers
+                    This is what my work colleagues and clients have to say about me.
                 </p>
             </div>
 
@@ -22,8 +24,19 @@ export default function SocialProof() {
                         constructive feedback, is relatable and free-spirited ...which have all added
                         to my enjoyment of working with him.
                     </p>
-                    <div className="text-md font-medium mt-6">
-                        Alec M. Musasa
+
+                    <div className="flex items-center mt-6 space-x-4">
+                        <div className="text-md font-medium">
+                            Alec M. Musasa
+                        </div>
+                        <Link
+                            href="https://www.linkedin.com/in/tmnyoni/details/recommendations/"
+                            target="_blank"
+                            className="text-xs text-gray-900/60 flex items-center space-x-1"
+                        >
+                            <LinkIcon className="inline h-3 w-3" />
+                            <span> LinkedIn </span>
+                        </Link>
                     </div>
                 </div>
                 <div></div>
