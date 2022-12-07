@@ -1,39 +1,18 @@
-import { PhoneIcon } from "@heroicons/react/24/outline"
-import Image from "next/image"
-import Link from "next/link"
-import SocialNetworks from "./social-networks"
-import { motion } from "framer-motion";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { PhoneIcon } from "@heroicons/react/24/outline";
+import SocialNetworks from "./social-networks";
+// import { motion } from "framer-motion";
 
-const easing = [.6, -0.5, .01, .99]
-
-const fadeInUp = {
-    initial: {
-        y: 60,
-        opacity: 0
-    },
-    animate: {
-        y: 1,
-        opacity: 1,
-        transition: {
-            duration: .6,
-            ease: easing
-        }
-    }
-}
-
-const stagger = {
-    animate: {
-        transition: {
-            staggerChildren: 0.1,
-        }
-    }
-}
 
 export default function HeroSection() {
     return (
-        <section className="container mx-auto my-10 py-6">
+        <section
+            className="container mx-auto my-10 py-6"
+        >
             <div className="max-w-2xl">
-                <div className="w-20 h-20 border rounded-full">
+                <div className="w-20 h-20 border rounded-full ">
                     <Image
                         src={"/assets/images/icon.png"}
                         width={100}
@@ -54,7 +33,7 @@ export default function HeroSection() {
                         Contact me
                         <PhoneIcon className="m-auto ml-3 inline-block h-4  w-6 -rotate-180" />
                     </Link>
-                    
+
                     <SocialNetworks />
                 </div>
             </div>

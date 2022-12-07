@@ -1,18 +1,9 @@
 import React from "react";
 import "./globals.css"
 import Image from "next/image";
-import Link from "next/link";
-import {
-    GlobeAltIcon,
-    BugAntIcon,
-    ChatBubbleBottomCenterTextIcon,
-    EnvelopeIcon
-} from "@heroicons/react/24/outline";
-
 import HeroSection from "./hero";
 import SkillsSection from "./skills";
 import SocialProof from "./social-proof";
-import Project from "./project";
 import Projects from "./projects";
 
 export default function Page() {
