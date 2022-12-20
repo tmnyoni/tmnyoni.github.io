@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/layout",
+    "app/layout.tsx", "app/head", "app/social-proof", "app/layout",
   ],
   "exclude": [
     "node_modules"
