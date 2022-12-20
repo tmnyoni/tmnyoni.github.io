@@ -1,5 +1,5 @@
 import React from "react";
-import "./globals.css"
+import "./globals.css";
 import Image from "next/image";
 import HeroSection from "./hero";
 import SkillsSection from "./skills";
@@ -7,9 +7,8 @@ import SocialProof from "./social-proof";
 import Projects from "./projects";
 
 export default function Page() {
-
     return (
-        <div>
+        <main>
             <HeroSection />
 
             <section>
@@ -19,7 +18,8 @@ export default function Page() {
                             My Top Skills
                         </h1>
                         <p className="w-96 text-center text-sm text-gray-400 mt-3">
-                            These are the characteristics that distinguish me from other developers.
+                            These are the characteristics that distinguish me from other
+                            developers.
                         </p>
                     </div>
 
@@ -29,26 +29,36 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
 
-            <section>
-                <div className="container mx-auto">
-                    <div className="mx-2 my-10">
-                        <div className="text-center flex flex-col items-center">
-                            <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
-                                Featured Projects
-                            </h1>
-                            <p className="w-96 text-center text-sm text-gray-400 mt-3">
-                                This is a compendium of projects that I have worked on over the years.
-                            </p>
-                        </div>
-
-                        <Projects />
+            <section className="container mx-auto">
+                <div className="mx-2 my-10">
+                    <div className="text-center flex flex-col items-center">
+                        <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
+                            Featured Projects
+                        </h1>
+                        <p className="w-96 text-center text-sm text-gray-400 mt-3">
+                            This is a compendium of projects that I have worked on over the
+                            years.
+                        </p>
                     </div>
+
+                    <Projects />
                 </div>
             </section>
 
-            <SocialProof />
+            <section className="container mx-auto pt-10">
+                <div className="text-center flex flex-col items-center">
+                    <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
+                        Testimonals
+                    </h1>
+                    <p className="w-72 text-center text-sm text-gray-400 mt-3">
+                        This is what my work colleagues and clients have to say about me.
+                    </p>
+                </div>
+
+                <SocialProof />
+            </section>
 
             <section className="container mx-auto">
                 <div className="mx-2 my-10">
@@ -59,22 +69,27 @@ export default function Page() {
                             </h3>
 
                             <p className="mt-6 text-slate-800">
-                                I am a passionate software developer ready to give anything I have to any endeavor.
-                                My main expertise is in web development. But I&apos;m not just a web developer; occasionally,
-                                I also develop desktop applications. I value both innovation and creativity.
+                                I am a passionate software developer ready to give anything I
+                                have to any endeavor. My main expertise is in web development.
+                                But I&apos;m not just a web developer; occasionally, I also
+                                develop desktop applications. I value both innovation and
+                                creativity.
                             </p>
 
                             <p className="mt-6 text-base text-slate-800">
-                                I was first introduced to programming through Visual Basic 6 when I was in GCE Ordinary level.
-                                I discovered a passion for creating incredible things and I embraced it.
-                                I tried to learn how to make applications but failed due to a lack of information
+                                I was first introduced to programming through Visual Basic 6
+                                when I was in GCE Ordinary level. I discovered a passion for
+                                creating incredible things and I embraced it. I tried to learn
+                                how to make applications but failed due to a lack of information
                                 and resources until I reached the GCE Advanced level.
                             </p>
 
                             <p className="mt-6 text-base text-slate-800">
-                                Since then, I&apos;ve devoted my life to mastering the art of better coding and using my coding skills to
-                                produce amazing things that will alter the course of history. To prepare for my purpose,
-                                I have been conducting research and exercising. I guess I have accomplished my task.
+                                Since then, I&apos;ve devoted my life to mastering the art of
+                                better coding and using my coding skills to produce amazing
+                                things that will alter the course of history. To prepare for my
+                                purpose, I have been conducting research and exercising. I guess
+                                I have accomplished my task.
                             </p>
                         </div>
                         <div className="py-1 px-2">
@@ -88,6 +103,6 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-        </div >
+        </main >
     );
-};
+}

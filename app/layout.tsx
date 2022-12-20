@@ -1,4 +1,4 @@
-import "./globals.css"
+import "./globals.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import { Inter } from "@next/font/google";
@@ -9,7 +9,7 @@ interface RootLayoutProps {
 
 const inter = Inter({
     subsets: ["latin"],
-    variable: "--font-inter"
+    variable: "--font-inter",
 });
 
 export default function RootLayout(props: RootLayoutProps) {
@@ -26,5 +26,5 @@ export default function RootLayout(props: RootLayoutProps) {
                 </main>
             </body>
         </html>
-    )
+    );
 }
