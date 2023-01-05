@@ -59,15 +59,14 @@ export default function Page() {
                 </div>
             </section>
 
-            <section>
+            <section className="w-full flex flex-col justify-center items-center px-4 my-12">
                 <div className="container mx-auto pt-10">
                     <div className="text-center flex flex-col items-center">
-                        <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
+                        <h1 className="text-3xl font-black ">
                             My Top Skills
                         </h1>
-                        <p className="w-96 text-center text-sm text-gray-400 mt-3">
-                            These are the characteristics that distinguish me from other
-                            developers.
+                        <p className="w-96 text-center mt-1">
+                            Skills that I possess
                         </p>
                     </div>
 
@@ -79,29 +78,26 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="container mx-auto">
-                <div className="mx-2 my-10">
+            <section className="w-full flex flex-col justify-center items-center px-4 my-12">
                     <div className="text-center flex flex-col items-center">
-                        <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
+                        <h1 className="text-3xl font-black">
                             Featured Projects
                         </h1>
-                        <p className="w-96 text-center text-sm text-gray-400 mt-3">
-                            This is a compendium of projects that I have worked on over the
-                            years.
+                        <p className="w-96 text-center mt-1">
+                            Collection of work
                         </p>
                     </div>
 
                     <Projects />
-                </div>
             </section>
 
             <section className="container mx-auto pt-10">
                 <div className="text-center flex flex-col items-center">
-                    <h1 className="max-w-xl text-3xl font-black tracking-tight text-gray-800 sm:text-4xl">
+                    <h1 className="text-3xl font-black">
                         Testimonals
                     </h1>
-                    <p className="w-72 text-center text-sm text-gray-400 mt-3">
-                        This is what my work colleagues and clients have to say about me.
+                    <p className="text-center mt-1">
+                        What other people say
                     </p>
                 </div>
 

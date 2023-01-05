@@ -1,55 +1,128 @@
+'use client'
+
+import { useState } from "react";
+import clsx from "clsx";
 import Project from "./project";
 
 interface IProject {
-  title: string;
-  imageUrl: string;
-  description: string;
-  sourceUrl: string;
+    title: string;
+    imageUrl: string;
+    description: string;
+    sourceUrl: string;
 }
 
 export default function Projects() {
-  const projects: IProject[] = [
-    {
-      title: "Lecui User Interface Builder",
-      imageUrl: "/assets/images/lecui.jpeg",
-      description:
-        "I am an active contributor to the lecui C++ Library, which is used to create user interfaces using modern C++.",
-      sourceUrl: "https:github.com/alecmus/lecui",
-    },
-    {
-      title: "Lecui User Interface Builder",
-      imageUrl: "/assets/images/lecui.jpeg",
-      description:
-        "I am an active contributor to the lecui C++ Library, which is used to create user interfaces using modern C++.",
-      sourceUrl: "https:github.com/alecmus/lecui",
-    },
-    {
-      title: "Lecui User Interface Builder",
-      imageUrl: "/assets/images/lecui.jpeg",
-      description:
-        "I am an active contributor to the lecui C++ Library, which is used to create user interfaces using modern C++.",
-      sourceUrl: "https:github.com/alecmus/lecui",
-    },
-    {
-      title: "Lecui User Interface Builder",
-      imageUrl: "/assets/images/lecui.jpeg",
-      description:
-        "I am an active contributor to the lecui C++ Library, which is used to create user interfaces using modern C++.",
-      sourceUrl: "https:github.com/alecmus/lecui",
-    },
-  ];
+    const [currentIndex, setCurrentIndex] = useState(1);
+    const prevSlide = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? projects.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    }
 
-  return (
-    <div className="grid md:grid-cols-2 gap-4 mt-16">
-      {projects.map((project, index) => (
-        <Project
-          key={index}
-          title={project.title}
-          imageUrl={project.imageUrl}
-          description={project.description}
-          sourceUrl={project.sourceUrl}
-        />
-      ))}
-    </div>
-  );
+    const nextSlide = () => {
+        const isLastSlide = currentIndex === projects.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    }
+
+    const gotoSlideWithIndex = (index: number) => {
+        setCurrentIndex(index);
+    }
+
+    const projects: IProject[] = [
+        {
+            title: "Lecui User Interface Builder",
+            imageUrl: "/assets/images/lecui.jpeg",
+            description:
+                "I am an active contributor to the lecui C++ Library, which is used to create user interfaces using modern C++.",
+            sourceUrl: "https:github.com/alecmus/lecui",
+        },
+        {
+            title: "Tawanda M. Portfolio",
+            imageUrl: "/assets/images/lecui.jpeg",
+            description:
+                "I am an active contributor to the lecui C++ Library, which is used to create user interfaces using modern C++.",
+            sourceUrl: "https:github.com/alecmus/lecui",
+        },
+        {
+            title: "Mpilo Website",
+            imageUrl: "/assets/images/lecui.jpeg",
+            description:
+                "I am an active contributor to the lecui C++ Library, which is used to create user interfaces using modern C++.",
+            sourceUrl: "https:github.com/alecmus/lecui",
+        },
+        {
+            title: "Methodist Hymn",
+            imageUrl: "/assets/images/lecui.jpeg",
+            description:
+                "I am an active contributor to the lecui C++ Library, which is used to create user interfaces using modern C++.",
+            sourceUrl: "https:github.com/alecmus/lecui",
+        },
+    ];
+
+    return (
+        <div className="flex flex-col items-center justify-center relative group">
+            <div className="w-72 h-48 mt-16 bg-gray-200 rounded">
+            </div>
+
+            <div className="mt-8 px-4">
+                <div> {projects[currentIndex].title} </div>
+                <p className="mt-6">
+                    I am an active contributor to the lecui C++ Library,
+                    which is used to create user interfaces using modern C++.
+                </p>
+            </div>
+
+            <div
+                onClick={prevSlide}
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 left-0 cursor-pointer"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15.75 19.5L8.25 12l7.5-7.5"
+                    />
+                </svg>
+            </div>
+
+            <div
+                onClick={nextSlide}
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 right-0 cursor-pointer"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                </svg>
+            </div>
+
+            <div className="flex top-4 justify-center py-2 space-x-1 mt-10">
+                {projects.map((project, index) =>
+                    <div
+                        key={index}
+                        className={clsx("h-4 rounded-full bg-black", index === currentIndex ? "w-8" : "w-4")}
+                        onClick={() => gotoSlideWithIndex(index)}
+                    >
+                    </div>
+                )}
+            </div>
+        </div>
+    );
 }
