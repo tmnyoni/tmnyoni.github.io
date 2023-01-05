@@ -8,7 +8,7 @@ import Projects from "./projects";
 
 export default function Page() {
     return (
-        <main>
+        <React.Fragment>
             <HeroSection />
 
             <section>
@@ -70,7 +70,7 @@ export default function Page() {
 
                             <p className="mt-6 text-slate-800">
                                 I am a passionate software developer ready to give anything I
-                                have to any endeavor. My main expertise is in web development.
+                                have to any endeavor. My React.Fragment expertise is in web development.
                                 But I&apos;m not just a web developer; occasionally, I also
                                 develop desktop applications. I value both innovation and
                                 creativity.
@@ -103,6 +103,6 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-        </main >
+        </React.Fragment >
     );
 }

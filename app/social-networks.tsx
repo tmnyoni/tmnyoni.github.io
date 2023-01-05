@@ -36,7 +36,7 @@ export default function SocialNetworks() {
         <Link
           href={socialNetwork.link}
           key={index}
-          className="ml-3 flex h-8 w-8 items-center justify-center p-1 text-gray-600"
+          className="ml-3 flex h-10 w-10 items-center justify-center p-1 text-gray-600"
         >
           <socialNetwork.icon />
         </Link>
@@ -102,5 +102,5 @@ export function LinkedInIcon() {
 }
 
 export function EmailIcon() {
-  return <EnvelopeIcon className="inline h-6 w-6" />;
+  return <EnvelopeIcon className="inline h-10 w-10" />;
 }
