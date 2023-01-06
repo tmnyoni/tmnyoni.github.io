@@ -1,13 +1,52 @@
+"use client"
+
 import { LinkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import clsx from "clsx";
 
 export default function SocialProof() {
+    const [currentIndex, setCurrentIndex] = useState(1);
+    const prevSlide = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? proofSlides.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    }
+
+    const nextSlide = () => {
+        const isLastSlide = currentIndex === proofSlides.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    }
+
+    const gotoSlideWithIndex = (index: number) => {
+        setCurrentIndex(index);
+    }
+
+    const proofSlides = [
+        {
+            author: "Alec T. Musasa"
+        },
+        {
+            author: "Another Guy"
+        },
+        {
+            author: "Another Guy"
+        }
+    ]
+
     return (
-        <div className="flex flex-col items-center">
-            <div className="w-[500px] py-8 px-12 my-20 border border-zinc-100 bg-zinc-100 rounded-md">
-                <div className="w-16 h-16 my-6 rounded-full border bg-gray-400"></div>
-                <p className="text-sm leading-6">
+        <div className="flex flex-col items-center justify-center my-20 relative">
+            <div className="rounded-md p-4">
+                <div className="flex items-center my-6 space-x-2">
+                    <div className="w-16 h-16 rounded-full border bg-gray-400">
+                    </div>
+                    <div className="ml-2">
+                        <div className="text-md font-medium">Alec M. Musasa</div>
+                        <div> Software Engineer </div>
+                    </div>
+                </div>
+                <p className="">
                     Tawanda is a diligent, curious, talented and artistic creator that
                     learns technical concepts quickly. He is tech-savvy and proficient
                     in various programming languages and frameworks. He has a great
@@ -15,18 +54,56 @@ export default function SocialProof() {
                     and free-spirited ...which have all added to my enjoyment of working
                     with him.
                 </p>
+            </div>
+            <div
+                onClick={prevSlide}
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 left-0 cursor-pointer"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15.75 19.5L8.25 12l7.5-7.5"
+                    />
+                </svg>
+            </div>
 
-                <div className="flex items-center mt-6 space-x-4">
-                    <div className="text-md font-medium">Alec M. Musasa</div>
-                    <Link
-                        href="https://www.linkedin.com/in/tmnyoni/details/recommendations/"
-                        target="_blank"
-                        className="text-xs text-gray-900/60 flex items-center space-x-1"
+            <div
+                onClick={nextSlide}
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 right-0 cursor-pointer"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                </svg>
+            </div>
+
+            <div className="flex top-4 justify-center py-2 space-x-1 mt-10">
+                {proofSlides.map((project, index) =>
+                    <div
+                        key={index}
+                        className={clsx("h-4 rounded-full bg-black", index === currentIndex ? "w-8" : "w-4")}
+                        onClick={() => gotoSlideWithIndex(index)}
                     >
-                        <LinkIcon className="inline h-3 w-3" />
-                        <span> LinkedIn </span>
-                    </Link>
-                </div>
+                    </div>
+                )}
             </div>
         </div>
     );

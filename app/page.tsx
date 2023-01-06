@@ -91,7 +91,7 @@ export default function Page() {
                     <Projects />
             </section>
 
-            <section className="container mx-auto pt-10">
+            <section className="w-full flex flex-col justify-center items-center px-4 my-12">
                 <div className="text-center flex flex-col items-center">
                     <h1 className="text-3xl font-black">
                         Testimonals
@@ -104,49 +104,6 @@ export default function Page() {
                 <SocialProof />
             </section>
 
-            <section className="container mx-auto">
-                <div className="mx-2 my-10">
-                    <div className="grid gap-4 md:grid-cols-2">
-                        <div className="ml-4">
-                            <h3 className="mt-2 text-5xl font-black">
-                                Software Engineer and Developer
-                            </h3>
-
-                            <p className="mt-6 text-slate-800">
-                                I am a passionate software developer ready to give anything I
-                                have to any endeavor. My React.Fragment expertise is in web development.
-                                But I&apos;m not just a web developer; occasionally, I also
-                                develop desktop applications. I value both innovation and
-                                creativity.
-                            </p>
-
-                            <p className="mt-6 text-base text-slate-800">
-                                I was first introduced to programming through Visual Basic 6
-                                when I was in GCE Ordinary level. I discovered a passion for
-                                creating incredible things and I embraced it. I tried to learn
-                                how to make applications but failed due to a lack of information
-                                and resources until I reached the GCE Advanced level.
-                            </p>
-
-                            <p className="mt-6 text-base text-slate-800">
-                                Since then, I&apos;ve devoted my life to mastering the art of
-                                better coding and using my coding skills to produce amazing
-                                things that will alter the course of history. To prepare for my
-                                purpose, I have been conducting research and exercising. I guess
-                                I have accomplished my task.
-                            </p>
-                        </div>
-                        <div className="py-1 px-2">
-                            <Image
-                                src="/assets/images/hero-image.png"
-                                width={350}
-                                height={400}
-                                alt="me-on-laptop"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
         </React.Fragment >
     );
 }
