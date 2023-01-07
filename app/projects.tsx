@@ -61,11 +61,11 @@ export default function Projects() {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center relative group">
-            <div className="w-72 h-48 mt-16 bg-gray-200 rounded">
+        <div className="w-full flex flex-col items-center justify-center relative group md:px-8 lg:w-9/12">
+            <div className="w-72 h-48 md:w-[500px] md:h-[300px] mt-16 bg-gray-200 rounded">
             </div>
 
-            <div className="mt-8 px-4">
+            <div className="mt-8 px-4 md:w-[500px]">
                 <div> {projects[currentIndex].title} </div>
                 <p className="mt-6">
                     I am an active contributor to the lecui C++ Library,
@@ -75,7 +75,7 @@ export default function Projects() {
 
             <div
                 onClick={prevSlide}
-                className="w-8 h-8 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 left-0 cursor-pointer"
+                className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 left-0 cursor-pointer"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ export default function Projects() {
 
             <div
                 onClick={nextSlide}
-                className="w-8 h-8 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 right-0 cursor-pointer"
+                className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 right-0 cursor-pointer"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

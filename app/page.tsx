@@ -113,7 +113,7 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full mt-16 py-8 relative">
+                <div className="w-full md:w-9/12 mt-16 py-8 relative">
                     <div className="absolute left-2 top-1"> Liblec Libraries </div>
                     <div className="absolute left-2 top-12"> Spring Boot </div>
                     <div className="absolute left-2 top-28"> Django </div>

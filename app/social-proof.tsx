@@ -36,8 +36,8 @@ export default function SocialProof() {
     ]
 
     return (
-        <div className="flex flex-col items-center justify-center my-20 relative">
-            <div className="rounded-md p-4">
+        <div className="w-full flex flex-col items-center justify-center my-20 relative md:px-8 lg:w-9/12">
+            <div className="rounded-md py-2 px-4 mt-6 md:w-[500px]">
                 <div className="flex items-center my-6 space-x-2">
                     <div className="w-16 h-16 rounded-full border bg-gray-400">
                     </div>
@@ -57,7 +57,7 @@ export default function SocialProof() {
             </div>
             <div
                 onClick={prevSlide}
-                className="w-8 h-8 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 left-0 cursor-pointer"
+                className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 left-0 cursor-pointer"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ export default function SocialProof() {
 
             <div
                 onClick={nextSlide}
-                className="w-8 h-8 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 right-0 cursor-pointer"
+                className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-black px-1 absolute top-1/2 -translate-x-0 -translate-y-1/2 right-0 cursor-pointer"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
