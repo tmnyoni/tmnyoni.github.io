@@ -7,6 +7,7 @@ import SocialProof from "./social-proof";
 import Projects from "./projects";
 
 import "./globals.css";
+import Slider from "./slider";
 
 export default function Page() {
     return (
@@ -95,24 +96,7 @@ export default function Page() {
             </section>
 
             <section className="w-full flex flex-col justify-center items-center px-4 my-8 py-10 bg-black font-black text-white">
-                <div className="w-full relative">
-                    <div className="flex absolute left-0 overflow-hidden">
-                        <div className="flex space-x-2 text-4xl justify-around">
-                            <div> C++ </div>
-                            <div> Java </div>
-                            <div> Python </div>
-                            <div> TypeScript </div>
-                            <div> JavaScript </div>
-                        </div>
-                        <div className="flex space-x-2 text-3xl  justify-around">
-                            <div> C++ </div>
-                            <div> Java </div>
-                            <div> Python </div>
-                            <div> TypeScript </div>
-                            <div> JavaScript </div>
-                        </div>
-                    </div>
-                </div>
+                <Slider />                   
                 <div className="w-full md:w-9/12 mt-16 py-8 relative">
                     <div className="absolute left-2 top-1"> Liblec Libraries </div>
                     <div className="absolute left-2 top-12"> Spring Boot </div>
@@ -136,6 +120,10 @@ export default function Page() {
 
                 <SocialProof />
             </section>
+
+            <button className="absolute h-12 w-12 bg-black text-white bottom-12 right-6">
+                Call
+            </button>
 
         </React.Fragment >
     );

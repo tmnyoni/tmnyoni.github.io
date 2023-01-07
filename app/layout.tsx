@@ -19,7 +19,7 @@ export default function RootLayout(props: RootLayoutProps) {
         <html className={`${inter.variable} font-sans`}>
             <head />
             <body>
-                <main className="flex flex-col justify-center">
+                <main className="flex flex-col justify-center relative">
                     <Navbar />
                     {children}
                     <Footer />

@@ -11,16 +11,13 @@ module.exports = {
         sans: ['var(--font-inter)']
       },
       keyframes: {
-        reveal: {
-          '0%': { transform: 'translateY(20px)' },
-          '100%': {
-             transform: 'none' ,
-             opacity: '1'
-            },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-1500px)' },
         }
       },
       animation: {
-        reveal: 'reveal 2s forwards',
+        scroll: 'scroll 40s linear infinite',
       }
     }
   },
