@@ -6,8 +6,8 @@ import SocialNetworks from "./social-networks";
 
 export default function HeroSection() {
     return (
-        <section className="w-full min-h-screen flex flex-col justify-center">
-            <div className="px-4">
+        <section className="w-full md:w-9/12 my-28 mx-auto flex flex-col justify-center">
+            <div className="px-4 sm:px-8">
                 <div className="flex items-center">
                     <div className="w-[80px] h-[80px] border-2 border-black rounded-full flex items-center justify-end">
                         <Image
@@ -21,16 +21,19 @@ export default function HeroSection() {
                     <SocialNetworks />
                 </div>
 
-                <h1 className="mt-12 text-3xl font-black">
+                <h1 className="mt-12 text-4xl sm:text-5xl font-black w-96 sm:w-[500px]">
                     Software developer and UI & UX designer
                 </h1>
 
-                <div className="mt-8 font-medium">
+                <div className="mt-8 font-medium text-lg">
                     Hi, I&apos;m Tawanda M. Nyoni
                 </div>
-                <p className="mt-2">
+                <p className="mt-2 text-lg md:w-8/12">
                     I&apos;m a passionate software developer, willing to
-                    give one hundred percent to any endeavor.
+                    give one hundred percent to any endeavor. <span className="hidden md:inline">
+                        I&apos;m a passionate software developer, willing to
+                        give one hundred percent to any endeavor.
+                    </span>
                 </p>
 
                 <div className="mt-12">
