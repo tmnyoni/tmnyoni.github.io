@@ -7,11 +7,16 @@ export default function Slider() {
         before:h-[100px] before:absolute before:w-[200px] before:z-[2] before:top-0 before:left-0 before:bg-green-100`}
         >
             <div className="animate-scroll flex w-[3000px] bg-red-100">
-                <div className="h-[100px] w-[300px] text-black text-5xl"> C++ </div>
-                <div className="h-[100px] w-[300px] text-black text-5xl"> Java </div>
-                <div className="h-[100px] w-[300px] text-black text-5xl"> Python </div>
-                <div className="h-[100px] w-[300px] text-black text-5xl"> TypeScript </div>
-                <div className="h-[100px] w-[300px] text-black text-5xl"> JavaScript </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-red-100"> C++ </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-green-100"> TypeScript </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-blue-100"> Java </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-yellow-100"> Python </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-gray-400"> JavaScript </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-red-100"> C++ </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-green-100"> TypeScript </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-blue-100"> Java </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-yellow-100"> Python </div>
+                <div className="h-[100px] w-[300px] text-black text-5xl flex items-center justify-center bg-gray-400"> JavaScript </div>
             </div>
         </div >
     )
