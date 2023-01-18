@@ -95,16 +95,26 @@ export default function Page() {
                 <Projects />
             </section>
 
-            <section className="w-full flex flex-col justify-center items-center px-4 my-8 py-10 bg-black font-black text-white">
+            <section className="w-full flex flex-col justify-center items-center relative px-4 my-8 py-10 bg-black font-black text-white">
                 <Slider />                   
-                <div className="w-full md:w-9/12 mt-16 py-8 relative">
-                    <div className="absolute left-2 top-1"> Liblec Libraries </div>
-                    <div className="absolute left-2 top-12"> Spring Boot </div>
-                    <div className="absolute left-2 top-28"> Django </div>
-                    <div className="absolute left-10 top-12"> React </div>
-                    <div className="absolute right-2 top-1"> Next.js </div>
-                    <div className="absolute right-2 top-12"> Angualar.js </div>
-                    <div className="absolute right-2 top-28"> REST API </div>
+                <div className="grid grid-cols-4 gap-x-4 gap-y-6 text-xl font-medium">
+                    <div className=""> Liblec Libs </div>
+                    <div className=""> Spring Boot </div>
+                    <div className=""> Django </div>
+                    <div className=""> React </div>
+                    <div className=""> Next.js </div>
+                    <div className=""> Angualar.js </div>
+                    <div className=""> Tailwindcss </div>
+                    <div className=""> REST API </div>
+                </div>
+
+                <div className="flex flex-col items-center">
+                <div className="text-2xl relative mt-8">
+                    Do you have a project idea
+                </div>
+                <div className="bg-white text-black px-4 py-1 text-2xl relative mt-2">
+                    lets get to it
+                </div>
                 </div>
             </section>
 
