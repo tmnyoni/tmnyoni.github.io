@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className="container m-auto w-full">
                 <div className="w-full flex items-center justify-between relative">
                     <div className="rounded-l-full">
-                        <Link href="/" className="flex items-center text-sm font-semibold">
+                        <Link href="/" className="fle items-center text-sm font-semibold hidden">
                             Tawanda M.
                         </Link>
                     </div>
