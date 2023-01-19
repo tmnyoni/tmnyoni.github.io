@@ -9,7 +9,7 @@ export default function HeroSection() {
         <section className="w-full md:w-9/12 my-28 mx-auto flex flex-col justify-center">
             <div className="px-4 sm:px-8">
                 <div className="flex items-center">
-                    <div className="w-[80px] h-[80px] border-2 border-black rounded-full flex items-center justify-end">
+                    <div className="w-[80px] h-[80px] border border-black rounded-full flex items-center justify-end ring-2 ring-black/10">
                         <Image
                             src={"/assets/images/icon.png"}
                             width={100}
@@ -21,34 +21,28 @@ export default function HeroSection() {
                     <SocialNetworks />
                 </div>
 
-                <h1 className="mt-12 text-4xl sm:text-5xl font-black w-96 sm:w-[500px]">
+                <h1 className="mt-12 text-4xl sm:text-5xl sm:leading-tight font-bold w-96 sm:w-[500px]">
                     Software developer and UI & UX designer
                 </h1>
 
-                <div className="mt-8 font-medium text-lg">
-                    Hi, I&apos;m Tawanda M. Nyoni
-                </div>
-                <p className="mt-2 text-lg md:w-8/12">
-                    I&apos;m a passionate software developer, willing to
-                    give one hundred percent to any endeavor. <span className="hidden md:inline">
-                        I&apos;m a passionate software developer, willing to
-                        give one hundred percent to any endeavor.
-                    </span>
+                <p className="mt-4 md:w-8/12">
+                    Hi, I&apos;m Tawanda M. Nyoni, a passionate software developer, willing to
+                    give one hundred percent to any endeavor.
                 </p>
 
                 <div className="mt-12">
                     <Link
                         href="#"
-                        className="rounded-md uppercase bg-black text-white py-2 px-4 border border-black flex items-center justify-center space-x-5 w-60"
+                        className="flex-inline bg-gray-900 text-gray-200 text-sm leading-6 font-medium py-2 px-6 rounded-lg"
                     >
-                        <div> Contact me </div>
+                    <span> Contact me </span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
-                            className="w-5 h-5"
+                            className="w-4 h-4 hidden"
                         >
                             <path
                                 strokeLinecap="round"

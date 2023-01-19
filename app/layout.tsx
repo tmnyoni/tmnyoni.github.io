@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import { Inter } from "@next/font/google";
+import clsx from "clsx";
 
 interface RootLayoutProps {
     children: React.ReactNode;
@@ -16,9 +17,9 @@ export default function RootLayout(props: RootLayoutProps) {
     const { children } = props;
 
     return (
-        <html className={`${inter.variable} font-sans`}>
+        <html lang="en">
             <head />
-            <body>
+            <body className={clsx(inter.variable, "font-sans text-gray-900 bg-gray-50")}>
                 <main className="flex flex-col justify-center relative">
                     <Navbar />
                     {children}
