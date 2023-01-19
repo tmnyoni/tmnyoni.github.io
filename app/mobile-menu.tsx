@@ -1,26 +1,9 @@
 import { Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+import { INavProps } from "./navbar";
 
-export default function MobileMenu() {
-    const navItems = [
-        {
-            url: "about",
-            text: "About"
-        },
-        {
-            url: "projects",
-            text: "Projects"
-        },
-        {
-            url: "articles",
-            text: "Articles"
-        },
-        {
-            url: "skills",
-            text: "skills"
-        }
-    ]
+export default function MobileMenu(props: INavProps) {
+    const { navItems } = props;
 
     return (
         <Popover className="relative font-normal text-gray-800 md:hidden">
@@ -47,7 +30,7 @@ export default function MobileMenu() {
                                                 key={item.text}
                                                 as={"a"}
                                                 href={item.url}
-                                                className="flex items-center rounded-lg py-2 px-4 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                                className="flex items-center rounded-lg py-2 px-4 transition duration-150 ease-in-out hover:bg-gray-800 hover:text-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                                             >
                                                 {item.text}
                                             </Popover.Button>
