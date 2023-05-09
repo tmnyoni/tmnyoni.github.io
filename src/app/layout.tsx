@@ -1,30 +1,31 @@
-import "./globals.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
-// import { Inter } from "next/font/google";
 import clsx from "clsx";
+import "@/styles/globals.css"
 
 interface RootLayoutProps {
     children: React.ReactNode;
 }
 
-// const inter = Inter({
-//     subsets: ["latin"],
-//     variable: "--font-inter",
-// });
-
 export default function RootLayout(props: RootLayoutProps) {
     const { children } = props;
 
     return (
-        <html lang="en">
-            <head />
-            <body className={clsx("font-sans text-gray-900 bg-gray-50")}>
-                <main className="flex flex-col justify-center relative">
-                    <Navbar />
+        <html
+            lang="en"
+            suppressHydrationWarning
+        >
+            <body
+                className={clsx(
+                    "bg-white text-gray-900 antialiased",
+                    // inter.className
+                )}
+            >
+                {/* <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                > */}
                     {children}
-                    <Footer />
-                </main>
+                {/* </ThemeProvider> */}
             </body>
         </html>
     );
