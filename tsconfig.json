@@ -22,14 +22,16 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/layout.tsx", "app/head", "app/social-proof", "app/layout", "app/navbar", "app/proje", "app/skillss", "app/social-networks",
   ],
   "exclude": [
     "node_modules"
