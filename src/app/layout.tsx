@@ -15,7 +15,7 @@ export default function RootLayout(props: RootLayoutProps) {
         >
             <body
                 className={clsx(
-                    "bg-white text-gray-900 antialiased",
+                    "bg-white min-h-screen text-gray-900 antialiased",
                     // inter.className
                 )}
             >
