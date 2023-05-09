@@ -1,11 +1,6 @@
 import Link from "next/link";
 import React from "react";
 
-export const metadata = {
-    title: "Home",
-    description: "Welcome to the home page",
-}
-
 export default function Page() {
     return (
         <main className="min-h-screen w-screen flex flex-col items-center justify-center">
