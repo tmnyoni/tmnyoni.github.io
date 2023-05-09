@@ -7,10 +7,6 @@ interface RootLayoutProps {
 
 import { siteConfig } from "@/config/site";
 
-export const metadata = {
-    title: "Tawanda M. Portfolio",
-}
-
 export default function RootLayout(props: RootLayoutProps) {
     const { children } = props;
 
