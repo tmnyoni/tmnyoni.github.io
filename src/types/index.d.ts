@@ -9,5 +9,5 @@ export type SiteConfig = {
 export type DockItem = {
     label: string;
     href: string;
-    icon: LucideIcon
+    icon: string;
 }

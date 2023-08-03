@@ -1,18 +1,22 @@
-import clsx from "clsx";
+import clsx from "clsx"
+
 import "@/styles/globals.css"
-import MainNav from "@/components/nav";
+
+import NavDock from "@/components/dock"
 
 interface RootLayoutProps {
-    children: React.ReactNode;
+    children: React.ReactNode
 }
 
 export default function SiteLayout(props: RootLayoutProps) {
-    const { children } = props;
+    const { children } = props
 
     return (
-        <main className="min-h-screen relative w-screen flex flex-col items-center justify-center">
+        <main className="relative flex min-h-screen w-screen flex-col items-center justify-center">
             {children}
-            <MainNav />
+            <section className="fixed bottom-12 left-0 right-0 mx-auto inline w-3/12 transform">
+                <NavDock />
+            </section>
         </main>
-    );
+    )
 }

@@ -1,36 +1,36 @@
 "use client"
 
-import Link from "next/link";
-import { useRef } from "react";
-
+import { useRef } from "react"
+import Link from "next/link"
 import {
     motion,
     MotionValue,
     useMotionValue,
+    useSpring,
     useTransform,
-    useSpring
-} from "framer-motion";
-import { DockItem } from "./dock-item";
-import { dockItems } from "@/config/dock-items";
+} from "framer-motion"
+
+import { dockItems } from "@/config/dock-items"
+import { DockItem } from "@/components/dock-item"
 
 export default function NavDock() {
-    let mouseXPosition = useMotionValue(Infinity);
+    let mouseXPosition = useMotionValue(Infinity)
 
     return (
-        <motion.div
+        <motion.nav
             onMouseMove={(e) => mouseXPosition.set(e.pageX)}
             onMouseLeave={() => mouseXPosition.set(Infinity)}
-            className="mx-auto flex h-16 items-end bg-slate-100 pb-3 px-4 justify-evenly rounded-lg"
+            className="mx-auto flex h-16 items-end justify-evenly rounded-2xl bg-slate-100 px-4 pb-3"
         >
-            {dockItems.map(({ href, label, icon }, index) => (
+            {dockItems.map(({ href, label, icon }) => (
                 <DockItem
-                    href={href}
+                    key={label}
                     label={label}
-                    key={index}
-                    mouseXPosition={mouseXPosition}
+                    href={href}
                     icon={icon}
+                    mouseXPosition={mouseXPosition}
                 />
             ))}
-        </motion.div>
+        </motion.nav>
     )
 }

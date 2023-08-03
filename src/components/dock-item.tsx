@@ -1,46 +1,83 @@
 "use client"
 
-import Link from "next/link";
-import { useRef } from "react";
-
+import { useRef } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import {
     motion,
     MotionValue,
     useMotionValue,
+    useSpring,
     useTransform,
-    useSpring
-} from "framer-motion";
-import { Home, LucideIcon } from "lucide-react";
+} from "framer-motion"
+import { Home, LucideIcon } from "lucide-react"
 
+import { cn } from "@/lib/utils"
+import { dockIcons } from "@/components/icons"
 
 type DockItemProps = {
-    mouseXPosition: MotionValue<number>;
-    href: string;
-    label: string;
-    icon: LucideIcon
-} & React.HTMLAttributes<HTMLDivElement>
+    mouseXPosition: MotionValue<number>
+    href: string
+    label: string
+    icon: string
+} & React.HTMLAttributes<HTMLAnchorElement>
 
-export function DockItem({ mouseXPosition, href, label }: DockItemProps) {
-    let ref = useRef<HTMLDivElement>(null);
+export function DockItem({
+    mouseXPosition,
+    href,
+    label,
+    icon,
+    className,
+    ...props
+}: DockItemProps) {
+    let ref = useRef<HTMLDivElement>(null)
 
     let distance = useTransform(mouseXPosition, (val: number) => {
-        let elementBounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-        return val - elementBounds.x - elementBounds.width / 2;
-    });
+        let elementBounds = ref.current?.getBoundingClientRect() ?? {
+            x: 0,
+            width: 0,
+        }
+        return val - elementBounds.x - elementBounds.width / 2
+    })
 
-    let widthSynchronizer = useTransform(distance, [-150, 0, 150], [40, 100, 40]);
-    let width = useSpring(widthSynchronizer, { mass: 0.1, stiffness: 150, damping: 12 });
+    let widthSynchronizer = useTransform(
+        distance,
+        [-150, 0, 150],
+        [40, 100, 40]
+    )
 
+    let width = useSpring(widthSynchronizer, {
+        mass: 0.1,
+        stiffness: 150,
+        damping: 12,
+    })
+
+    const pathname = usePathname()
+    // @ts-ignore
+    const Icon: LucideIcon = dockIcons[icon]
     return (
-        <Link href={href} className="group relative">
+        <Link
+            href={href}
+            className={cn(
+                "group relative flex flex-col items-center",
+                className
+            )}
+            {...props}
+        >
             <motion.div
                 ref={ref}
                 style={{ width }}
-                className="aspect-square w-10 rounded flex items-center  justify-center bg-slate-200 shadow-lg active:scale-90 duration-100"
+                className="flex aspect-square w-10 items-center justify-center  rounded-xl bg-slate-200 shadow-lg duration-100 active:scale-90"
             >
-                <Home />
+                <Icon className="duration-100 group-hover:scale-150" />
+                <span className="sr-only">{label}</span>
             </motion.div>
-                <div className="fixed"></div>
+            <div
+                className={cn(
+                    "absolute bottom-0 aspect-square h-1 rounded-full bg-red-700",
+                    pathname === href ? "block" : "hidden"
+                )}
+            ></div>
         </Link>
     )
 }

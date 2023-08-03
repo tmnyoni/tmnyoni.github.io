@@ -1,30 +1,29 @@
 import { DockItem } from "@/types";
-import { Home, User, FolderRoot, PenSquare, MessageCircle, } from "lucide-react"
 
 export const dockItems: DockItem[] = [
     {
         label: "Home",
         href: "/",
-        icon: Home
+        icon: "home"
     },
     {
         label: "About Me",
         href: "/about-me",
-        icon: User
+        icon: "aboutMe"
     },
     {
         label: "Projects",
         href: "/projects",
-        icon: FolderRoot
+        icon: "projects"
     },
     {
         label: "Blog",
         href: "/blog",
-        icon: PenSquare
+        icon: "blog"
     },
     {
         label: "Chat Me",
         href: "/chat-me",
-        icon: MessageCircle
+        icon: "chatMe"
     }
 ]
