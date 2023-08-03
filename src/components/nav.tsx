@@ -4,7 +4,7 @@ import NavDock from "./dock";
 
 export default function MainNav() {
     return (
-        <div className="absolute mx-auto left-0 right-0 w-5/12 bottom-12 transform inline">
+        <div className="fixed mx-auto left-0 right-0 w-3/12 bottom-12 transform inline">
             <NavDock />
         </div>
     )

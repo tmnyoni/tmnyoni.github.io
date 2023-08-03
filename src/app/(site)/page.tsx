@@ -6,7 +6,7 @@ export default function Page() {
     return (
         <main>
             <div className="font-medium text-lg"> Hey, Im Tawanda M. </div>
-            <div className="text-[90px] max-w-[19ch] leading-none text-center font-medium"> 
+            <div className="text-[90px] max-w-[19ch] leading-none text-center font-black"> 
             Software Developer and UI & UX Designer
             </div>
             <MainNav />
