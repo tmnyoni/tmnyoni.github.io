@@ -12,6 +12,7 @@
     "@headlessui/react": "^1.7.16",
     "@heroicons/react": "^2.0.18",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
+    "@vercel/analytics": "^1.0.1",
     "clsx": "^2.0.0",
     "framer-motion": "^10.15.0",
     "lucide-react": "^0.263.1",
