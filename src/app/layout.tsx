@@ -2,9 +2,12 @@ import "@/styles/globals.css"
 
 import { Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
+import { ThemeProvider } from "next-themes"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+
+import NextThemesProvider from "./theme"
 
 interface RootLayoutProps {
     children: React.ReactNode
@@ -26,14 +29,10 @@ export default function RootLayout(props: RootLayoutProps) {
                     poppins.className
                 )}
             >
-                {/* <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                > */}
-                {children}
-                <Analytics />
-                {/* </ThemeProvider> */}
+                <NextThemesProvider>
+                    {children}
+                    <Analytics />
+                </NextThemesProvider>
             </body>
         </html>
     )
