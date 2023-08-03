@@ -3,6 +3,7 @@ import { Anton } from "next/font/google"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 
 const anton = Anton({
     weight: "400",
@@ -28,12 +29,12 @@ export default function Page() {
                             <p className="mt-1">Hi</p>
                         </div>
                         <textarea
-                            className="rounded border p-2 placeholder:text-sm"
+                            className="rounded-lg border border-slate-200 p-2 text-sm shadow outline-none focus:ring-1"
                             placeholder="Type your whatchu wanna say here..."
                         />
-                        <button className="px- inline-block w-fit items-center gap-2 rounded-lg bg-slate-900 px-8 py-2 text-white">
+                        <Button className="inline-flex w-fit bg-slate-900 text-slate-50 hover:bg-slate-700 active:scale-95">
                             Send it
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </section>

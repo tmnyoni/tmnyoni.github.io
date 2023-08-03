@@ -22,7 +22,7 @@ export default function Page() {
                         Okay, here we talking about &quot;The job&quot; well
                         done 😉
                     </div>
-                    <div className="mt-4 grid gap-4">
+                    <div className="mt-4 grid gap-8">
                         <div>
                             <h4
                                 className={cn(
@@ -38,11 +38,45 @@ export default function Page() {
                                 you&apos;re looking at right now... for sure I
                                 outdid myself
                             </p>
+                            <div className="flex items-center gap-2 text-xs text-red-500">
+                                <div className="flex h-5 w-8 items-center justify-end rounded-full bg-red-300 px-0.5">
+                                    <div className="h-4 w-4 rounded-full bg-red-900"></div>
+                                </div>
+                                <div>Dev Mode</div>
+                            </div>
                             <Link
                                 href="#master-piece"
-                                className="mt-2 flex text-sm text-slate-600"
+                                className="mt-2 flex items-center text-sm text-slate-600"
                             >
                                 <Link2 className="mr-2" /> Go there
+                            </Link>
+                        </div>
+                        <div>
+                            <h4
+                                className={cn(
+                                    "font-medium text-slate-700",
+                                    anton.className
+                                )}
+                            >
+                                2️⃣Cognitive Analytica Website
+                            </h4>
+                            <p className="w-[60ch] text-sm text-slate-500">
+                                The other masterpiece is the Cognitive Analytica
+                                Website that I designed using Figma and
+                                Developed using NextJS a ReactJS framework
+                            </p>
+                            <div className="flex items-center gap-2 text-xs text-red-500">
+                                <div className="flex h-5 w-8 items-center justify-end rounded-full bg-red-300 px-0.5">
+                                    <div className="h-4 w-4 rounded-full bg-red-900"></div>
+                                </div>
+                                <div>Dev Mode</div>
+                            </div>
+                            <Link
+                                href="https://cognitiveanalyticazimbabwe.co.zw"
+                                target="_blank"
+                                className="mt-2 flex items-center text-sm text-slate-600"
+                            >
+                                <Link2 className="mr-2" /> <span>Go there</span>
                             </Link>
                         </div>
                     </div>

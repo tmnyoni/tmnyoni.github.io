@@ -6,9 +6,6 @@ import { Github, Linkedin } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
-import { GitHubButton } from "./github-button"
-import { LinkedInButton } from "./linkedin-button"
-
 const anton = Anton({
     weight: "400",
     subsets: ["latin"],
