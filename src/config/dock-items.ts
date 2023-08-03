@@ -22,6 +22,11 @@ export const dockItems: DockItem[] = [
         icon: "blog"
     },
     {
+        label: "Resume",
+        href: "/resume",
+        icon: "resume"
+    },
+    {
         label: "Chat Me",
         href: "/chat-me",
         icon: "chatMe"

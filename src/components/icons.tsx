@@ -1,4 +1,11 @@
-import { FolderRoot, Home, MessageCircle, PenSquare, User } from "lucide-react"
+import {
+    FolderRoot,
+    Home,
+    MessageCircle,
+    PenSquare,
+    Scroll,
+    User,
+} from "lucide-react"
 
 export const dockIcons = {
     home: Home,
@@ -6,4 +13,5 @@ export const dockIcons = {
     projects: FolderRoot,
     blog: PenSquare,
     chatMe: MessageCircle,
+    resume: Scroll,
 }
