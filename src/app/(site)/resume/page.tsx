@@ -22,7 +22,7 @@ export default function Page() {
                     <div className="mt-2 text-sm text-slate-700">
                         This is the walk I have walked 😉
                     </div>
-                    <div className="mt-4 grid gap-4">
+                    <div className="mt-4 grid gap-8">
                         <div>
                             <p className="mb-4">
                                 What did you think I will put, haahahhaa
@@ -46,6 +46,46 @@ export default function Page() {
                                 <Github className="mr-1 h-4 w-4" />
                                 <span>GitHub</span>
                             </Link>
+                        </div>
+
+                        <div>
+                            <div className={cn(anton.className)}>
+                                Oh well, lemme not bore you to death 🩻
+                            </div>
+                            <div
+                                className={cn(anton.className, "mt-6 text-lg")}
+                            >
+                                1️⃣Work Experience
+                            </div>
+                            <div>
+                                <div className="font-mediu">
+                                    Claxon Actuaries
+                                </div>
+                                <div className="flex items-center gap-4 text-sm text-slate-500">
+                                    <div>Graduate Trainee: Analyst</div>
+                                    <div className="rounded-lg bg-slate-100 px-4 py-1 text-xs">
+                                        July 2023 - present
+                                    </div>
+                                </div>
+                                <div className="mt-2 space-y-1 text-sm">
+                                    <div className="flex">
+                                        <span>➡️</span>
+                                        <p className="ml-1">
+                                            Redesigned and Developed a system
+                                            that is created in ReactJS and
+                                            Python using FastApi and NextJS
+                                        </p>
+                                    </div>
+                                    <div className="flex">
+                                        <span>➡️</span>
+                                        <p className="ml-1">
+                                            Research on new ways to authenticate
+                                            users using MFA and implemented the
+                                            solution
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
