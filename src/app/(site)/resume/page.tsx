@@ -1,8 +1,13 @@
 import React from "react"
 import { Anton } from "next/font/google"
 import Link from "next/link"
+import { Github, Linkedin } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+
+import { GitHubButton } from "./github-button"
+import { LinkedInButton } from "./linkedin-button"
 
 const anton = Anton({
     weight: "400",
@@ -26,20 +31,23 @@ export default function Page() {
                                 What did you think I will put, haahahhaa
                             </p>
                             <span>Just go to my </span>
+
                             <Link
                                 href="https://linkedin.com/in/tmnyoni"
                                 target="_blank"
-                                className="rounded border bg-blue-500 p-2 text-slate-50"
+                                className="inline-flex justify-center rounded bg-blue-500 px-4 py-2 text-sm text-slate-50 duration-100 hover:bg-blue-400 active:scale-95"
                             >
-                                LinkedIn Profile
+                                <Linkedin className="mr-1 h-4 w-4" />
+                                <span>LinkedIn</span>
                             </Link>
                             <span className="mx-2">or</span>
                             <Link
                                 href="https://github.com/tmnyoni"
                                 target="_blank"
-                                className="rounded border bg-black p-2 text-slate-50"
+                                className="inline-flex justify-center rounded bg-slate-900 px-4 py-2 text-sm text-slate-50 duration-100 hover:bg-slate-700 active:scale-95"
                             >
-                                GitHub
+                                <Github className="mr-1 h-4 w-4" />
+                                <span>GitHub</span>
                             </Link>
                         </div>
                     </div>

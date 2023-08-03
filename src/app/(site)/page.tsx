@@ -18,16 +18,18 @@ const anton = Anton({
 export default function Page() {
     return (
         <main className={cn(anton.className)}>
-            <div
-                className={cn(
-                    "mb-10 text-center text-3xl font-medium",
-                    caveat.className
-                )}
-            >
-                Hey 👋, I&apos;m Tawanda M.
-            </div>
-            <div className="max-w-[19ch] text-center text-[90px] font-black leading-tight">
-                Software Developer and UI & UX Designer
+            <div className="flex flex-col items-center justify-center">
+                <div
+                    className={cn(
+                        "mb-10 text-center text-3xl font-medium",
+                        caveat.className
+                    )}
+                >
+                    Hey 👋, I&apos;m Tawanda M.
+                </div>
+                <div className="max-w-[19ch] text-center text-[90px] font-black leading-tight">
+                    Software Developer and UI & UX Designer
+                </div>
             </div>
         </main>
     )

@@ -69,6 +69,10 @@ export function DockItem({
             )}
             {...props}
         >
+            <div className="text-medium mb-1 hidden rounded-lg bg-slate-100 px-3 py-1 text-xs  opacity-0 duration-300 group-hover:block group-hover:scale-110 group-hover:opacity-80">
+                {label}
+            </div>
+
             <motion.div
                 ref={ref}
                 style={{ width }}
