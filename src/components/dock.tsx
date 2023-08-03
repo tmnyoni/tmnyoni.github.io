@@ -20,7 +20,7 @@ export default function NavDock() {
         <motion.nav
             onMouseMove={(e) => mouseXPosition.set(e.pageX)}
             onMouseLeave={() => mouseXPosition.set(Infinity)}
-            className="mx-auto flex h-16 items-end justify-evenly rounded-2xl bg-slate-100 px-4 pb-3"
+            className="mx-auto flex h-16 items-end justify-evenly gap-4 rounded-2xl bg-slate-100 px-4 pb-3"
         >
             {dockItems.map(({ href, label, icon }) => (
                 <DockItem

@@ -32,18 +32,23 @@ export function DockItem({
 }: DockItemProps) {
     let ref = useRef<HTMLDivElement>(null)
 
-    let distance = useTransform(mouseXPosition, (val: number) => {
-        let elementBounds = ref.current?.getBoundingClientRect() ?? {
-            x: 0,
-            width: 0,
+    let distanceFromMouseXToElementCenter = useTransform(
+        mouseXPosition,
+        (mouseXValue: number) => {
+            let elementBounds = ref.current?.getBoundingClientRect() ?? {
+                x: 0,
+                width: 0,
+            }
+            return mouseXValue - elementBounds.x - elementBounds.width / 2
         }
-        return val - elementBounds.x - elementBounds.width / 2
-    })
+    )
 
+    let domain = [-150, 0, 150]
+    let range = [40, 100, 40]
     let widthSynchronizer = useTransform(
-        distance,
-        [-150, 0, 150],
-        [40, 100, 40]
+        distanceFromMouseXToElementCenter,
+        domain,
+        range
     )
 
     let width = useSpring(widthSynchronizer, {
