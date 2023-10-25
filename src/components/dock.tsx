@@ -1,26 +1,25 @@
 "use client"
 
-import { useRef } from "react"
+import React from "react"
 import Link from "next/link"
-import {
-    motion,
-    MotionValue,
-    useMotionValue,
-    useSpring,
-    useTransform,
-} from "framer-motion"
+import { usePathname } from "next/navigation"
+import { motion, useMotionValue } from "framer-motion"
+import { LucideIcon } from "lucide-react"
 
 import { dockItems } from "@/config/dock-items"
+import { cn } from "@/lib/utils"
 import { DockItem } from "@/components/dock-item"
 
-export default function NavDock() {
+import { dockIcons } from "./icons"
+
+export default function DesktopDock() {
     let mouseXPosition = useMotionValue(Infinity)
 
     return (
         <motion.nav
             onMouseMove={(e) => mouseXPosition.set(e.pageX)}
             onMouseLeave={() => mouseXPosition.set(Infinity)}
-            className="mx-auto flex h-16 items-end justify-evenly gap-4 rounded-2xl bg-slate-100 px-4 pb-3"
+            className="mx-auto hidden h-16 items-end justify-evenly gap-4 rounded-2xl bg-slate-100 px-4 pb-3 md:flex"
         >
             {dockItems.map(({ href, label, icon }) => (
                 <DockItem
@@ -32,5 +31,39 @@ export default function NavDock() {
                 />
             ))}
         </motion.nav>
+    )
+}
+
+type MobileDockProps = React.HTMLAttributes<HTMLDivElement>
+export function MobileDock({ className, ...props }: MobileDockProps) {
+    const pathname = usePathname()
+    return (
+        <div className="flex items-center" {...props}>
+            {dockItems.map(({ href, label, icon }) => {
+                //@ts-ignore
+                const Icon: LucideIcon = dockIcons[icon]
+                return (
+                    <Link
+                        key={label}
+                        href={href}
+                        className={cn(
+                            "group relative flex flex-col items-center",
+                            className
+                        )}
+                    >
+                        <div className="flex aspect-square w-10 items-center justify-center  rounded-xl bg-slate-200 shadow-lg duration-100">
+                            <Icon className="" />
+                            <span className="sr-only">{label}</span>
+                        </div>
+                        <div
+                            className={cn(
+                                "absolute bottom-0 aspect-square h-1 rounded-full bg-red-700",
+                                pathname === href ? "block" : "hidden"
+                            )}
+                        ></div>
+                    </Link>
+                )
+            })}
+        </div>
     )
 }

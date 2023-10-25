@@ -1,6 +1,4 @@
-import React from "react"
 import { Anton } from "next/font/google"
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 
@@ -24,16 +22,20 @@ export default function Page() {
                         <p>
                             My name is Tawanda M. Nyoni. I am a software
                             developer based in Harare. I speciliaze in web
-                            development, and Mobile applications development. I
-                            develop solutions to community problems. Currently I
-                            am working at Claxon Acturies as an Analyst:
-                            Graduate Trainee
+                            development, Mobile and Desktop apps development.I
+                            am currently working at Claxon Acturies. I almost
+                            forgot, I am also a Data analyst.
                         </p>
                         <p>
                             I like calling myself a full-stack developer,
                             because I develop both frontend and backend. My
                             stack usually includes python & TypeScript. But I
                             have also developed applications in C++ and Java
+                        </p>
+                        <p>
+                            I spend most of my time developing applications, and
+                            I also like playing games. And drinking coffee, of
+                            course, I mean 😉.
                         </p>
                     </div>
                 </div>
