@@ -1,6 +1,4 @@
-import React from "react"
 import { Anton } from "next/font/google"
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 
@@ -12,7 +10,7 @@ const anton = Anton({
 export default function Page() {
     return (
         <main className="flex min-h-screen  w-screen flex-col pt-8">
-            <section className="mx-auto w-[600px]">
+            <section className="mx-auto max-w-[600px]">
                 <div>
                     <div className={cn("text-3xl", anton.className)}>Blog</div>
                     <div className="mt-2 text-sm text-slate-700">

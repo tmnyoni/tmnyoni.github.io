@@ -1,10 +1,8 @@
-import React from "react"
 import { Anton } from "next/font/google"
 import Link from "next/link"
 import { Github, Linkedin } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 
 const anton = Anton({
     weight: "400",
@@ -14,7 +12,7 @@ const anton = Anton({
 export default function Page() {
     return (
         <main className="flex min-h-screen  w-screen flex-col pt-8">
-            <section className="mx-auto w-[600px]">
+            <section className="mx-auto max-w-[600px]">
                 <div>
                     <div className={cn("text-3xl", anton.className)}>
                         Resume

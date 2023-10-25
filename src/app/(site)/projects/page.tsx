@@ -1,4 +1,3 @@
-import React from "react"
 import { Anton } from "next/font/google"
 import Link from "next/link"
 import { Link2 } from "lucide-react"
@@ -13,7 +12,7 @@ const anton = Anton({
 export default function Page() {
     return (
         <main className="flex min-h-screen  w-screen flex-col pt-8">
-            <section className="mx-auto w-[600px]">
+            <section className="mx-auto max-w-[600px]">
                 <div>
                     <div className={cn("text-3xl", anton.className)}>
                         Projects
@@ -32,7 +31,7 @@ export default function Page() {
                             >
                                 1️⃣The Masterpiece
                             </h4>
-                            <p className="w-[60ch] text-sm text-slate-500">
+                            <p className="max-w-[60ch] text-sm text-slate-500">
                                 Let&apos;s talk about the Masterpiece that I
                                 created and that masterpiece is the website that
                                 you&apos;re looking at right now... for sure I
@@ -60,7 +59,7 @@ export default function Page() {
                             >
                                 2️⃣Cognitive Analytica Website
                             </h4>
-                            <p className="w-[60ch] text-sm text-slate-500">
+                            <p className="max-w-[60ch] text-sm text-slate-500">
                                 The other masterpiece is the Cognitive Analytica
                                 Website that I designed using Figma and
                                 Developed using NextJS a ReactJS framework
