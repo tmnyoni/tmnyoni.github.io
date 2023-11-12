@@ -57,11 +57,11 @@ export function MobileDock({ className, ...props }: MobileDockProps) {
                         key={label}
                         href={href}
                         className={cn(
-                            "group relative flex flex-col items-center bg-slate-100",
+                            "group relative flex flex-col items-center rounded-xl bg-slate-200 dark:bg-slate-800",
                             className
                         )}
                     >
-                        <div className="flex aspect-square w-10 items-center justify-center  rounded-xl bg-slate-200 shadow-lg duration-100">
+                        <div className="flex aspect-square w-10 items-center justify-center  rounded-xl  shadow-lg duration-100">
                             <Icon className="" />
                             <span className="sr-only">{label}</span>
                         </div>
