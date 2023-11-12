@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Github, Linkedin } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { Bullet } from "@/components/bullet"
+import { Numbering } from "@/components/numbering"
 
 const anton = Anton({
     weight: "400",
@@ -53,21 +55,22 @@ export default function Page() {
                             <div
                                 className={cn(anton.className, "mt-6 text-lg")}
                             >
-                                1️⃣Work Experience
+                                Work Experience
                             </div>
                             <div>
-                                <div className="font-mediu">
-                                    Claxon Actuaries
+                                <div className="flex items-center gap-x-1 font-medium">
+                                    <Numbering number={1} />
+                                    <div>Claxon Actuaries</div>
                                 </div>
-                                <div className="flex items-center gap-4 text-sm text-slate-500">
+                                <div className="flex items-center gap-4 text-slate-500">
                                     <div>Graduate Trainee: Analyst</div>
-                                    <div className="rounded-lg bg-slate-100 px-4 py-1 text-xs">
+                                    <div className="rounded-lg bg-slate-100 px-4 py-1 text-sm">
                                         July 2023 - present
                                     </div>
                                 </div>
                                 <div className="mt-2 space-y-1 text-sm">
-                                    <div className="flex">
-                                        <span>➡️</span>
+                                    <div className="flex items-start">
+                                        <Bullet />
                                         <p className="ml-1">
                                             Redesigned and Developed a system
                                             that is created in ReactJS and
@@ -75,7 +78,7 @@ export default function Page() {
                                         </p>
                                     </div>
                                     <div className="flex">
-                                        <span>➡️</span>
+                                        <Bullet />
                                         <p className="ml-1">
                                             Research on new ways to authenticate
                                             users using MFA and implemented the

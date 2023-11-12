@@ -1,3 +1,5 @@
+"use client"
+
 import { Anton } from "next/font/google"
 
 import { cn } from "@/lib/utils"
@@ -23,10 +25,18 @@ export default function Page() {
                         it😉
                     </div>
                     <div className="mt-4 grid gap-4">
-                        <div className="h-0 w-0 border-[solid_38px]" />
-                        <div className="max-w-[40ch] rounded-lg bg-slate-100 p-4 text-sm dark:bg-slate-800">
-                            <p>Lemme be the first</p>
-                            <p className="mt-1">Hi</p>
+                        <div className=" space-y-1">
+                            <p className="rounded-bl-lg rounded-br-lg rounded-tr-lg bg-slate-100 p-4 dark:bg-slate-800">
+                                Allow me to introduce myself. Unlike some
+                                people, I don&apos;t perform &quot;magic&quot;.
+                                I create websites and web applications. So
+                                please use this chat only for business purposes.
+                                I&apos;m sure you can manage to be a good
+                                citizen being for once.
+                            </p>
+                            <p className="bg-slate-100 p-4 dark:bg-slate-800">
+                                Hi Earthling 😉
+                            </p>
                         </div>
                         <ChatForm />
                     </div>
@@ -38,8 +48,8 @@ export default function Page() {
 
 function ChatForm() {
     return (
-        <form className="flex flex-col space-y-2">
-            <Input placeholder="Email" />
+        <form className="flex w-full flex-col space-y-2">
+            <Input placeholder="Email" className="rounded border" />
             <Textarea
                 className="h-32 rounded-lg border border-slate-200 p-2 text-sm shadow outline-none focus:ring-1"
                 placeholder="Type your whatchu wanna say here..."
