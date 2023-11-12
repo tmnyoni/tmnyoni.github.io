@@ -1,6 +1,4 @@
-import React from "react"
 import { Anton, Caveat } from "next/font/google"
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 
@@ -17,17 +15,17 @@ const anton = Anton({
 
 export default function Page() {
     return (
-        <main className={cn(anton.className)}>
+        <main className={cn("px-2", anton.className)}>
             <div className="flex flex-col items-center justify-center">
                 <div
                     className={cn(
-                        "mb-10 text-center text-3xl font-medium",
+                        "mb-2 text-center text-3xl font-medium md:mb-10",
                         caveat.className
                     )}
                 >
                     Hey 👋, I&apos;m Tawanda M.
                 </div>
-                <div className="max-w-[19ch] text-center text-[90px] font-black leading-tight">
+                <div className="max-w-[19ch] text-center text-4xl font-black leading-tight md:text-8xl">
                     Software Developer and UI & UX Designer
                 </div>
             </div>

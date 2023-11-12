@@ -11,7 +11,7 @@ const anton = Anton({
 
 export default function Page() {
     return (
-        <main className="flex min-h-screen  w-screen flex-col pt-8">
+        <main className="flex min-h-screen  w-screen flex-col px-2 pt-8">
             <section className="mx-auto max-w-[600px]">
                 <div>
                     <div className={cn("text-3xl", anton.className)}>

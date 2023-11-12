@@ -1,26 +1,31 @@
-"use client"
-
-import React, { useRef } from "react"
-import { AriaButtonProps, useButton } from "react-aria"
+import React, { ComponentProps } from "react"
+import { motion, MotionProps } from "framer-motion"
+import { AriaButtonProps } from "react-aria"
 
 import { cn } from "@/lib/utils"
 
-type ButtonProps = AriaButtonProps & React.HTMLAttributes<HTMLButtonElement>
-export function Button(props: ButtonProps) {
-    let ref = useRef(null)
-    let { buttonProps } = useButton(props, ref)
-    let { children, className } = props
+type ButtonProps = {
+    asChild?: boolean
+} & AriaButtonProps &
+    ComponentProps<"button"> &
+    MotionProps
 
-    return (
-        <button
-            {...buttonProps}
-            ref={ref}
-            className={cn(
-                "inline-flex items-center space-x-2 rounded px-6 py-2 text-sm",
-                className
-            )}
-        >
-            {children}
-        </button>
-    )
-}
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+    ({ className, asChild = false, children, ...props }, ref) => {
+        return (
+            <motion.button
+                {...props}
+                ref={ref}
+                className={cn(
+                    "inline-flex items-center space-x-2 rounded px-6 py-2 text-sm",
+                    className
+                )}
+            >
+                {children}
+            </motion.button>
+        )
+    }
+)
+Button.displayName = "button"
+
+export { Button }

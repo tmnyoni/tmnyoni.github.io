@@ -2,6 +2,8 @@ import { Anton } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 const anton = Anton({
     weight: "400",
@@ -10,7 +12,7 @@ const anton = Anton({
 
 export default function Page() {
     return (
-        <main className="flex min-h-screen  w-screen flex-col pt-8">
+        <main className="flex min-h-screen  w-screen flex-col px-2 pt-8">
             <section className="mx-auto max-w-[600px]">
                 <div>
                     <div className={cn("text-3xl", anton.className)}>
@@ -22,20 +24,30 @@ export default function Page() {
                     </div>
                     <div className="mt-4 grid gap-4">
                         <div className="h-0 w-0 border-[solid_38px]" />
-                        <div className="max-w-[40ch] rounded-lg bg-slate-100 p-4 text-sm">
+                        <div className="max-w-[40ch] rounded-lg bg-slate-100 p-4 text-sm dark:bg-slate-800">
                             <p>Lemme be the first</p>
                             <p className="mt-1">Hi</p>
                         </div>
-                        <textarea
-                            className="rounded-lg border border-slate-200 p-2 text-sm shadow outline-none focus:ring-1"
-                            placeholder="Type your whatchu wanna say here..."
-                        />
-                        <Button className="inline-flex w-fit bg-slate-900 text-slate-50 hover:bg-slate-700 active:scale-95">
-                            Send it
-                        </Button>
+                        <ChatForm />
                     </div>
                 </div>
             </section>
         </main>
+    )
+}
+
+function ChatForm() {
+    return (
+        <form className="flex flex-col space-y-2">
+            <Input placeholder="Email" />
+            <Textarea
+                className="h-32 rounded-lg border border-slate-200 p-2 text-sm shadow outline-none focus:ring-1"
+                placeholder="Type your whatchu wanna say here..."
+            />
+
+            <Button className="inline-flex w-fit bg-slate-800 text-slate-50 hover:bg-slate-700 active:scale-95">
+                Send it
+            </Button>
+        </form>
     )
 }
