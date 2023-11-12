@@ -1,35 +1,31 @@
 import "@/styles/globals.css"
 
-import { Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
-import { ThemeProvider } from "next-themes"
+import { GeistSans } from "geist/font/sans"
 
-import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 
 import NextThemesProvider from "./theme"
 
-interface RootLayoutProps {
+type RootLayoutProps = {
     children: React.ReactNode
 }
 
-const poppins = Poppins({
-    weight: ["400", "500"],
-    subsets: ["latin"],
-})
-
-export default function RootLayout(props: RootLayoutProps) {
+export default function RootLayout(props: Readonly<RootLayoutProps>) {
     const { children } = props
 
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html
+            lang="en"
+            suppressHydrationWarning
+            className={GeistSans.className}
+        >
             <body
                 className={cn(
-                    "min-h-screen bg-white text-gray-900 antialiased",
-                    poppins.className
+                    "min-h-screen bg-[url('/images/bg.svg')] antialiased"
                 )}
             >
-                <NextThemesProvider>
+                <NextThemesProvider defaultTheme="system">
                     {children}
                     <Analytics />
                 </NextThemesProvider>
