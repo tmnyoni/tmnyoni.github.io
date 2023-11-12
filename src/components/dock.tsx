@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import { ComponentProps } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, useMotionValue } from "framer-motion"
@@ -12,14 +12,18 @@ import { DockItem } from "@/components/dock-item"
 
 import { dockIcons } from "./icons"
 
-export default function DesktopDock() {
+type DesktopDockProps = ComponentProps<"div">
+export default function DesktopDock({ className }: Readonly<DesktopDockProps>) {
     let mouseXPosition = useMotionValue(Infinity)
 
     return (
         <motion.nav
             onMouseMove={(e) => mouseXPosition.set(e.pageX)}
             onMouseLeave={() => mouseXPosition.set(Infinity)}
-            className="mx-auto hidden h-16 items-end justify-evenly gap-4 rounded-2xl bg-slate-100 px-4 pb-3 md:flex"
+            className={cn(
+                "mx-auto hidden h-16 items-end justify-evenly gap-4 rounded-2xl bg-slate-200 px-4 pb-3",
+                className
+            )}
         >
             {dockItems.map(({ href, label, icon }) => (
                 <DockItem
@@ -34,20 +38,26 @@ export default function DesktopDock() {
     )
 }
 
-type MobileDockProps = React.HTMLAttributes<HTMLDivElement>
+type MobileDockProps = ComponentProps<"div">
 export function MobileDock({ className, ...props }: MobileDockProps) {
     const pathname = usePathname()
     return (
-        <div className="flex items-center" {...props}>
+        <div
+            className={cn(
+                "flex items-center space-x-1.5 rounded-xl p-1.5",
+                className
+            )}
+            {...props}
+        >
             {dockItems.map(({ href, label, icon }) => {
-                //@ts-ignore
-                const Icon: LucideIcon = dockIcons[icon]
+                const Icon: LucideIcon =
+                    dockIcons[icon as keyof typeof dockIcons]
                 return (
                     <Link
                         key={label}
                         href={href}
                         className={cn(
-                            "group relative flex flex-col items-center",
+                            "group relative flex flex-col items-center bg-slate-100",
                             className
                         )}
                     >

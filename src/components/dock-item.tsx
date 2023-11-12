@@ -3,14 +3,8 @@
 import { useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import {
-    motion,
-    MotionValue,
-    useMotionValue,
-    useSpring,
-    useTransform,
-} from "framer-motion"
-import { Home, LucideIcon } from "lucide-react"
+import { motion, MotionValue, useSpring, useTransform } from "framer-motion"
+import { LucideIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { dockIcons } from "@/components/icons"
@@ -29,7 +23,7 @@ export function DockItem({
     icon,
     className,
     ...props
-}: DockItemProps) {
+}: Readonly<DockItemProps>) {
     let ref = useRef<HTMLDivElement>(null)
 
     let distanceFromMouseXToElementCenter = useTransform(
@@ -58,8 +52,7 @@ export function DockItem({
     })
 
     const pathname = usePathname()
-    // @ts-ignore
-    const Icon: LucideIcon = dockIcons[icon]
+    const Icon: LucideIcon = dockIcons[icon as keyof typeof dockIcons]
     return (
         <Link
             href={href}
@@ -69,16 +62,16 @@ export function DockItem({
             )}
             {...props}
         >
-            <div className="text-medium mb-1 hidden rounded-lg bg-slate-100 px-3 py-1 text-xs  opacity-0 duration-300 group-hover:block group-hover:scale-110 group-hover:opacity-80">
+            <div className="text-medium mb-1 hidden rounded bg-slate-300 px-3 py-1 text-xs opacity-0 duration-300 group-hover:block group-hover:scale-110 group-hover:opacity-90 ">
                 {label}
             </div>
 
             <motion.div
                 ref={ref}
                 style={{ width }}
-                className="flex aspect-square w-10 items-center justify-center  rounded-xl bg-slate-200 shadow-lg duration-100 active:scale-90"
+                className="flex aspect-square w-10 items-center justify-center  rounded-xl border border-slate-400 bg-slate-300 shadow-lg duration-100 active:scale-90"
             >
-                <Icon className="duration-100 group-hover:scale-150" />
+                <Icon className="duration-400 transition-all group-hover:scale-150" />
                 <span className="sr-only">{label}</span>
             </motion.div>
             <div

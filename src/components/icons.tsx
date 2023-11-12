@@ -1,6 +1,7 @@
 import {
     FolderRoot,
     Home,
+    LayoutGrid,
     MessageCircle,
     PenSquare,
     Scroll,
@@ -14,4 +15,5 @@ export const dockIcons = {
     blog: PenSquare,
     chatMe: MessageCircle,
     resume: Scroll,
+    apps: LayoutGrid,
 }
