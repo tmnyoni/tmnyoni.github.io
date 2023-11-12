@@ -15,7 +15,11 @@ export function ToggleThemeButton() {
                 setTheme(theme === "light" ? "dark" : "light")
             }}
         >
-            <SunMoon className={cn(theme == "system" ? "block" : "hidden")} />
+            <SunMoon
+                className={cn(
+                    theme !== "dark" && theme !== "light" ? "block" : "hidden"
+                )}
+            />
             <Moon className={cn(theme === "light" ? "block" : "hidden")} />
             <Sun className={cn(theme === "dark" ? "block" : "hidden")} />
         </Button>
