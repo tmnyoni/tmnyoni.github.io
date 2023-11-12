@@ -21,7 +21,7 @@ export default function DesktopDock({ className }: Readonly<DesktopDockProps>) {
             onMouseMove={(e) => mouseXPosition.set(e.pageX)}
             onMouseLeave={() => mouseXPosition.set(Infinity)}
             className={cn(
-                "mx-auto hidden h-16 items-end justify-evenly gap-4 rounded-2xl bg-slate-200 px-4 pb-3",
+                "mx-auto hidden h-16 items-end justify-evenly gap-4 rounded-2xl bg-slate-200 px-4 pb-3 dark:bg-slate-800",
                 className
             )}
         >
