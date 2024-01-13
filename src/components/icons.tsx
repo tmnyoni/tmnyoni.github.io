@@ -1,16 +1,16 @@
 import {
     FolderRoot,
     Home,
+    Info,
     LayoutGrid,
     MessageCircle,
     PenSquare,
     Scroll,
-    User,
 } from "lucide-react"
 
 export const dockIcons = {
     home: Home,
-    aboutMe: User,
+    aboutMe: Info,
     projects: FolderRoot,
     blog: PenSquare,
     chatMe: MessageCircle,
