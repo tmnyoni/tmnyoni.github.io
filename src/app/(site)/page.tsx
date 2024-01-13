@@ -2,6 +2,8 @@ import { Anton, Caveat } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 
+import { AnimatedText } from "./animated-text"
+
 const caveat = Caveat({
     weight: ["400", "500", "600", "700"],
     subsets: ["latin"],
@@ -23,11 +25,12 @@ export default function Page() {
                         caveat.className
                     )}
                 >
-                    Hey 👋, I&apos;m Tawanda M.
+                    Hey👋, I&apos;m Tawanda M.
                 </div>
-                <div className="max-w-[19ch] text-center text-4xl font-black leading-tight md:text-8xl">
-                    Software Developer and UI & UX Designer
-                </div>
+                <AnimatedText
+                    text="Software Developer and UI & UX Designer"
+                    className="mt-10 max-w-[19ch] text-center text-4xl font-black leading-tight md:text-8xl"
+                />
             </div>
         </main>
     )
