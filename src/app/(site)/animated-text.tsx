@@ -12,7 +12,7 @@ const defaultVariants = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.05,
+            duration: 0.1,
         },
     },
 }
@@ -41,7 +41,7 @@ export function AnimatedText({
                 aria-hidden="true"
                 initial={isInView ? "visible" : "hidden"}
                 animate="visible"
-                transition={{ staggerChildren: 0.05 }}
+                transition={{ staggerChildren: 0.1 }}
             >
                 {text.split(" ").map((word, index) => (
                     <span key={`${index}.word`} className="inline-block">
