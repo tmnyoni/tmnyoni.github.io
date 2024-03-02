@@ -1,5 +1,6 @@
 import { ComponentProps } from "react"
 import { Anton } from "next/font/google"
+import Image from "next/image"
 import Link from "next/link"
 import { Link2 } from "lucide-react"
 
@@ -16,6 +17,7 @@ type ProjectProps = {
     description: string
     href: string
     status?: string
+    img: string
 } & ComponentProps<"div">
 
 export function Project({
@@ -24,21 +26,30 @@ export function Project({
     description,
     href,
     status,
+    img,
 }: Readonly<ProjectProps>) {
     return (
         <div>
+            <div>
+                <Image
+                    alt="app-screentshot"
+                    src={img}
+                    width={1920}
+                    height={1080}
+                    className="mt-8 w-full rounded-2xl border"
+                />
+            </div>
             <div
                 className={cn(
-                    "flex items-center gap-x-1 font-medium text-slate-700",
+                    "mt-4 flex items-center gap-x-1 font-medium text-slate-700",
                     anton.className
                 )}
             >
-                <div className="flex aspect-square h-5 items-center justify-center rounded bg-blue-400 pb-0.5 text-sm font-semibold text-white">
-                    {number}
+                <div className="text-xl font-medium">
+                    {number}. {title}
                 </div>
-                <div className="text-md">{title}</div>
             </div>
-            <p className="max-w-[60ch]text-slate-500">{description}</p>
+            <p className="max-w-[60ch]text-slate-500 mt-4">{description}</p>
             {status && (
                 <div className="flex items-center gap-2 text-red-500">
                     <div className="flex h-5 w-8 items-center justify-end rounded-full bg-red-300 px-0.5">

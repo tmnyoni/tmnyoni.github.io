@@ -40,12 +40,12 @@ export default function Page() {
                         />
                         <div className="mt-8 grid gap-6">
                             <p>
-                                Hello there, world. Tawanda M. Nyoni here, a
-                                Harare-based software developer extraordinaire.
-                                I work on web development, mobile and desktop
-                                apps, and data analysis. You name it, and I code
-                                it. I work at Claxon Acturies, where I make
-                                magic happen with numbers and algorithms.
+                                Hello, I am Tawanda M. Nyoni, a Harare-based
+                                software developer extraordinaire. I work on web
+                                development, mobile and desktop apps, and data
+                                analysis. You name it, and I code it. I work at
+                                Claxon Acturies, where I make magic happen with
+                                numbers and algorithms.
                             </p>
                             <p>
                                 As if being a software developer extraordinaire
