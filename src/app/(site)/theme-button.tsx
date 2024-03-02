@@ -9,7 +9,7 @@ export function ToggleThemeButton() {
     const { theme, setTheme } = useTheme()
     return (
         <button
-            className="absolute right-4 top-4 inline-flex justify-between gap-x-1 rounded-full border border-gray-500 p-0.5 shadow-inner"
+            className="fixed right-4 top-4 inline-flex justify-between gap-x-1 rounded-full border border-gray-500 p-0.5 shadow-inner"
             onClick={() => {
                 setTheme(theme === "light" ? "dark" : "light")
             }}
