@@ -41,10 +41,9 @@ export default function DesktopDock({ className }: Readonly<DesktopDockProps>) {
 type MobileDockProps = ComponentProps<"div">
 export function MobileDock({ className, ...props }: MobileDockProps) {
     const [open, setOpen] = useState(false)
-    const pathname = usePathname()
 
     return (
-        <div className="relative text-black">
+        <div className="relative text-black sm:hidden">
             <div
                 className="relative z-50 grid size-12 place-items-center rounded-2xl border bg-white shadow-inner "
                 onClick={() => setOpen((prev) => !prev)}
@@ -77,6 +76,8 @@ type MobileItem = {
     index: number
 }
 export function MobileItem({ icon, href, index }: Readonly<MobileItem>) {
+    const pathname = usePathname()
+
     const Icon: LucideIcon = dockIcons[icon as keyof typeof dockIcons]
     return (
         <Link
@@ -86,7 +87,10 @@ export function MobileItem({ icon, href, index }: Readonly<MobileItem>) {
             style={{
                 transform: `rotate(calc(${index}*360deg/10)) translateY(110px)`,
             }}
-            className={`absolute -top-10 grid size-10 translate-y-0 place-items-center duration-300`}
+            className={cn(
+                `absolute -top-10 grid size-10 translate-y-0 place-items-center rounded-full  duration-300`,
+                pathname.endsWith(href) && "bg-black text-white"
+            )}
         >
             <Icon
                 style={{ transform: `rotate(calc(270deg - ${index}*36deg))` }}
