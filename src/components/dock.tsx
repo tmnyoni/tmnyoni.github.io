@@ -46,7 +46,7 @@ export function MobileDock({ className, ...props }: MobileDockProps) {
     return (
         <div className="relative">
             <div
-                className="relative z-50 grid size-12 place-items-center rounded-2xl border shadow-inner "
+                className="relative z-50 grid size-12 place-items-center rounded-2xl border bg-white shadow-inner "
                 onClick={() => setOpen((prev) => !prev)}
             >
                 <LayoutDashboardIcon />
@@ -57,7 +57,7 @@ export function MobileDock({ className, ...props }: MobileDockProps) {
                     open ? "flex" : "hidden"
                 )}
             >
-                <div className="absolute -left-[125px] -top-[170px] h-[300px] w-[300px] rounded-full border bg-white/80 shadow" />
+                <div className="absolute -left-[125px] -top-[170px] h-[300px] w-screen rounded-full border bg-white/80 shadow" />
                 {dockItems.map((dockItem, index) => (
                     <MobileItem
                         key={index}

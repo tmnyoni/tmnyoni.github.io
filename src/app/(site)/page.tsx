@@ -43,7 +43,7 @@ const item = {
 
 export default function Page() {
     return (
-        <main className={cn("px-2", anton.className)}>
+        <main className={cn("px-4", anton.className)}>
             <motion.div variants={container} initial="hidden" animate="visible">
                 <motion.div
                     variants={item}
