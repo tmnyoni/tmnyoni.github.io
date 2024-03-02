@@ -18,16 +18,25 @@ const anton = Anton({
     subsets: ["latin"],
 })
 
-const defaultVariants = {
-    hidden: {
-        opacity: 0,
-        y: 80,
-    },
+const container = {
+    hidden: { opacity: 1, scale: 0 },
     visible: {
         opacity: 1,
-        y: 0,
+        scale: 1,
         transition: {
-            duration: 0.4,
+            delayChildren: 0.3,
+            staggerChildren: 0.5,
+        },
+    },
+}
+
+const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.3,
         },
     },
 }
@@ -35,28 +44,33 @@ const defaultVariants = {
 export default function Page() {
     return (
         <main className={cn("px-2", anton.className)}>
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                transition={{ staggerChildren: 0.5 }}
-            >
+            <motion.div variants={container} initial="hidden" animate="visible">
                 <motion.div
-                    variants={defaultVariants}
+                    variants={item}
                     className={cn(
-                        "text-center text-3xl font-medium ",
+                        "text-center text-3xl font-medium",
                         caveat.className
                     )}
                 >
                     Hey👋, I&apos;m Tawanda M.
                 </motion.div>
                 <motion.div
-                    variants={defaultVariants}
-                    // className="mt-10 text-balance text-center text-4xl font-black leading-tight sm:text-6xl md:text-8xl"
+                    variants={item}
+                    className="mt-10 max-w-[19ch] text-center text-4xl font-black leading-tight md:text-8xl"
                 >
                     <AnimatedText
                         text="Software Developer and UI & UX Designer"
                         className="mt-10 max-w-[19ch] text-center text-4xl font-black leading-tight md:text-8xl"
                     />
+                </motion.div>
+                <motion.div
+                    variants={item}
+                    // className="mt-10 text-balance text-center text-4xl font-black leading-tight sm:text-6xl md:text-8xl"
+                >
+                    {/* <AnimatedText
+                        text="Software Developer and UI & UX Designer"
+                        className="mt-10 max-w-[19ch] text-center text-4xl font-black leading-tight md:text-8xl"
+                    /> */}
                 </motion.div>
             </motion.div>
         </main>

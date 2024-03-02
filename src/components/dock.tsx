@@ -1,10 +1,10 @@
 "use client"
 
-import { ComponentProps } from "react"
+import { ComponentProps, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, useMotionValue } from "framer-motion"
-import { LucideIcon } from "lucide-react"
+import { LayoutDashboardIcon, LucideIcon } from "lucide-react"
 
 import { dockItems } from "@/config/dock-items"
 import { cn } from "@/lib/utils"
@@ -40,40 +40,57 @@ export default function DesktopDock({ className }: Readonly<DesktopDockProps>) {
 
 type MobileDockProps = ComponentProps<"div">
 export function MobileDock({ className, ...props }: MobileDockProps) {
+    const [open, setOpen] = useState(false)
     const pathname = usePathname()
+
     return (
-        <div
-            className={cn(
-                "flex items-center space-x-1.5 rounded-xl p-1.5",
-                className
-            )}
-            {...props}
-        >
-            {dockItems.map(({ href, label, icon }) => {
-                const Icon: LucideIcon =
-                    dockIcons[icon as keyof typeof dockIcons]
-                return (
-                    <Link
-                        key={label}
-                        href={href}
-                        className={cn(
-                            "group relative flex flex-col items-center rounded-xl bg-slate-200 dark:bg-slate-800",
-                            className
-                        )}
-                    >
-                        <div className="flex aspect-square w-10 items-center justify-center  rounded-xl  shadow-lg duration-100">
-                            <Icon className="" />
-                            <span className="sr-only">{label}</span>
-                        </div>
-                        <div
-                            className={cn(
-                                "absolute bottom-0 aspect-square h-1 rounded-full bg-red-700",
-                                pathname === href ? "block" : "hidden"
-                            )}
-                        ></div>
-                    </Link>
-                )
-            })}
+        <div className="relative">
+            <div
+                className="relative z-50 grid size-12 place-items-center rounded-2xl border shadow-inner "
+                onClick={() => setOpen((prev) => !prev)}
+            >
+                <LayoutDashboardIcon />
+            </div>
+            <div
+                className={cn(
+                    "absolute -top-0 z-10  rotate-[90deg]",
+                    open ? "flex" : "hidden"
+                )}
+            >
+                <div className="absolute -left-[125px] -top-[170px] h-[300px] w-[300px] rounded-full border bg-white/80 shadow" />
+                {dockItems.map((dockItem, index) => (
+                    <MobileItem
+                        key={index}
+                        index={index}
+                        href={dockItem.href}
+                        icon={dockItem.icon}
+                    />
+                ))}
+            </div>
         </div>
+    )
+}
+
+type MobileItem = {
+    icon: string
+    href: string
+    index: number
+}
+export function MobileItem({ icon, href, index }: Readonly<MobileItem>) {
+    const Icon: LucideIcon = dockIcons[icon as keyof typeof dockIcons]
+    return (
+        <Link
+            href={href}
+            key={index}
+            data-index={`${index}`}
+            style={{
+                transform: `rotate(calc(${index}*360deg/10)) translateY(110px)`,
+            }}
+            className={`absolute -top-10 grid size-10 translate-y-0 place-items-center duration-300`}
+        >
+            <Icon
+                style={{ transform: `rotate(calc(270deg - ${index}*36deg))` }}
+            />
+        </Link>
     )
 }
