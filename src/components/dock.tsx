@@ -44,7 +44,7 @@ export function MobileDock({ className, ...props }: MobileDockProps) {
     const pathname = usePathname()
 
     return (
-        <div className="relative">
+        <div className="relative text-black">
             <div
                 className="relative z-50 grid size-12 place-items-center rounded-2xl border bg-white shadow-inner "
                 onClick={() => setOpen((prev) => !prev)}
