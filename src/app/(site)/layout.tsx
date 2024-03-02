@@ -27,7 +27,7 @@ export default function SiteLayout(props: RootLayoutProps) {
     )
 }
 
-export function Footer() {
+function Footer() {
     return (
         <div className="mx-1 grid flex-col place-items-center justify-center rounded bg-gray-100/40 px-4 dark:bg-black/90 md:mx-4">
             <div className="mt-20 text-lg font-bold">My Portfolio</div>
