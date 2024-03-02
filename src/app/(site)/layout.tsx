@@ -22,7 +22,7 @@ export default function SiteLayout(props: Readonly<SiteLayoutProps>) {
 
     return (
         <main className="relative min-h-screen">
-            <div className="grid h-screen place-items-center">
+            <div className="grid min-h-screen place-items-center">
                 <ToggleThemeButton />
 
                 {children}
@@ -38,7 +38,7 @@ export default function SiteLayout(props: Readonly<SiteLayoutProps>) {
 
 function Footer() {
     return (
-        <div className="mx-1 mb-3 grid flex-col place-items-center justify-center rounded-3xl bg-gray-200/50 px-4 dark:bg-black/90 md:mx-4">
+        <div className="mx-2 mb-3 mt-8 grid flex-col place-items-center justify-center rounded-3xl bg-gray-200/50 px-4 dark:bg-black/90 md:mx-4">
             <div className="mt-20 text-xl font-black">My Portfolio</div>
             <div className="mt-4 flex items-center gap-x-4">
                 <Link
@@ -77,7 +77,7 @@ function Footer() {
                     <GithubIcon />
                 </Link>
             </div>
-            <div className="mt-5 h-px min-w-96 bg-gradient-to-r from-white via-gray-900 to-white" />
+            <div className="mt-5 h-px min-w-96 bg-gradient-to-r from-white via-gray-900 to-white dark:from-black dark:via-white dark:to-black" />
             <div className="mb-28 mt-10 space-y-10">
                 <div>
                     <h3 className="font-medium">Designer and Developer</h3>
