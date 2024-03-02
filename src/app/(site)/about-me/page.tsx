@@ -1,5 +1,5 @@
 import { Anton, Caveat } from "next/font/google"
-import Link from "next/link"
+import Image from "next/image"
 
 import { cn } from "@/lib/utils"
 
@@ -31,6 +31,13 @@ export default function Page() {
                         <div className="mt-1 text-sm text-slate-700">
                             Who am I, and what are my aspirations
                         </div>
+                        <Image
+                            alt="my-picutre"
+                            src="/images/about-img.jpg"
+                            width={1920}
+                            height={1080}
+                            className="mt-8 rounded-2xl"
+                        />
                         <div className="mt-8 grid gap-6">
                             <p>
                                 Hello there, world. Tawanda M. Nyoni here, a
@@ -65,23 +72,6 @@ export default function Page() {
                                 human being with hobbies and caffeine addiction.
                                 That&apos;s me in a nutshell. Nice to meet you
                                 😉.
-                            </p>
-
-                            <p className="text-slate-700">
-                                Just so you know, I&apos;m not that great at
-                                English, and my sarcasm is pretty lame. But hey,
-                                I&apos;m a good prompt engineer. Do you even
-                                know what that is? You should google it, maybe
-                                you&apos;ll learn something. And while
-                                you&apos;re at it,{" "}
-                                <Link
-                                    href="/blog"
-                                    className="font-medium text-blue-800 underline underline-offset-2 active:scale-95"
-                                >
-                                    check out my blog
-                                </Link>
-                                . I mean, it&apos;s not like you have anything
-                                better to do.
                             </p>
                         </div>
                     </div>
