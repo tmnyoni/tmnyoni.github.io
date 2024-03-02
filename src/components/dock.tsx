@@ -43,7 +43,7 @@ export function MobileDock({ className, ...props }: MobileDockProps) {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className="relative text-black sm:hidden">
+        <div className="relative isolate text-black sm:hidden">
             <div
                 className="relative z-50 grid size-12 place-items-center rounded-2xl border bg-white shadow-inner "
                 onClick={() => setOpen((prev) => !prev)}
@@ -52,11 +52,11 @@ export function MobileDock({ className, ...props }: MobileDockProps) {
             </div>
             <div
                 className={cn(
-                    "absolute -top-0 z-10  rotate-[90deg]",
+                    "absolute -top-0 z-20  rotate-[90deg]",
                     open ? "flex" : "hidden"
                 )}
             >
-                <div className="absolute -left-[125px] -top-[170px] h-[300px] w-screen rounded-full border bg-white/80 shadow" />
+                <div className="absolute -left-[125px] -top-[170px] h-[300px] w-[300px] rounded-full bg-white/80" />
                 {dockItems.map((dockItem, index) => (
                     <MobileItem
                         key={index}

@@ -63,15 +63,6 @@ export default function Page() {
                         className="mt-10 max-w-[19ch] text-center text-4xl font-black leading-tight md:text-8xl"
                     />
                 </motion.div>
-                <motion.div
-                    variants={item}
-                    // className="mt-10 text-balance text-center text-4xl font-black leading-tight sm:text-6xl md:text-8xl"
-                >
-                    {/* <AnimatedText
-                        text="Software Developer and UI & UX Designer"
-                        className="mt-10 max-w-[19ch] text-center text-4xl font-black leading-tight md:text-8xl"
-                    /> */}
-                </motion.div>
             </motion.div>
         </main>
     )
