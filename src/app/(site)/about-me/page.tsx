@@ -16,7 +16,7 @@ const caveat = Caveat({
 
 export default function Page() {
     return (
-        <main className="flex min-h-screen  flex-col px-4 pt-8">
+        <main className="flex min-h-screen flex-col px-4 pt-32">
             <section className="mx-auto max-w-[600px]">
                 <div>
                     <div
