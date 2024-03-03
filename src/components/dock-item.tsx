@@ -76,7 +76,7 @@ export function DockItem({
             </motion.div>
             <div
                 className={cn(
-                    "absolute bottom-0 size-1 rounded-full bg-black",
+                    "absolute bottom-0 size-1 rounded-full bg-black dark:bg-white",
                     pathname === href ? "block" : "hidden"
                 )}
             ></div>

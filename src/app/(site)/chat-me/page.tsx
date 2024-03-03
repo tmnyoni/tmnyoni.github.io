@@ -35,8 +35,8 @@ export default function Page() {
                                 Tawanda M. Nyoni
                             </p>
                             <div className="mt-1 flex">
-                                <div className="size-0 -rotate-180 border-b-[20px] border-l-0 border-r-[20px] border-gray-100 border-r-transparent" />
-                                <p className="flex-1 rounded-b-xl rounded-tr-xl bg-gray-100 p-6 text-sm dark:bg-gray-800">
+                                <div className="size-0 -rotate-180 border-b-[20px] border-l-0 border-r-[20px] border-gray-100 border-r-transparent dark:border-b-black" />
+                                <p className="flex-1 rounded-b-xl rounded-tr-xl bg-gray-100 p-6 text-sm dark:bg-black/80 dark:text-gray-50">
                                     Allow me to introduce myself. Unlike some
                                     people, I don&apos;t perform
                                     &quot;magic&quot;. I create websites and web
@@ -50,12 +50,12 @@ export default function Page() {
                             </p>
                         </div>
                     </div>
-                    <div className="ml-6 flex items-center">
-                        <div className="h-px flex-1 bg-gradient-to-r from-white to-gray-300" />
-                        <div className="rounded border-x border-gray-300 px-8 text-sm text-gray-500">
+                    <div className="flex items-center">
+                        <div className="h-px flex-1 bg-gradient-to-r from-white to-gray-300 dark:from-background dark:to-white" />
+                        <div className="rounded border-x border-gray-300 px-8 text-sm text-gray-500 dark:border-l-white">
                             Today
                         </div>
-                        <div className="h-px flex-1 bg-gradient-to-r from-gray-300 to-white" />
+                        <div className="dark:to-bafrom-background h-px flex-1 bg-gradient-to-r from-gray-300 to-white dark:from-white" />
                     </div>
                     <div className="flex">
                         <div className="grid size-8 place-items-center rounded-full border bg-gray-50 sm:size-12">
@@ -88,7 +88,6 @@ function ChatForm() {
         }
     }
 
-    console.log(state)
     return (
         <form action={formAction} className="flex flex-col space-y-2">
             <div className="flex">
