@@ -21,7 +21,7 @@ export default function DesktopDock({ className }: Readonly<DesktopDockProps>) {
             onMouseMove={(e) => mouseXPosition.set(e.pageX)}
             onMouseLeave={() => mouseXPosition.set(Infinity)}
             className={cn(
-                "mx-auto hidden h-16 items-end justify-evenly gap-4 rounded-2xl bg-gray-200 px-4 pb-3 dark:bg-gray-900",
+                "mx-auto hidden h-16 items-end justify-evenly gap-4 rounded-2xl bg-gray-200 px-4 pb-3 dark:bg-black",
                 className
             )}
         >
@@ -85,10 +85,10 @@ export function MobileItem({ icon, href, index }: Readonly<MobileItem>) {
             key={index}
             data-index={`${index}`}
             style={{
-                transform: `rotate(calc(${index}*360deg/10)) trangrayY(110px)`,
+                transform: `rotate(calc(${index}*360deg/10)) translateY(110px)`,
             }}
             className={cn(
-                `trangray-y-0 absolute -top-10 grid size-10 place-items-center rounded-full  duration-300`,
+                `absolute -top-10 grid size-10 translate-y-0 place-items-center rounded-full border text-black duration-300`,
                 pathname.endsWith(href) && "bg-black text-white"
             )}
         >
