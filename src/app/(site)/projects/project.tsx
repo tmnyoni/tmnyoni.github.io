@@ -41,7 +41,7 @@ export function Project({
             </div>
             <div
                 className={cn(
-                    "mt-4 flex items-center gap-x-1 font-medium text-slate-700",
+                    "mt-4 flex items-center gap-x-1 font-medium text-slate-700 dark:text-gray-100",
                     anton.className
                 )}
             >

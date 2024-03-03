@@ -23,7 +23,7 @@ export default function Page() {
                     >
                         Projects
                     </div>
-                    <div className="mt-1 text-sm text-slate-700">
+                    <div className="mt-1 text-sm text-slate-700 dark:text-gray-50">
                         Okay, here we talking about &quot;The job&quot; well
                         done 😉
                     </div>
