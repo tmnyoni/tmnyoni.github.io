@@ -19,7 +19,7 @@ export default function Page() {
                     <div className={cn("text-3xl", anton.className)}>
                         Resume
                     </div>
-                    <div className="mt-2 text-sm text-slate-700">
+                    <div className="mt-2 text-sm text-gray-700">
                         This is the walk I have walked 😉
                     </div>
                     <div className="mt-4 grid gap-8">
@@ -32,7 +32,7 @@ export default function Page() {
                             <Link
                                 href="https://linkedin.com/in/tmnyoni"
                                 target="_blank"
-                                className="inline-flex justify-center rounded bg-blue-500 px-4 py-2 text-sm text-slate-50 duration-100 hover:bg-blue-400 active:scale-95"
+                                className="inline-flex justify-center rounded bg-blue-500 px-4 py-2 text-sm text-gray-50 duration-100 hover:bg-blue-400 active:scale-95"
                             >
                                 <Linkedin className="mr-1 h-4 w-4" />
                                 <span>LinkedIn</span>
@@ -41,7 +41,7 @@ export default function Page() {
                             <Link
                                 href="https://github.com/tmnyoni"
                                 target="_blank"
-                                className="inline-flex justify-center rounded bg-slate-900 px-4 py-2 text-sm text-slate-50 duration-100 hover:bg-slate-700 active:scale-95"
+                                className="inline-flex justify-center rounded bg-gray-900 px-4 py-2 text-sm text-gray-50 duration-100 hover:bg-gray-700 active:scale-95"
                             >
                                 <Github className="mr-1 h-4 w-4" />
                                 <span>GitHub</span>
@@ -62,9 +62,9 @@ export default function Page() {
                                     <Numbering number={1} />
                                     <div>Claxon Actuaries</div>
                                 </div>
-                                <div className="flex items-center gap-4 text-slate-500">
+                                <div className="flex items-center gap-4 text-gray-500">
                                     <div>Graduate Trainee: Analyst</div>
-                                    <div className="rounded-lg bg-slate-100 px-4 py-1 text-sm">
+                                    <div className="rounded-lg bg-gray-100 px-4 py-1 text-sm">
                                         July 2023 - present
                                     </div>
                                 </div>

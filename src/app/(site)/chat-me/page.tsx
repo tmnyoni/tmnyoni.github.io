@@ -22,7 +22,7 @@ export default function Page() {
         <main className="flex min-h-screen flex-col px-4 pt-8 ">
             <section className="mx-auto max-w-[600px]">
                 <div className={cn("text-3xl", anton.className)}>Chat-me</div>
-                <div className="mt-2 text-sm text-slate-700">
+                <div className="mt-2 text-sm text-gray-700">
                     You wanna talk to me, let&apos; talk. You gonna like it😉
                 </div>
                 <div className="mt-4 grid gap-10 text-gray-600">
@@ -36,7 +36,7 @@ export default function Page() {
                             </p>
                             <div className="mt-1 flex">
                                 <div className="size-0 -rotate-180 border-b-[20px] border-l-0 border-r-[20px] border-gray-100 border-r-transparent" />
-                                <p className="flex-1 rounded-b-xl rounded-tr-xl bg-gray-100 p-6 text-sm dark:bg-slate-800">
+                                <p className="flex-1 rounded-b-xl rounded-tr-xl bg-gray-100 p-6 text-sm dark:bg-gray-800">
                                     Allow me to introduce myself. Unlike some
                                     people, I don&apos;t perform
                                     &quot;magic&quot;. I create websites and web
@@ -45,7 +45,7 @@ export default function Page() {
                                     manage to be a good citizen being for once.
                                 </p>
                             </div>
-                            <p className="ml-5 mt-1 rounded-xl bg-gray-100 p-6 text-sm dark:bg-slate-800">
+                            <p className="ml-5 mt-1 rounded-xl bg-gray-100 p-6 text-sm dark:bg-gray-800">
                                 Hi Earthling 😉
                             </p>
                         </div>

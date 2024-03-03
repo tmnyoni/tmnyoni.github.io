@@ -13,7 +13,7 @@ export default function Page() {
         <main className="flex min-h-screen  flex-col px-4 pt-8">
             <section className="mx-auto max-w-[600px]">
                 <div className={cn("text-3xl", anton.className)}>Blog</div>
-                <div className="mt-2 text-sm text-slate-700">
+                <div className="mt-2 text-sm text-gray-700">
                     I do a little research and write my opinions & its allowed
                     😉
                 </div>
@@ -25,7 +25,7 @@ export default function Page() {
                             </div>
                             <h4
                                 className={cn(
-                                    "font-medium text-slate-700",
+                                    "font-medium text-gray-700",
                                     anton.className
                                 )}
                             >

@@ -62,14 +62,14 @@ export function DockItem({
             )}
             {...props}
         >
-            <div className="text-medium mb-1 hidden rounded bg-slate-300 px-3 py-1 text-xs opacity-0 duration-300 group-hover:block group-hover:scale-110 group-hover:opacity-90 dark:bg-black ">
+            <div className="text-medium mb-1 hidden rounded bg-gray-300 px-3 py-1 text-xs opacity-0 duration-300 group-hover:block group-hover:scale-110 group-hover:opacity-90 dark:bg-gray-900 ">
                 {label}
             </div>
 
             <motion.div
                 ref={ref}
                 style={{ width }}
-                className="flex aspect-square w-10 items-center justify-center  rounded-xl border border-slate-400 bg-slate-300 shadow-lg duration-100 active:scale-90 dark:bg-black"
+                className="flex aspect-square w-10 items-center justify-center  rounded-xl border border-gray-400 bg-gray-300 shadow-lg duration-100 active:scale-90 dark:bg-gray-900"
             >
                 <Icon className="duration-400 transition-all group-hover:scale-150" />
                 <span className="sr-only">{label}</span>

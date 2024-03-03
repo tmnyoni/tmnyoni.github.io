@@ -21,7 +21,7 @@ export default function Page() {
                     >
                         About me
                     </div>
-                    <div className="mt-1 text-sm text-slate-700">
+                    <div className="mt-1 text-sm text-gray-700">
                         Who am I, and what are my aspirations
                     </div>
                     <Image
