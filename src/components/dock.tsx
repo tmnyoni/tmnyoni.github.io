@@ -85,7 +85,7 @@ export function MobileItem({ icon, href, index }: Readonly<MobileItem>) {
             key={index}
             data-index={`${index}`}
             style={{
-                transform: `rotate(calc(${index}*360deg/10)) translateY(110px)`,
+                transform: `rotate(calc(${index}*360deg/8)) translateY(110px)`,
             }}
             className={cn(
                 `absolute -top-10 grid size-10 translate-y-0 place-items-center rounded-full border text-black duration-300`,
@@ -93,7 +93,7 @@ export function MobileItem({ icon, href, index }: Readonly<MobileItem>) {
             )}
         >
             <Icon
-                style={{ transform: `rotate(calc(270deg - ${index}*36deg))` }}
+                style={{ transform: `rotate(calc(270deg - ${index}*45deg))` }}
             />
         </Link>
     )

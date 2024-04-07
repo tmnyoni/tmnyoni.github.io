@@ -31,39 +31,30 @@ export default function Page() {
                         height={1080}
                         className="mt-8 rounded-2xl"
                     />
+
                     <div className="mt-8 grid gap-6">
                         <p>
-                            Hello, I am Tawanda M. Nyoni, a Harare-based
-                            software developer extraordinaire. I work on web
-                            development, mobile and desktop apps, and data
-                            analysis. You name it, and I code it. I work at
-                            Claxon Acturies, where I make magic happen with
-                            numbers and algorithms.
+                            I&apos;m Tawanda M. Nyoni, a Software Developer &
+                            UI/UX Designer. I create user-centric software
+                            solutions by seamlessly blending development
+                            expertise with UI/UX design thinking.
                         </p>
                         <p>
-                            As if being a software developer extraordinaire
-                            wasn&apos;t enough, I&apos;m also a brilliant UI &
-                            UX designer. I have a passion for colors and fonts,
-                            and I know how to make them work together in
-                            harmony. I like drawing lines and circles, because
-                            they are the essence of design. I also do
-                            photography, because I&apos;m a visual storyteller.
-                            Just say hi, and I&apos;ll blow your mind with my
-                            amazing stories.
+                            I&apos;m a full-stack developer with proficiency in
+                            both front-end and back-end development. My primary
+                            languages are Python and TypeScript, but I can also
+                            navigate C++ and am currently on a quest to master
+                            Rust (without the self-inflicted torture,
+                            hopefully).
                         </p>
+
                         <p>
-                            I&apos;m a full-stack developer, which means
-                            I&apos;m equally adept at frontend and backend
-                            development. Python and TypeScript are my favorite
-                            tools, but I can also use C++ and Java when I feel
-                            like torturing myself.
-                        </p>
-                        <p>
-                            When I&apos;m not busy creating awesome
-                            applications, I like to play games and drink coffee.
-                            Because, you know, I&apos;m a normal human being
-                            with hobbies and caffeine addiction. That&apos;s me
-                            in a nutshell. Nice to meet you 😉.
+                            In UI/UX design, I leverage Figma to translate user
+                            research and usability testing into intuitive and
+                            visually appealing interfaces. My passion lies in
+                            constantly seeking ways to improve user experience,
+                            whether it&apos;s for apps I&apos;m developing or
+                            exploring innovative solutions for future projects.
                         </p>
                     </div>
                 </div>
